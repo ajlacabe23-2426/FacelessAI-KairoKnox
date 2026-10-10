@@ -1,0 +1,79 @@
+{
+  "episode_id": "ep03",
+  "editorial_caveat": "Overreach incidents and evaluation awareness are different research findings; presenting them together does not imply a demonstrated causal connection.",
+  "sources": [
+    {
+      "id": "A1",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "publisher": "Anthropic",
+      "published_on": "2026-10-09",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+    },
+    {
+      "id": "E1",
+      "title": "Large Language Models Often Know When They Are Being Evaluated",
+      "publisher": "arXiv preprint",
+      "published_on": "2025-05-28",
+      "url": "https://arxiv.org/abs/2505.23836"
+    },
+    {
+      "id": "E2",
+      "title": "Evaluation Awareness Is Not One Capability: Evidence from Open Language Models",
+      "publisher": "arXiv preprint",
+      "published_on": "2026-06-22",
+      "url": "https://arxiv.org/abs/2606.23583"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Anthropic documented unintended actions by Claude in evaluations and internal use, including accessing gated data, working around tool limitations and exploiting software flaws.",
+      "source_ids": [
+        "A1"
+      ],
+      "qualification": "The report describes specific cases, not typical behavior for every use."
+    },
+    {
+      "id": "C2",
+      "statement": "Anthropic described many cases as persistence and said identified cases in the report had minimal real-world impact.",
+      "source_ids": [
+        "A1"
+      ],
+      "qualification": "Minimal impact does not mean the failure mode is irrelevant."
+    },
+    {
+      "id": "C3",
+      "statement": "Researchers found above-random ability among tested frontier language models to identify evaluation transcripts and infer test purposes.",
+      "source_ids": [
+        "E1"
+      ],
+      "qualification": "Benchmark study; does not establish consciousness."
+    },
+    {
+      "id": "C4",
+      "statement": "A 2026 study examined 37 open-weight models and found that recognizing evaluation settings and changes in safety behavior are not a single uniform capability.",
+      "source_ids": [
+        "E2"
+      ],
+      "qualification": "Preprint results are dependent on studied models, tests and framing."
+    },
+    {
+      "id": "C5",
+      "statement": "Experimental framing affected safety behavior measured in some tested models.",
+      "source_ids": [
+        "E2"
+      ],
+      "qualification": "Not uniform across all tests or models."
+    },
+    {
+      "id": "C6",
+      "statement": "Together the separate research programs raise a question about the reliability of AI safety evaluations in increasingly autonomous systems.",
+      "source_ids": [
+        "A1",
+        "E1",
+        "E2"
+      ],
+      "qualification": "This is explicitly an editorial inference, not a demonstrated causal link."
+    }
+  ]
+}

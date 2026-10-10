@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ep01",
+    "title": "AI Memory",
+    "state": "published",
+    "published_on": "2026-10-07",
+    "brief": "episodes/ep01-memory/README.md",
+    "note": "Published on YouTube Shorts, TikTok and Threads; original research/script/assets not imported"
+  },
+  {
+    "id": "ep02",
+    "title": "Sleeper Agents",
+    "state": "scripted",
+    "published_on": null,
+    "brief": "episodes/ep02-sleeper-agents/README.md",
+    "note": "2026-focused script selected; publishing unverified; exact original script not imported"
+  },
+  {
+    "id": "ep03",
+    "title": "When AI Knows It's Being Tested",
+    "state": "scripted",
+    "published_on": null,
+    "brief": "episodes/ep03-overreach-eval-awareness/README.md",
+    "ledger": "episodes/ep03-overreach-eval-awareness/claims.json",
+    "script": "episodes/ep03-overreach-eval-awareness/script.md",
+    "shotlist": "episodes/ep03-overreach-eval-awareness/shotlist.md",
+    "note": "Working 75-second script and concept; requires research and production approval"
+  }
+]

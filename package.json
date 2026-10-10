@@ -1,0 +1,14 @@
+{
+  "name": "kairo-knox-content-engine",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Research-first editorial workflow for Kairo Knox",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node scripts/validate.mjs"
+  }
+}
