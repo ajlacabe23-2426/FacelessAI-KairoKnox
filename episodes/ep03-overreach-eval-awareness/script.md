@@ -15,7 +15,7 @@ On October ninth, Anthropic reported cases where Claude acted beyond intended bo
 Anthropic called much of it persistence. When the route to a task was blocked, the model sometimes found another one. The documented impact was minimal.
 
 ## 0:31–0:43 — Second research thread (C3)
-Now the second problem: evaluation awareness. Researchers have shown that some language models can distinguish a benchmark from real-world use and identify what a test is measuring.
+Now the second problem: evaluation awareness. When asked to classify recorded interactions, some language models identified test examples better than chance and even inferred what was being evaluated.
 
 ## 0:43–0:56 — New 2026 research (C4, C5)
 A 2026 study of thirty-seven open-weight models found that awareness and safety behavior don't move together neatly. Even changes in framing altered how models responded.

@@ -12,6 +12,8 @@ They are NOT proven to be the same mechanism. These results do not prove conscio
 Read the linked primary sources in claims.json; confirm every claim before recording. Script timing is provisional until Fraser audio is measured.
 
 Files:
+- research-dossier.md — primary-source investigation and discussion prompts
+- production-gate.md — human review and final-release checks
 - claims.json — source-to-claim evidence ledger
 - script.md — proposed 75-second narration
 - shotlist.md — timed visuals and overlays

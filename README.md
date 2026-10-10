@@ -12,7 +12,7 @@ Discover → Read primary sources → Map claims to evidence → Investigate lim
 
 ## Project layout
 - episodes/: individual episode records, claim ledgers, scripts, and shot plans
-- docs/: editorial research standards, brand guidance, safety practices and roadmap
+- docs/: editorial research standards, creator-led research workflow, brand guidance, safety practices and roadmap
 - templates/: repeatable research and episode worksheets
 - scripts/: structural validators
 - .github/workflows/: automated validation on pull requests
@@ -20,6 +20,6 @@ Discover → Read primary sources → Map claims to evidence → Investigate lim
 ## Human decisions are central
 The creator selects topics, reads and interprets source material, verifies consequential claims, approves the Kairo character reference and final editorial output, and publishes. Tool-assisted organization must never be mistaken for independently verified facts or permission to publish.
 
-Run npm run validate with Node.js 20+ to check metadata and evidence references. The checks DO NOT fact-check web sources.
+Start with docs/RESEARCH_WORKFLOW.md for a 30–45 minute original-source investigation. Episode 3 has a reviewer dossier and a release checklist. Run npm run validate with Node.js 20+ to check metadata and evidence references. The checks DO NOT fact-check web sources.
 
 **Privacy:** This repository was observed as PUBLIC on October 10, 2026. Keep credentials, unpublished master media, and personal data outside GitHub. This project is independent from Axiovela and other software projects.
