@@ -25,5 +25,16 @@
     "script": "episodes/ep03-overreach-eval-awareness/script.md",
     "shotlist": "episodes/ep03-overreach-eval-awareness/shotlist.md",
     "note": "Working 75-second script and concept; requires research and production approval"
+  },
+  {
+    "id": "ep11",
+    "title": "The AI That Reached a Robotic Arm",
+    "state": "researching",
+    "published_on": null,
+    "brief": "episodes/ep11-robot-arm-ot-lab/README.md",
+    "script": "episodes/ep11-robot-arm-ot-lab/script.md",
+    "shotlist": "episodes/ep11-robot-arm-ot-lab/shotlist.md",
+    "ledger": "episodes/ep11-robot-arm-ot-lab/claims.json",
+    "note": "Research-backed, unapproved, not voice-timed; no MP4 or ZIP; source limitations explicit"
   }
 ]
