@@ -10,6 +10,7 @@ Previous episodes have uploaded video assets and completed narration jobs. Reuse
 ## Credit preflight
 Fraser voice (preset voice ID 6705e465-7b52-5915-a1d8-b1222885e01d): new speech price quote = 6.7 credits. Quote only, not generated.
 One 8-second 9:16 Seedance 2.5 industrial B-roll clip: price quote = 56 credits. Quote only, not generated.
+Lower-cost alternative verified: Kling 3.0 Turbo, five-second 9:16 text-to-video clip = 7.5 credits each. Six clips would cost 45 credits plus 6.7 for Fraser narration = 51.7 credits before editing; this is a proposed authorization cap, not an order or guarantee of a completed short. Reuse existing Kairo motion clips as editorial breaks. New footage would be labeled illustrative and not presented as real research video.
 Balance when checked: 81.15 credits. One clip is not a complete 60–80 second film. Earlier credit approvals were for earlier episodes; new budget approval required.
 
 ## Video requirements
