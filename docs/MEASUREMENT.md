@@ -16,16 +16,18 @@ At approximately 24 hours, 48 hours and seven days (when provider data becomes a
 - Report unavailable metrics as **N/A**, not zero, and never mix views with reach in a denominator.
 
 ## Threads reporting per post
-Record topic bucket (documentation / open question / practical insight / occasional video), post date, views, replies, reposts, quotes, likes, profile visits if available, and meaningful follow-up conversations. Prefer **median views and median replies per original text post** over one viral outlier. Track replies written to others separately when possible.
+Record topic bucket (**Debate Drop** / documentation / practical insight / optional entertainment discussion / occasional video), post date, views, replies, reposts, quotes, likes, profile visits if available, and meaningful follow-up conversations. Prefer **median views and median replies per original text post** over one viral outlier. For debates, distinguish substantive comments and distinct viewpoints from low-effort reactions; note how often a debate creates a promising organic follow-up subject. Track replies written to others separately when possible. Never imply higher views prove a ranking algorithm favored debate.
 
 ## Two-week Threads pilot
-Hypothesis: original project documentation and good questions will be better matched to the existing account audience than repeated video announcements.
+Hypothesis: original project documentation and **short, good-faith Debate Drops** will be better matched to the existing account audience than repeated video announcements.
 1. For two weeks, publish 3–5 original text-led posts weekly using the content mix in PLATFORM_PLAYBOOK.md.
 2. Keep the Kairo auto-video crosspost OFF. A thoughtfully introduced clip is allowed only as a separately approved test.
-3. Log each post by type; respond to appropriate replies, and record any media or link inclusion.
+3. Log each post by type; compare Debate Drops against documentation and prior video announcements at comparable post ages; respond to appropriate replies, and record any media or link inclusion.
+3a. For debate posts, record the number of substantive replies, relevant alternative viewpoints, and whether the discussion revealed one clear researched follow-up question. Do not confuse heated arguments with healthy engagement.
 4. Compare median views and reply rates for the test groups with the previous comparable period, accounting for post age and small sample size.
 5. Review qualitative response (relevant questions, constructive discussion, technical credibility) before changing the mix.
 6. If data is insufficient, extend the test rather than make definitive claims.
+7. When a debate produces a useful follow-up, queue a **proposal** for a text update or occasional evidence-checked short video. No automatic topic-to-video conversion and no publishing without final review.
 
 ## Signal Cuts pilot
 - Release three distinct clips in spaced slots rather than the same day.
