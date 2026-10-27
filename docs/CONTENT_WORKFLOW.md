@@ -5,6 +5,7 @@ Version: 2026-10-27. Editorial policy; not an automatic publishing job.
 - **Core Episodes**: researched AI, technology, cybersecurity, robotics and societal implications.
 - **Micro Learning**: one practical, demonstrable, repeatable lesson for every two regular Core Episodes. Show meaningful inputs, outputs, limitations, and safety boundaries.
 - **Signal Cuts**: a distinct original editorial series linking AI with business, algorithms, advertising, investing concepts, entertainment and gaming, consumer behavior, economics, and society. Do not simply repost or repackage the same Kairo episode. Use source material only with appropriate rights and meaningful original commentary.
+- **Kairo Debate Drops (Threads-first)**: original 1–3 sentence prompts identifying meaningful tradeoffs in AI, entertainment, games, technology, marketing, business and society. These are text-led conversations, not another video quota. Valuable debates can inspire optional evidence-checked Threads-native video proposals, subject to review, source-rights and final publication approval.
 
 Maintain Kairo Knox's consistent masked analyst identity and established visual/audio language. Reuse approved assets first. Higgsfield may be used for approved production. Use established voice profiles as specified for an individual piece; no blanket permission to purchase credits.
 
@@ -28,7 +29,8 @@ Maintain Kairo Knox's consistent masked analyst identity and established visual/
 - Produce in batches independently of distribution. Production capacity must not force publishing frequency.
 - Prioritize the limited Metricool monthly posting allowance for high-value releases. Never schedule merely to occupy an open slot.
 - Proposed Signal Cuts pilot windows (America/Chicago, NOT scheduled): **Oct 30 at 10:00 AM; Nov 4 at 6:00 PM; Nov 9 at 10:00 AM**. Move a window if a Core Episode or Micro Learning would collide or final review is incomplete.
-- Threads follows a **separate conversation-first calendar** described in PLATFORM_PLAYBOOK.md. Do not auto-crosspost videos to Threads.
+- Threads follows a **separate conversation-first calendar** described in PLATFORM_PLAYBOOK.md: roughly two Debate Drops, a verifiable build log, and a practical insight per week, with occasional additional conversation if warranted. Do not auto-crosspost videos to Threads.
+- Debate responses may inform a **research and pitch queue**, never an automated production or publication action. A Threads-native video derived from a discussion requires up-to-date evidence checks, rights clearance, the established review-cut gate, and final user approval.
 - Publication remains subject to the user's final approval for each video and post.
 
 ## Preflight quality checklist
