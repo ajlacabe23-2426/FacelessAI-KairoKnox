@@ -1,0 +1,7 @@
+# Private reports and experiment inputs
+.content-agent/
+**/.DS_Store
+*.env
+.env*
+!*.env.example
+node_modules/
