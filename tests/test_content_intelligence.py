@@ -118,6 +118,9 @@ class KairoEngineTests(unittest.TestCase):
     def test_trial_needs_manual_evidence(self):
         exp = experiment()
         exp["status"] = "reviewed"
+        exp["min_views"] = 100
+        exp["pass_rule"] = {"metric": "saves_per_1000_views", "minimum_lift_fraction": 0.10,
+                            "benchmark_minimum": 10.0}
         exp["trials"] = [
             {"role": role, "platform_post_id": role, "url": "https://www.instagram.com/reel/" + role,
              "url_verified": True, "published_at": moment(24),
@@ -126,9 +129,8 @@ class KairoEngineTests(unittest.TestCase):
         ]
         self.assertEqual(trial_review(exp)["next_status"], "trial")
         exp["status"] = "trial"
-        exp["min_views"] = 100
-        exp["pass_rule"] = {"metric": "saves_per_1000_views", "minimum_lift_fraction": 0.10}
         self.assertEqual(trial_review(exp)["next_status"], "trial")
+        self.assertEqual(trial_review(exp)["comparison"]["recommended"], "control")
         exp["sharing_decision"] = "share_neither"
         self.assertEqual(trial_review(exp)["next_status"], "closed")
 
@@ -146,6 +148,23 @@ class KairoEngineTests(unittest.TestCase):
         week2 = learning_session(archive, again["lessons"], "2026-W45", now + timedelta(days=7))
         self.assertEqual(len(week2["lessons"][0]["confirmations"]), 1)
         self.assertEqual(week2["lessons"][0]["status"], "hunch")
+
+    def test_trial_benchmark_is_mandatory_before_posting(self):
+        exp = experiment()
+        exp["status"] = "reviewed"
+        exp["trials"] = [
+            {"role": role, "platform_post_id": role, "url": "https://www.instagram.com/reel/" + role,
+             "url_verified": True, "published_at": moment(24)}
+            for role in ("control", "test")
+        ]
+        self.assertEqual(trial_review(exp)["next_status"], "reviewed")
+
+    def test_postmortem_aligns_actual_words_and_screens(self):
+        report = post_mortem(experiment(), [], datetime(2026, 10, 29, tzinfo=timezone.utc))
+        aligned = report["variants"][0]["aligned_windows"]
+        self.assertEqual(aligned[0]["speech"][0]["exact_words"], "Complete verified transcript")
+        self.assertFalse(aligned[0]["cause_verified"])
+        self.assertEqual(aligned[0]["start"], 0)
 
     def test_sibling_cuts_group_once(self):
         a, b = archive_video(1, True), archive_video(2, False)
