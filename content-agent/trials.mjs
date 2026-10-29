@@ -1,5 +1,5 @@
 // Descript handoff and Instagram Trial Reels lifecycle. Never connects or publishes autonomously.
-import {ratePerThousand,validateSegments} from "./analysis.mjs";
+import {ratePerThousand,validateSegments,validateSourceMap} from "./analysis.mjs";
 const finite=x=>typeof x==="number"&&Number.isFinite(x);
 const hasUrl=u=>typeof u==="string"&&/^https:\/\/(?:www\.)?instagram\.com\/reel\/[A-Za-z0-9_-]+\/?(?:\?.*)?$/.test(u);
 const fail=s=>{throw new Error(s);};
@@ -17,7 +17,9 @@ export function prepareTrial(experiment,{control=null,test=null,comparison=null}
   if(experiment.status==="closed")fail("Closed experiments cannot be reused");
   if(experiment.status!=="reviewed")fail("Only reviewed experiments may be prepared for an edit trial");
   if(!Array.isArray(experiment.variants)||experiment.variants.length!==2)fail("Exactly two verified sibling source variants needed");
-  if(experiment.variants.some(v=>v.media_verified!==true||v.source_map_verified!==true))fail("Both source files and source-to-cut maps must be verified");
+  if(experiment.variants.some(v=>v.media_verified!==true||v.source_map_verified!==true||!v.source_file_id||
+    !validateSourceMap(v.duration_seconds,v.source_duration_seconds,v.source_time_map).complete))
+    fail("Both source files and explicit original-to-cut time maps must be verified");
   const notes=experiment.variants.flatMap(v=>(v.edit_notes||[]).filter(n=>n.action==="CHANGE"||n.action==="CUT").map(n=>({...n,variant_id:v.variant_id})));
   for(const note of notes){
     if(!finite(note.start)||!finite(note.end)||note.start<0||note.end<=note.start||!["EDIT-ONLY","RE-RECORD"].includes(note.method))fail("Edit notes require exact timestamps and edit method");
