@@ -28,6 +28,7 @@ export function prepareTrial(experiment,{control=null,test=null,comparison=null}
     finite(comparison.minimum_views)&&comparison.minimum_views>0&&
     ["test_higher_retention","test_higher_saves_per_1000"].includes(comparison.pass_rule);
   return {experiment_id:experiment.experiment_id,status:"reviewed",
+    trial_state_patch:{compositions:comp,comparison:validComparison?comparison:null,ready_for_private_trial:comp.control.verified&&comp.test.verified&&!!validComparison},
     proposed_edit_notes:notes,recording_list:notes.filter(n=>n.method==="RE-RECORD").map(n=>({start:n.start,end:n.end,existing_words:n.words,instruction:n.instruction??null})),
     compositions:comp,comparison:validComparison?comparison:null,
     ready_for_private_trial:comp.control.verified&&comp.test.verified&&!!validComparison,
@@ -45,11 +46,12 @@ export function registerTrialPosts(experiment,{control_url=null,test_url=null,co
   const trial=getTrial(experiment);
   const urls={control_url:control_url??trial.control_url??null,test_url:test_url??trial.test_url??null};
   const ids={control_post_id:control_post_id??trial.control_post_id??null,test_post_id:test_post_id??trial.test_post_id??null};
-  const both=hasUrl(urls.control_url)&&hasUrl(urls.test_url)&&urls.control_url!==urls.test_url&&
+  const prepared=!!trial.comparison&&trial.compositions?.control?.verified===true&&trial.compositions?.test?.verified===true;
+  const both=prepared&&hasUrl(urls.control_url)&&hasUrl(urls.test_url)&&urls.control_url!==urls.test_url&&
     !!ids.control_post_id&&!!ids.test_post_id&&ids.control_post_id!==ids.test_post_id;
   // URLs are user-provided records, not independently verified against Instagram.
   return {...experiment,status:both?"trial":"reviewed",trial:{...trial,...urls,...ids,
-    urls_recorded:both,provider_verified:false},blocking_reason:both?null:"two distinct Instagram trial URLs and post IDs required"};
+    urls_recorded:both,provider_verified:false},blocking_reason:both?null:prepared?"two distinct Instagram trial URLs and post IDs required":"verified Descript compositions and predeclared comparison required"};
 }
 export function recordTrialObservation(experiment,{variant,observation}){
   if(experiment?.status!=="trial")fail("Trial must be in trial state");
