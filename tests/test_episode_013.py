@@ -30,9 +30,23 @@ class Episode013PreproductionTests(unittest.TestCase):
         b = BRIEF.read_text(encoding="utf-8").lower()
         self.assertIn("illustrative recreation", s)
         self.assertIn("not live", s)
-        self.assertIn("99", s)
-        self.assertIn("no video", b)
-        self.assertIn("not every", b)
+        self.assertIn("75", s)
+        self.assertIn("$29.99", s)
+        self.assertIn("$359+", s)
+        self.assertIn("i love hiking", s)
+        self.assertNotIn("99 percentage points", s)
+        self.assertIn("no media rendering", b)
+        self.assertIn("other models behaved differently", b)
+
+    def test_character_mix_and_approved_story_persist(self):
+        pitch = json.loads(PITCH.read_text(encoding="utf-8"))
+        self.assertEqual(pitch["personality_profile"]["mysterious_investigator_pct"], 45)
+        self.assertEqual(pitch["personality_profile"]["witty_tech_analyst_pct"], 55)
+        experiment = json.loads((ROOT / "episodes" / "013" / "PLANNED_EXPERIMENT.json").read_text(encoding="utf-8"))
+        self.assertEqual(experiment["status"], "planned")
+        self.assertEqual(experiment["personality_mix"]["witty_analyst_pct"], 55)
+        self.assertEqual(len({v["variant_id"] for v in experiment["variants"]}), 2)
+        self.assertTrue(all(v["platform_post_id"] is None for v in experiment["variants"]))
 
 
 if __name__ == "__main__":
