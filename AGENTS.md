@@ -6,6 +6,7 @@ When working in this repository, read docs/CONTENT_INTELLIGENCE.md and prompts/K
 
 ## Required order
 1. **Creative Director:** pitch two distinct truthful openings, an accessible human-world problem, actual visual demonstration, credible teaching payoff, optional genuine humor, then rate seven criteria and obtain production approval.
+   - **Kairo standing on-screen voice and behavior (approved Oct 29, 2026): 45% mysterious investigator, 55% witty tech analyst.** Use sharp conversational transitions, grounded curiosity, restrained sarcastic observations and genuine viewer stakes; do not make 55% of words jokes. Preserve mask, visual identity, voice continuity, accuracy and humility. Each episode must have a visually observable payoff and a practical teaching payoff.
 2. **Produce/review privately:** original or properly cleared media; preserve masked Kairo identity; inspect finished playable media, transcript, visual continuity, rights and source labels.
 3. **Post-mortem:** only from actual published IDs, real time maps, dated native analytics and observed retention; label missing data and distinguish correlation from causation.
 4. **Edit/trial:** use Descript connected project only when originals exist and their IDs can be verified. Reuse exact composition IDs. No automatic social posting or public sharing. Record predeclared trial rule and user decisions.
