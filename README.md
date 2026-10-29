@@ -7,6 +7,7 @@ Kairo Knox: original short-form storytelling, practical Micro Learning, and Sign
 - [Production, approval and publishing workflow](docs/CONTENT_WORKFLOW.md)
 - [Platform playbook — including Threads discussion/documentation strategy](docs/PLATFORM_PLAYBOOK.md)
 - [Measurement and two-week audience experiment](docs/MEASUREMENT.md)
+- [Retention audit and editorial remediation — October 29, 2026](docs/RETENTION_REMEDIATION_2026-10-29.md)
 - [Reusable post/script templates](templates/POST_TEMPLATES.md)
 - [Blank release log](templates/RELEASE_LOG.csv)
 
