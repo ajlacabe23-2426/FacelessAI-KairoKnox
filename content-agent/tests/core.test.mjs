@@ -82,9 +82,12 @@ test("trial control requires review, two verified compositions and specified com
  const result=prepareTrial({experiment_id:"E1",status:"reviewed",variants:[v("A"),v("B")]});
  assert.equal(result.ready_for_private_trial,false);
  assert.equal(result.blockers.length,3);
+ const unprepared=registerTrialPosts({experiment_id:"E2",status:"reviewed",trial:{comparison:{comparison_age_hours:24,minimum_views:1000,pass_rule:"test_higher_retention"}}},
+  {control_url:"https://www.instagram.com/reel/first/",control_post_id:"first",test_url:"https://www.instagram.com/reel/second/",test_post_id:"second"});
+ assert.equal(unprepared.status,"reviewed");
 });
 test("trial URLs, dated paired insights, comparison and explicit human closure",()=>{
- const e={experiment_id:"E1",status:"reviewed",trial:{comparison:{comparison_age_hours:24,
+ const e={experiment_id:"E1",status:"reviewed",trial:{compositions:{control:{verified:true},test:{verified:true}},comparison:{comparison_age_hours:24,
   age_tolerance_hours:1,minimum_views:1000,pass_rule:"test_higher_retention",minimum_improvement:0}}};
  const partial=registerTrialPosts(e,{control_url:"https://www.instagram.com/reel/one/",control_post_id:"one"});
  assert.equal(partial.status,"reviewed");
