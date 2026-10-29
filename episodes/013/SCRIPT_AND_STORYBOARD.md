@@ -63,7 +63,7 @@
 - Visual hierarchy: money / decision / memory / evidence / advice. No meaningless neon establishing shots.
 - Final image and audio checks: readable mobile text, source labels, accurate captions, consistent Kairo mask and clothing, clean voice mix, no broken frames.
 - Real MP4 and ZIP must be verified before user final approval and any publishing.
-- No claims of Descript compositions, final rendered video, or verified runtime before actual media exists.
+- A locally rendered full-length *visual workprint* exists and its H.264/AAC file characteristics were verified using ffprobe. No Descript composition, Fraser narration, final completed voice/video package or verified source-to-cut map exists yet.
 
 **Sources**
 - https://gail.wharton.upenn.edu/research-and-insights/technical-report-agentic-shopping/
