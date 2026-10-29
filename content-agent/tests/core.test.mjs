@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {percentileContinuous,ratePerThousand,validateSegments,threeSecondWindows,postMortem,featureContrast} from "../analysis.mjs";
+import {percentileContinuous,ratePerThousand,validateSegments,validateSourceMap,threeSecondWindows,postMortem,featureContrast} from "../analysis.mjs";
 import {creativeDirector} from "../creative.mjs";
 import {eligibleLearningManifest,executeInstrument,learningSession} from "../learning.mjs";
 import {prepareTrial,registerTrialPosts,recordTrialObservation,evaluateTrial,closeTrial} from "../trials.mjs";
@@ -9,7 +9,9 @@ const obs=(post,views=1200,extra={})=>({source:"test",source_timestamp:"2026-10-
  published_at:"2026-10-26T12:00:00Z",platform:"instagram",post_id:post,distribution_period:"2026-10",
  views,saves:12,shares:3,avg_percent_viewed:.4,retention:[{second:0,retained:1},{second:3,retained:.7},{second:10,retained:.35}],...extra});
 const v=(id,extra={})=>({variant_id:id,platform_post_id:id,post_url:"https://www.instagram.com/reel/"+id+"/",
- duration_seconds:3.25,media_verified:true,source_map_verified:true,
+ duration_seconds:3.25,source_duration_seconds:10,source_file_id:"master.mov",
+ source_time_map:[{cut_start:0,cut_end:3.25,source_start:1,source_end:4.25}],
+ media_verified:true,source_map_verified:true,
  speech_segments:[{start:0,end:3.25}],screen_segments:[{start:0,end:3.25}],
  observations:[obs(id)],...extra});
 test("paired saves/views, null unknown and linear interpolated percentile",()=>{
@@ -23,9 +25,14 @@ test("fractional final-second coverage is mandatory",()=>{
  assert.deepEqual(validateSegments(3.25,[{start:0,end:3}]).gaps,[{start:3,end:3.25}]);
  assert.equal(validateSegments(3.25,[{start:0,end:3.25}]).complete,true);
 });
+test("explicit cut-to-source map cannot be inferred and covers fractional last second",()=>{
+ assert.equal(validateSourceMap(3.25,10,[]).complete,false);
+ assert.equal(validateSourceMap(3.25,10,[{cut_start:0,cut_end:3,source_start:0,source_end:3}]).complete,false);
+ assert.equal(validateSourceMap(3.25,10,[{cut_start:0,cut_end:3.25,source_start:1,source_end:4.25}]).complete,true);
+});
 test("retention gaps remain unknown and no artificial interpolation",()=>{
  const w=threeSecondWindows([{second:0,retained:1},{second:3,retained:.7}],4);
- assert.equal(w.valid.length,1); assert.equal(w.valid[0].relative_loss,.3);
+ assert.equal(w.valid.length,1); assert.ok(Math.abs(w.valid[0].relative_loss-.3)<1e-10);
  assert.equal(w.missing.length,1);assert.equal(w.missing[0].start,1);
 });
 test("postmortem never advances incomplete media",()=>{
