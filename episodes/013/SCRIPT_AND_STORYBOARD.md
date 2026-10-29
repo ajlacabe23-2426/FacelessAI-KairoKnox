@@ -3,7 +3,7 @@
 **Target:** ~39–44 seconds, pending *actual* Fraser narration timing. 9:16 1080×1920, 30fps.
 **Character:** 45% mysterious investigator / 55% witty tech analyst. Sarcasm is a flourish; evidence is the spine.
 **Format:** Story mystery → three-word memory reveal → measurable research result → humorous reversal → practical shopping prompt.
-**Status:** Human concept approved; actual production and posting NOT approved. Timecodes are proposed, not observed; no existing source-to-cut map yet.
+**Status:** Human concept approved. A **43.2s 1080×1920 18fps private motion workprint** now exists with original audio bed, full-scene editorial captions and a saved Kairo image. The user must still review the workprint and a correct Fraser narration must be mixed and re-timed. **This file is not the final Kairo episode, has no verified source-to-cut map for Descript and was not posted.**
 
 ## Revised original voiceover (v2, not yet voiced)
 > Thirty dollars. Five stars.
