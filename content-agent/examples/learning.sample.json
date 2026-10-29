@@ -1,0 +1,21 @@
+{
+  "now": "2026-10-29T12:00:00Z",
+  "lessons": [
+    {
+      "lesson_id": "SYNTHETIC-LESSON-001",
+      "claim": "A visible first-frame outcome may be associated with longer watch through second 10.",
+      "instrument": {
+        "feature": "visible_outcome",
+        "metric": "retention_at_10",
+        "platform": "instagram",
+        "distribution_period": "2026-10",
+        "expected_direction": "higher"
+      },
+      "status": "hunch",
+      "created_at": "2026-10-29T12:00:00Z",
+      "confirmations": [],
+      "history": []
+    }
+  ],
+  "posts": []
+}

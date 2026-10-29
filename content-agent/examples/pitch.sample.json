@@ -1,0 +1,33 @@
+{
+  "id": "SYNTHETIC-PITCH-001",
+  "audience": "People who use social feeds",
+  "human_stakes": "Why one unusual pause can affect what gets recommended",
+  "topic": "Simplified recommendation ranking",
+  "hook_consequence": "One pause changed this made-up feed",
+  "hook_prediction": "Can a pause change what comes next?",
+  "evidence": "Show an ORIGINAL simulated ranking score that changes after a sample pause; label ILLUSTRATIVE MODEL",
+  "observable_result": "The sample feed changes between two different actions, with limits stated",
+  "lesson": "One behavior is a signal, not a complete description of a person",
+  "visual_plan": "First frame: two different illustrated feeds side by side; next frame: score animation",
+  "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+  ],
+  "hypothesis": "A visible first-frame consequence increases retention at second 10",
+  "sources": [],
+  "scores": {
+    "hook": 2,
+    "relevance": 2,
+    "payoff": 2,
+    "teaching": 2,
+    "personality": 1,
+    "visual_evidence": 2,
+    "distribution": 2
+  },
+  "fabricated_claims": false,
+  "unlicensed_assets": false,
+  "private_data": false,
+  "unsafe_demonstration": false,
+  "auto_publish": false
+}

@@ -1,0 +1,23 @@
+name: Kairo Content Agent Tests
+on:
+  pull_request:
+    paths:
+      - 'content-agent/**'
+      - '.github/workflows/content-agent-test.yml'
+  push:
+    branches:
+      - 'editorial/**'
+    paths:
+      - 'content-agent/**'
+      - '.github/workflows/content-agent-test.yml'
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node --test content-agent/tests/*.test.mjs
