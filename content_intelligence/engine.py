@@ -79,6 +79,8 @@ def verify_variant(variant):
         errors.append("verified post ID and HTTPS URL needed")
     if not variant.get("post_url_verified", False):
         errors.append("post URL has not been verified")
+    if not variant.get("published_at") or not variant.get("distribution_period"):
+        errors.append("publication time and distribution period required")
     return {"complete": not errors, "errors": errors, "coverage": parts}
 
 
@@ -282,6 +284,11 @@ def trial_review(experiment):
         if not entry.get("platform_post_id") or not valid_url(entry.get("url")) or not entry.get("url_verified") or not entry.get("published_at"):
             return {"next_status": status, "reason": "Both manually posted trial URLs and platform IDs require verification"}
     if status == "reviewed":
+        rule = experiment.get("pass_rule") or {}
+        if (experiment.get("min_views") is None or experiment.get("comparison_age_hours") is None
+                or rule.get("metric") not in ("saves_per_1000_views", "avg_watch_seconds", "shares")
+                or not isinstance(rule.get("benchmark_minimum"), (int, float))):
+            return {"next_status": "reviewed", "reason": "Predeclare comparison age, minimum views and own-history pass rule before trial posts"}
         return {"next_status": "trial", "reason": "Both trial posts verified; awaiting comparable metrics"}
     if status == "closed":
         return {"next_status": "closed", "reason": "Immutable closed experiment"}
