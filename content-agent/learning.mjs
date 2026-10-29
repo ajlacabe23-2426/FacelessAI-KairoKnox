@@ -82,7 +82,8 @@ export function learningSession({lessons=[],posts=[],now=new Date().toISOString(
         status="weakened"; action="counterevidence observed";
       } else action="no independent new observations";
     }
-    if(!["weakened","stale"].includes(status))status=original.confirmations.length>=3?"settled":original.confirmations.length>=2?"likely":"hunch";
+    if(action==="confirmed with new observations")status=original.confirmations.length>=3?"settled":original.confirmations.length>=2?"likely":"hunch";
+    else if(!["weakened","stale"].includes(status))status=original.confirmations.length>=3?"settled":original.confirmations.length>=2?"likely":"hunch";
     if(!sameWeek) original.history.push({week:reportWeek,at:now,status,action,analysis:result});
     original.status=status;original.last_tested_at=now;
     updates.push(original);
