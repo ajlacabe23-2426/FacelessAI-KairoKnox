@@ -9,6 +9,9 @@ Version: 2026-10-27. Editorial policy; not an automatic publishing job.
 
 Maintain Kairo Knox's consistent masked analyst identity and established visual/audio language. Reuse approved assets first. Higgsfield may be used for approved production. Use established voice profiles as specified for an individual piece; no blanket permission to purchase credits.
 
+## Retention-first creative gate (pilot)
+Before stage 3 script approval, use [Creator-Informed Production Standard](CREATOR_INSPIRED_PRODUCTION_STANDARD.md): compare a consequence-first and prediction-first hook, demonstrate a real or clearly labeled illustrative mechanism, deliver the promised takeaway, and include humor only where accurate and natural. Every script gets an evidence/rights check, a 14-point quality rubric and a platform-specific measurement hypothesis. This pilot does not constitute automatic production or final user approval.
+
 ## Mandatory stage gates
 1. **Discover & pitch**: topic, intended viewer, one-sentence claim, audience benefit, format, evidence plan.
 2. **Evidence & rights**: verify all factual assertions using trustworthy sources, distinguish reported results from independently validated results, capture source URLs and publication dates, confirm rights/permissions for any outside video, audio, logos and images. Credit sources where appropriate. A transformation or attribution alone does not automatically confer rights.
