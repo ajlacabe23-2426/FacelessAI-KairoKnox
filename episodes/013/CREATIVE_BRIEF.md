@@ -18,7 +18,7 @@
 **PRIMARY SOURCE:** Wharton Generative AI Labs, *Agentic Shopping is Complicated and Contingent*, August 27, 2026.
 https://gail.wharton.upenn.edu/research-and-insights/technical-report-agentic-shopping/
 
-Researchers simulated approximately 26,000 AI shopping test runs with six frontier models in several conditions. Agents chose from a screenshot of an **eight-fitness-watch** product grid. Depending on the experimental condition, models first received outside source screenshots (including reviews), other sources and their order, injected user memory, or distinct tool-call delivery formats. In one single-source condition a model's choice of the source-recommended product changed by **+99 percentage points**, but findings varied substantially by model.
+Researchers simulated approximately 26,000 AI shopping test runs with six frontier models in several conditions. Agents chose from a screenshot of an **eight-fitness-watch** product grid. Depending on the experimental condition, models first received outside source screenshots (including reviews), other sources and their order, injected user memory, or distinct tool-call delivery formats. In one single-source condition a model's choice of the source-recommended product changed by **+99 percentage points**, but findings varied substantially by model. **Not every model** changed its preferred product, and the result is not a universal AI-shopping behavior.
 
 **Secondary source / context:** Wharton AI & Analytics Initiative, *Your AI Shopping Agent Is Less Consistent Than You Think*.
 https://ai-analytics.wharton.upenn.edu/insights/your-ai-shopping-agent-is-less-consistent-than-you-think/
