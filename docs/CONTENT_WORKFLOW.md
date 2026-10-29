@@ -12,6 +12,12 @@ Maintain Kairo Knox's consistent masked analyst identity and established visual/
 ## Retention-first creative gate (pilot)
 Before stage 3 script approval, use [Creator-Informed Production Standard](CREATOR_INSPIRED_PRODUCTION_STANDARD.md): compare a consequence-first and prediction-first hook, demonstrate a real or clearly labeled illustrative mechanism, deliver the promised takeaway, and include humor only where accurate and natural. Every script gets an evidence/rights check, a 14-point quality rubric and a platform-specific measurement hypothesis. This pilot does not constitute automatic production or final user approval.
 
+## Selected content intelligence gates (implementation branch)
+- **Kairo Creative Director:** use the offline creative rubric before spending video credits; hook, human relevance, payoff, meaningful visuals, teachability and platform packaging must be reviewed. See ../content-agent/README.md.
+- **Post-mortem:** only compare timestamped observed retention and dated analytics; no missing-seconds interpolation. Full speech, screen and explicit source time map coverage are prerequisites for a reviewed experiment.
+- **Learning:** retest saved hypotheses with independently labeled evidence across later weeks; weak results remain hunches, never invented proof.
+- **Descript/Instagram trials:** generate private edit and recording plans, verify both Descript compositions, obtain separate final approval and manual posted URLs, then decide against the predeclared comparison. No automatic publishing. The Descript connection and original media are prerequisites for actual compositions.
+
 ## Mandatory stage gates
 1. **Discover & pitch**: topic, intended viewer, one-sentence claim, audience benefit, format, evidence plan.
 2. **Evidence & rights**: verify all factual assertions using trustworthy sources, distinguish reported results from independently validated results, capture source URLs and publication dates, confirm rights/permissions for any outside video, audio, logos and images. Credit sources where appropriate. A transformation or attribution alone does not automatically confer rights.
