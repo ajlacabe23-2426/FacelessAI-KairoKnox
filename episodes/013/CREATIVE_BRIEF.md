@@ -3,7 +3,7 @@
 **Series:** Beneath the System (Core) | **Date:** 2026-10-29
 **Concept approval:** The user selected the hiking-memory / $29.99-vs-$359+ watch storyline on October 29, 2026.
 **Personality mix:** **45% mysterious investigator (A) / 55% witty tech analyst (B)**. This is a creative tone target, not a literal joke-count or stopwatch ratio.
-**Status:** Story and tone approved; script, timed storyboard, edit package and rights still in review. NO media rendering, paid credits, public distribution or final video approval.
+**Status:** Story/tone approved; **43.2s full-length visual workprint rendered privately** on October 29, 2026, with original nonverbal soundtrack, original watch graphics and a previously saved Kairo reference image. **Fraser voiceover is NOT included; this is not the final episode.** No Higgsfield credits were spent and nothing was published.
 
 ## Promise to a first-time viewer
 *A three-word memory changed what some AI shopping agents recommended—even when one watch was cheaper and higher rated. Why? And how do you avoid getting upsold by an unspoken assumption?*
