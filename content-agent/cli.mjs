@@ -2,7 +2,7 @@
 // Offline-only CLI for selected Kairo Content Agent capabilities (#3, #4, #5, Creative Director).
 // No browser, credentials, API calls, analytics collection, or automated publication.
 import {readFile,mkdir,writeFile,rename} from "node:fs/promises";
-import {dirname,resolve} from "node:path";
+import {dirname,resolve,relative,isAbsolute} from "node:path";
 import {creativeDirector} from "./creative.mjs";
 import {postMortem} from "./analysis.mjs";
 import {learningSession} from "./learning.mjs";
@@ -42,7 +42,9 @@ else{
       const file=resolve(flags[outIndex+1]);
       // Production reports stay under the git-ignored private directory.
       const privateDir=resolve(".content-agent");
-      if(file!==privateDir && !file.startsWith(privateDir+"/"))throw new Error("Output must stay inside .content-agent/");
+      const rel=relative(privateDir,file);
+      const outside=rel===".."||rel.startsWith(".."+(process.platform==="win32"?"\\":"/"))||isAbsolute(rel);
+      if(!rel||outside)throw new Error("Output must stay inside .content-agent/");
       await mkdir(dirname(file),{recursive:true,mode:0o700});
       const tmp=file+".tmp-"+process.pid;
       await writeFile(tmp,result,{mode:0o600});
