@@ -5,6 +5,7 @@ Kairo Knox: original short-form storytelling, practical Micro Learning, and Sign
 ## Editorial operations
 
 - [Production, approval and publishing workflow](docs/CONTENT_WORKFLOW.md)
+- [**Executable Content Intelligence: Creative Director, post-mortem, edit trials, weekly learning**](docs/CONTENT_INTELLIGENCE.md)
 - [Platform playbook — including Threads discussion/documentation strategy](docs/PLATFORM_PLAYBOOK.md)
 - [Measurement and two-week audience experiment](docs/MEASUREMENT.md)
 - [Reusable post/script templates](templates/POST_TEMPLATES.md)
