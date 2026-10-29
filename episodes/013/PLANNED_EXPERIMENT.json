@@ -1,0 +1,61 @@
+{
+  "experiment_id": "KK-EP013-OPENING-20261029-01",
+  "parent_experiment_id": null,
+  "status": "planned",
+  "objective": "Compare a visible price-consequence opening against a three-word prediction opening, retaining the same hiking-memory evidence, duration and practical lesson; prioritize real early retention when available",
+  "decision_rule": null,
+  "comparison_age_hours": 48,
+  "min_views": null,
+  "platform": "instagram",
+  "distribution_period": null,
+  "hypothesis": "Showing the $29.99/$359+ consequence first will create a faster, more relatable curiosity gap than first asking about the memory. This is unproven and requires comparable posts and observed metrics.",
+  "variants": [
+    {
+      "variant_id": "KK-EP013-A",
+      "role": "control",
+      "opening": "Thirty dollars. Five stars. Yet some AI shopping agents chose a watch costing at least three-fifty-nine.",
+      "source_file": null,
+      "source_map_verified": false,
+      "media_verified": false,
+      "platform_post_id": null,
+      "post_url": null,
+      "post_url_verified": false,
+      "published_at": null,
+      "duration_seconds": null,
+      "speech": [],
+      "screens": [],
+      "time_map": [],
+      "observations": [],
+      "topic_version": "hiking-memory v2"
+    },
+    {
+      "variant_id": "KK-EP013-B",
+      "role": "test",
+      "opening": "Can three words convince an AI to recommend a $359 watch over a $30 one?",
+      "source_file": null,
+      "source_map_verified": false,
+      "media_verified": false,
+      "platform_post_id": null,
+      "post_url": null,
+      "post_url_verified": false,
+      "published_at": null,
+      "duration_seconds": null,
+      "speech": [],
+      "screens": [],
+      "time_map": [],
+      "observations": [],
+      "topic_version": "hiking-memory v2"
+    }
+  ],
+  "pending_decisions": [
+    "Review revised script and preliminary visual prototype before narration or paid image/video generation",
+    "Verify platform experiment support and choose a comparable, predeclared success rule",
+    "Create the alternate B cut only after a verified A master and explicit experiment approval",
+    "User must review playable final MP4/ZIP and approve any social publication"
+  ],
+  "story_concept_approved_at": "2026-10-29",
+  "personality_mix": {
+    "investigator_pct": 45,
+    "witty_analyst_pct": 55
+  }
+}
