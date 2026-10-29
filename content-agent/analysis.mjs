@@ -34,6 +34,23 @@ export function validateSegments(duration,segments) {
   if(cursor<duration-1e-7)gaps.push({start:cursor,end:duration});
   return {complete:gaps.length===0,gaps,covered_seconds:duration-gaps.reduce((s,g)=>s+g.end-g.start,0)};
 }
+// Explicit, verified source-to-cut temporal map. This validates structure, not footage identity.
+export function validateSourceMap(duration,sourceDuration,map) {
+  if(!isNum(sourceDuration)||sourceDuration<=0||!Array.isArray(map)||!map.length)
+    return {complete:false,reason:"Explicit original source duration and cut mapping required",gaps:[{start:0,end:duration}]};
+  const items=[...map].sort((a,b)=>a.cut_start-b.cut_start);
+  for(let i=0;i<items.length;i++){
+    const s=items[i];
+    if(![s.cut_start,s.cut_end,s.source_start,s.source_end].every(isNum) ||
+       s.cut_start<0||s.cut_end<=s.cut_start||s.cut_end>duration+1e-7||
+       s.source_start<0||s.source_end<=s.source_start||s.source_end>sourceDuration+1e-7||
+       !approx(s.cut_end-s.cut_start,s.source_end-s.source_start) ||
+       (i>0&&s.cut_start<items[i-1].cut_end-1e-7))
+       return {complete:false,reason:"Invalid or overlapping original-to-cut time map",gaps:[]};
+  }
+  const coverage=validateSegments(duration,items.map(s=>({start:s.cut_start,end:s.cut_end})));
+  return {...coverage,source_duration_seconds:sourceDuration};
+}
 export function threeSecondWindows(retention,duration) {
   if(!isNum(duration)||duration<3)return {valid:[],missing:[],note:"Clip shorter than three seconds"};
   const map=new Map((retention||[]).filter(p=>isNum(p.second)&&isNum(p.retained)&&p.retained>=0&&p.retained<=1).map(p=>[Number(p.second.toFixed(6)),p.retained]));
@@ -94,6 +111,8 @@ export function postMortem({experiment,archive=[],now=new Date().toISOString()})
   for(const v of experiment.variants){
     if(!v.variant_id||!v.platform_post_id||!v.post_url)problems.push({variant:v.variant_id??null,issue:"missing assigned ID or published URL"});
     if(v.media_verified!==true||v.source_map_verified!==true)problems.push({variant:v.variant_id,issue:"media or original-to-cut map unverified"});
+    const sourceMap=validateSourceMap(v.duration_seconds,v.source_duration_seconds,v.source_time_map);
+    if(!v.source_file_id||!sourceMap.complete)problems.push({variant:v.variant_id,issue:"explicit original-to-cut time map incomplete",gaps:sourceMap.gaps,reason:sourceMap.reason??null});
     const speech=validateSegments(v.duration_seconds,v.speech_segments);
     const screen=validateSegments(v.duration_seconds,v.screen_segments);
     if(!speech.complete)problems.push({variant:v.variant_id,issue:"speech coverage incomplete",gaps:speech.gaps});
@@ -102,11 +121,12 @@ export function postMortem({experiment,archive=[],now=new Date().toISOString()})
     if(!o)problems.push({variant:v.variant_id,issue:"metrics unavailable"});
     const windows=threeSecondWindows(o?.retention??[],v.duration_seconds);
     variants.push({variant_id:v.variant_id,platform_post_id:v.platform_post_id??null,
-      speech_coverage:speech,screen_coverage:screen,
+      source_map_coverage:sourceMap,speech_coverage:speech,screen_coverage:screen,
       metrics:describeObservation(o),retention_windows:windows,
       edit_notes:(v.edit_notes||[]).map(n=>{
         if(!["KEEP","CHANGE","CUT"].includes(n.action)||!isNum(n.start)||!isNum(n.end)||n.start<0||n.end>v.duration_seconds||n.end<=n.start)err("Edit notes require exact timestamps and KEEP / CHANGE / CUT");
         if(n.action!=="KEEP"&&!["EDIT-ONLY","RE-RECORD"].includes(n.method))err("Changes require EDIT-ONLY or RE-RECORD");
+        if(!n.words||typeof n.words!=="string")err("Editor must provide exact source words");
         return {...n,hypothesis:true};
       })});
   }
