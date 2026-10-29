@@ -1,0 +1,31 @@
+{
+  "title": "Kairo Knox Episode 013 — One Review Changed the AI's Mind",
+  "platform": "instagram",
+  "intended_viewer": "Everyday online shoppers, students, gamers and curious technology users, not just AI engineers",
+  "audience_benefit": "Understand why AI shopping recommendations can change after seeing outside information, and learn not to trust a single ranked pick without checking sources",
+  "hook_consequence": "One review changed an AI shopping agent's preferred watch in a controlled study",
+  "hook_prediction": "Same watches, same specs. Will the assistant make the same choice after viewing one review?",
+  "visible_proof": "Original vector-animated eight-watch product grid; a BEFORE/AFTER pick switch, labelled 'ILLUSTRATIVE RECREATION — NOT A LIVE MODEL'; then a cited study result from one tested model-and-source condition",
+  "teachable_payoff": "A model recommendation may be influenced by source exposure and context; compare specifications and inspect sources rather than assuming the first ranking is objective",
+  "sources": [
+    "https://gail.wharton.upenn.edu/research-and-insights/technical-report-agentic-shopping/",
+    "https://ai-analytics.wharton.upenn.edu/insights/your-ai-shopping-agent-is-less-consistent-than-you-think/",
+    "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/who-wins-when-ai-does-the-shopping-new-evidence-on-agentic-commerce"
+  ],
+  "optional_humor": "So the AI shopper did what humans do: read one review and suddenly have a new favorite.",
+  "rights_status": "original vector animations only; external paper figures and third-party clips are NOT cleared",
+  "unsupported_claims": false,
+  "uncleared_rights": false,
+  "misleading_footage": false,
+  "sensitive_data": false,
+  "unsafe_demo": false,
+  "ratings": {
+    "hook_clarity": 2,
+    "viewer_relevance": 2,
+    "payoff": 2,
+    "teachability": 2,
+    "personality_humor": 1,
+    "visual_credibility": 2,
+    "platform_measurement": 1
+  }
+}
