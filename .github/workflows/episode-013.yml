@@ -1,0 +1,26 @@
+name: Kairo Episode 013 creative checks
+
+on:
+  push:
+    paths:
+      - 'episodes/013/**'
+      - 'tests/test_episode_013.py'
+      - '.github/workflows/episode-013.yml'
+  pull_request:
+    paths:
+      - 'episodes/013/**'
+      - 'tests/test_episode_013.py'
+      - '.github/workflows/episode-013.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  creative-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_episode_013.py' -v
