@@ -108,6 +108,8 @@ def snapshot(variant, comparison_age_hours, tolerance_hours=None):
     """Only one timestamped response supplies both saves and views."""
     target = float(comparison_age_hours)
     tolerance = max(6.0, target * 0.25) if tolerance_hours is None else float(tolerance_hours)
+    if not variant.get("published_at"):
+        return {"available": False, "reason": "Published timestamp unavailable"}
     publication = parse_time(variant["published_at"])
     options = []
     for row in variant.get("observations", []):
@@ -185,10 +187,23 @@ def post_mortem(experiment, archive, now=None):
         measurement = snapshot(variant, experiment.get("comparison_age_hours", 48))
         retention = measurement.get("retention") or []
         windows = three_second_windows(retention, variant.get("duration_seconds"))
+        aligned = []
+        for window in windows["observed"]:
+            start, end = window["start"], window["end"]
+            speech = [{"start": seg["start"], "end": seg["end"], "exact_words": seg.get("text")}
+                      for seg in variant.get("speech", [])
+                      if float(seg["start"]) < end and float(seg["end"]) > start]
+            screens = [{"start": seg["start"], "end": seg["end"], "description": seg.get("description")}
+                       for seg in variant.get("screens", [])
+                       if float(seg["start"]) < end and float(seg["end"]) > start]
+            aligned.append({"start": start, "end": end, "relative_loss": window["relative_loss"],
+                            "speech": speech, "screens": screens,
+                            "cause_verified": False, "review_action": "HYPOTHESIS ONLY"})
         result["variants"].append({"variant_id": variant["variant_id"],
                                     "platform_post_id": variant.get("platform_post_id"),
                                     "verification": checked, "measurement": measurement,
                                     "three_second_windows": windows,
+                                    "aligned_windows": aligned,
                                     "edit_plan": variant.get("edit_plan", [])})
         if not checked["complete"]:
             result["limitations"].append(variant["variant_id"] + ": " + "; ".join(checked["errors"]))
@@ -273,16 +288,37 @@ def trial_review(experiment):
     checks = [snapshot({"published_at": t["published_at"], "observations": t.get("observations", [])},
                        experiment.get("comparison_age_hours", 48)) for t in trials]
     min_views = experiment.get("min_views")
-    if min_views is None or not experiment.get("pass_rule"):
-        return {"next_status": "trial", "reason": "Predeclared minimum views and pass rule required"}
+    rule = experiment.get("pass_rule") or {}
+    allowed = ("saves_per_1000_views", "avg_watch_seconds", "shares")
+    metric, benchmark = rule.get("metric"), rule.get("benchmark_minimum")
+    lift = rule.get("minimum_lift_fraction", 0.0)
+    if (min_views is None or metric not in allowed or not isinstance(benchmark, (float, int))
+            or not isinstance(lift, (float, int)) or lift < 0 or benchmark < 0):
+        return {"next_status": "trial", "reason": "Predeclared min_views, metric, own-history benchmark_minimum and valid lift required"}
     if any(not c["available"] or c["views"] is None or c["views"] < min_views for c in checks):
         return {"next_status": "trial", "reason": "Comparable trial observations not yet sufficient", "observations": checks}
+    control, test = checks
+    a, b = control.get(metric), test.get(metric)
+    if a is None or b is None:
+        return {"next_status": "trial", "reason": "Chosen metric unavailable for one or both trials", "observations": checks}
+    control_passes, test_passes = a >= benchmark, b >= benchmark
+    test_beats_control = b >= a * (1 + lift) and b > a
+    winner = "test" if test_passes and test_beats_control else "control" if control_passes else "neither"
+    recommendation = ("Consider sharing the " + winner + " trial after human review"
+                      if winner != "neither" else "Neither passes; recommend a new experiment")
+    comparison = {"metric": metric, "benchmark_minimum": benchmark,
+                  "minimum_lift_fraction": lift, "control": a, "test": b,
+                  "recommended": winner, "recommendation": recommendation,
+                  "not_controlled_ab_test": True}
     if experiment.get("sharing_decision") not in ("share_control", "share_test", "share_neither"):
-        return {"next_status": "trial", "reason": "Waiting for user's actual sharing decision", "observations": checks}
+        return {"next_status": "trial", "reason": "Waiting for user's actual sharing decision",
+                "observations": checks, "comparison": comparison}
     if experiment["sharing_decision"] != "share_neither" and not valid_url(experiment.get("shared_url")):
-        return {"next_status": "trial", "reason": "Verified shared URL required", "observations": checks}
+        return {"next_status": "trial", "reason": "Verified shared URL required",
+                "observations": checks, "comparison": comparison}
     if experiment["sharing_decision"] != "share_neither" and not experiment.get("shared_url_verified"):
-        return {"next_status": "trial", "reason": "Shared URL has not been verified", "observations": checks}
+        return {"next_status": "trial", "reason": "Shared URL has not been verified",
+                "observations": checks, "comparison": comparison}
     return {"next_status": "closed", "reason": "User decision recorded; do not select closed experiment again",
-            "observations": checks, "pass_rule": experiment["pass_rule"],
+            "observations": checks, "comparison": comparison,
             "sharing_decision": experiment["sharing_decision"]}
