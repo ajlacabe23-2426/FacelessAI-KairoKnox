@@ -55,7 +55,7 @@ Comparison archive: an array of similarly shaped video records; per-post eligibi
 ## Descript connection and actual editing (#4)
 Descript is connected through ChatGPT. No Kairo media/project was found during the initial connected-drive search. Therefore this repository prepares an edit handoff and recording list, but cannot claim to have created original/revised compositions, confirmed durations or delivered MP4 files. Once original files are uploaded and a reviewed experiment has a source map, use Descript's Agent Underlord via the connector to create and verify control/test compositions, reusing project and composition IDs in the experiment JSON. Review the compositions privately. Export manually and confirm Instagram Trial Reel eligibility in the account before distributing. Do not publish links or clips without the user's final approval.
 
-Instagram Trial Reel comparisons are **not randomized A/B tests**. Prior to posting, record 48h or another comparable age, min views and pass rule based on your own available observations. After manually posting, record both IDs/URLs and dated metrics, then run trial. No final sharing occurs automatically.
+Instagram Trial Reel comparisons are **not randomized A/B tests**. Prior to posting, record 48h or another comparable age, min views and pass rule based on your own available observations. The JSON pass_rule requires metric (saves_per_1000_views, avg_watch_seconds or shares), numeric benchmark_minimum derived from your own comparable trials, and optional minimum_lift_fraction. The observed comparison shows whether test beats control and whether either reaches the benchmark; neither outcome is a randomized controlled experiment. After manually posting, record both IDs/URLs and dated metrics, then run trial. No final sharing occurs automatically.
 
 ## Human approval boundaries
 1. Idea approval is not production approval.
@@ -69,6 +69,8 @@ Instagram Trial Reel comparisons are **not randomized A/B tests**. Prior to post
 - No genuine media timeline validation from Descript yet: current user drive search did not return a Kairo project and actual video files are not attached here.
 - No reliable archive with 20+ comparable 1,000-view videos has been established. Post-mortems remain descriptive without that percentile threshold.
 - The assistant does not claim retention improvement until we run pilots and compare real metrics.
+- Post-mortem outputs aligned_windows with exact overlapping transcript words and on-screen descriptions for each observed 3-second window. All causal labels remain unverified hypotheses.
+- See [agent entry instructions](../AGENTS.md), [four reusable operating prompts](../prompts/KAIRO_CONTENT_INTELLIGENCE.md), and [blank Creative Director pitch template](../templates/CREATIVE_PITCH.json).
 
 ## Recommended immediate operation
 1. Select a future Kairo idea and complete Creative Director pitch fields and ratings.
