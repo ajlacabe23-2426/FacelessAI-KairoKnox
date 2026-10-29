@@ -1,60 +1,55 @@
 # Kairo Knox — Episode 013 Creative Brief
-**Working title:** One Review Changed the AI's Mind  
-**Series:** Beneath the System (core)  
-**Date:** 2026-10-29  
-**Status:** Research verified; script / storyboard in draft; NO video, voiceover, media purchase, publication, or final approval yet.  
-**Audience:** Everyday shoppers and curious nontechnical viewers who want to understand AI recommendations.
-**Value promise:** See how the same products can produce different AI suggestions because of outside context; learn a simple habit for evaluating the recommendation.
+**Working title:** Three Words. A $359 AI Recommendation.
+**Series:** Beneath the System (Core) | **Date:** 2026-10-29
+**Concept approval:** The user selected the hiking-memory / $29.99-vs-$359+ watch storyline on October 29, 2026.
+**Personality mix:** **45% mysterious investigator (A) / 55% witty tech analyst (B)**. This is a creative tone target, not a literal joke-count or stopwatch ratio.
+**Status:** Story and tone approved; script, timed storyboard, edit package and rights still in review. NO media rendering, paid credits, public distribution or final video approval.
 
-## Why this is different from previous Kairo episodes
-- The viewer sees a visually understandable outcome **before** hearing model jargon.
-- The first five seconds identify a recognizable consumer decision: which watch to buy.
-- An original visual demo makes the causal setup visible, without pretending we ran a live AI model.
-- One verifiable number provides evidence (a **99-percentage-point shift in one specific tested model and review condition**), followed immediately by the limitation.
-- A brief relatable joke humanizes Kairo without replacing his masked identity or turning the episode into a comedy sketch.
-- One action: inspect actual product specifications and sources, not just a ranked result.
+## Promise to a first-time viewer
+*A three-word memory changed what some AI shopping agents recommended—even when one watch was cheaper and higher rated. Why? And how do you avoid getting upsold by an unspoken assumption?*
 
-## Evidence summary and precise boundaries
-**PRIMARY SOURCE:** Wharton Generative AI Labs, *Agentic Shopping is Complicated and Contingent*, August 27, 2026.
+**Human stakes:** Spending money, the weirdness of personalization, and whether a recommendation explains its trade-offs. Kairo investigates a problem familiar to anyone who has ever shopped online and uses dry humor to make an actual technical lesson stick.
+
+## Original primary evidence (verified 2026-10-29)
+Wharton Generative AI Labs, *Agentic Shopping is Complicated and Contingent*, **August 27, 2026**:
 https://gail.wharton.upenn.edu/research-and-insights/technical-report-agentic-shopping/
 
-Researchers simulated approximately 26,000 AI shopping test runs with six frontier models in several conditions. Agents chose from a screenshot of an **eight-fitness-watch** product grid. Depending on the experimental condition, models first received outside source screenshots (including reviews), other sources and their order, injected user memory, or distinct tool-call delivery formats. In one single-source condition a model's choice of the source-recommended product changed by **+99 percentage points**, but findings varied substantially by model. **Not every model** changed its preferred product, and the result is not a universal AI-shopping behavior.
+- Wharton ran approximately **26,000 simulated shopping tests**, varying context and other inputs across several studies. Six models were tested in most studies. No real-world shoppers bought these watches as part of the experiment.
+- The **injected user-memory experiment** modified the eight-watch grid so one generic "Smart Watch with Alexa" was **$29.99**, rated **5.0**, and outperformed the alternatives on the *displayed* price, rating and review count. Every other watch cost **at least $359** and was worse on those displayed measures.
+- Researchers added the text **"I love hiking!"** as a user memory. **Claude Opus 4.8** shifted toward the hiking-friendly **Garmin Vivoactive 5** in roughly three-quarters of runs; secondary breakdowns describe a **+75-percentage-point** selection shift. GPT-5.5 and Gemini 3.1 Flash Lite also moved toward the hiking-friendly model. Other models behaved differently.
+- **Do not imply** the expensive watch was objectively better for every user, or that the experiment measured real hiking utility, overall quality or real purchases. The $29.99 watch was "objectively best" on displayed price/rating/review-count criteria—not necessarily best for someone whose real requirement is hiking functionality.
+- Other Wharton experiments involved reviews and tool-result ordering. **Do not mix their +99pp single-source result into this memory experiment.** Our episode focuses only on the user-memory contrast.
 
-**Secondary source / context:** Wharton AI & Analytics Initiative, *Your AI Shopping Agent Is Less Consistent Than You Think*.
+Additional source:
 https://ai-analytics.wharton.upenn.edu/insights/your-ai-shopping-agent-is-less-consistent-than-you-think/
 
-**Recent why-now source:** McKinsey, *Who wins when AI does the shopping?*, October 28, 2026. The underlying survey was **fielded in June 2026**, approximately 21,000 respondents in 11 markets; its Oct 28 publication is not the date of a brand-new experiment.
+Optional October 28 contextual reporting (not necessary in the voiceover):
 https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/who-wins-when-ai-does-the-shopping-new-evidence-on-agentic-commerce
+McKinsey published in October, but its underlying consumer survey was conducted in June 2026. Avoid claiming these were live shopping statistics from this Wharton experiment.
 
-### Do not claim
-- That an AI agent was filmed changing a live recommendation for this episode.
-- That every AI model changed its mind by 99%.
-- That Wharton observed real customer purchases; these were research simulations.
-- That a single review always overrides price/quality.
-- That source order affects every model in the same way.
-- That this research was released yesterday (Wharton report is from August 27).
-- That any named shopping platform recommends products by the illustrative algorithm shown.
+## Creative Director update
+**Lead angle:** Not "researchers studied AI". Lead with the absurd shopping contrast and the tiny amount of personal context that changed some models' recommendations.
 
-## Two opening choices (record only ONE initial version unless experiment approved)
-**A — consequence-first (recommended):** "One review changed an AI shopper's mind." First frame: eight *original fictional* fitness watch cards; selection border flips when a generic review arrives. On-screen 'Illustration based on research' from the first frame.
+**Investigative share (45%):** A price mystery, verified setup, source transparency, meaningful caveat and testable takeaway.
+**Witty analyst share (55%):** conversational language, pacing, relatable wallet joke, visual reaction, energetic edit rhythm and a specific audience choice. Does **not** mean flippancy with sources or an unbroken stream of jokes.
 
-**B — prediction-first:** "Same eight watches. Would the AI pick the same one after one review?" First frame: two selection screens labelled BEFORE / AFTER, the second choice initially hidden, then revealed by second five.
+**Hook A (selected):** "Thirty dollars. Five stars. So why did some AI agents choose a watch costing at least three-fifty-nine?" First frame displays two generic watch cards, priced $29.99 and $359+, labelled **ILLUSTRATIVE RECREATION — SIMULATED STUDY**.
+**Hook B (unproduced future test):** "Can three words convince an AI to recommend a $359 watch over a $30 one?" Reveal the three words at seconds 5–8. Future variant needs separate user approval and real media maps.
 
-Why A: the surprising result is understandable with no AI background; B may invite more predictions but risks slower disclosure. Retention improvement is a hypothesis, not a fact.
+**Payoffs:**
+1. A viewer learns that *personalization can shift priorities away from the strongest displayed bargain*.
+2. They learn to ask for a **budget and the specific trade-offs**, not blindly trust the first recommendation.
+3. A memorable Kairo observation: **"Apparently, your wallet's going hiking too."**
 
-## Editorial quality gate (Creative Director)
-Human-proposed 0–2 scores:
-- Hook clarity: **2** (specific result first frame)
-- Viewer relevance: **2** (familiar shopping decision)
-- Payoff: **2** (reveal followed by research result)
-- Teachability: **2** (check sources/specifications)
-- Personality & humor: **1** (subtle joke, pending voice performance)
-- Visual credibility: **2** (original recreation clearly labelled)
-- Platform/measurement readiness: **1** (plan ready, native TikTok/YouTube data incomplete)
-**Provisional total: 12/14.** This is a subjective editorial review, not the audience's rating or proof of higher retention. Hard stop for inaccurate facts, unlicensed assets, or unclear recreation labels.
+**Kairo Creative Director provisional ratings (0–2 each):**
+Hook clarity 2; viewer relevance 2; payoff 2; teachability 2; personality/humor 2; visual credibility 1 (graphics only planned); platform/measurement readiness 1 (native early retention availability unknown) = **12/14**, subjectively. The original 12/14 approval did not verify the finished video. Human final QC is necessary.
 
-## Authenticity and licensing controls
-Create original generic watch silhouettes, cards, scores and review bubbles. Do not reproduce Wharton charts without rights approval. Do not use watch brand marks, review-site logos, other creators' footage, identifiable users' reviews or fabricated live AI UI. Kairo mask, clothing, hologram motifs and approved Fraser voice must remain consistent; use existing approved reference assets before generating anything new. No purchased credits without separate production authorization. Final playable MP4 + ZIP require verification and human approval before posting.
+## Rights and production constraints
+- Original generic vector watch UI and original text graphics; no borrowed real product photos, Wharton figures, proprietary logos, or fake live screen recordings.
+- Full-screen, persistent legible **"ILLUSTRATIVE RECREATION — NOT LIVE AI OUTPUT"** label during recreated portions.
+- Reuse approved Kairo mask, clothing, lighting, voice profile **Fraser** and approved asset references; Kairo appears for two short personality beats without taking the viewer away from the demo.
+- Human voice timing and font/animation safe-area QA before final render.
+- No purchased Higgsfield credits, final video publication or scheduling from this concept approval alone.
 
-## Publication and measurement
-Primary target: one **original 40–45 second** Core episode for TikTok / YouTube Shorts / Instagram Reels with platform-specific captions. Never publish merely because this brief exists. At first experiment, measure comparable-age (48h / 7d) retention, average watch seconds, saves/shares, comments. Unknown native retention remains null, not zero. Compare opening A to alternate opening B only after exact edit maps, composition IDs, and comparable trial approvals. Do **not** claim this is a controlled randomized A/B test.
+## Measurement
+Primary next-release metric: observed average watch duration and normalized average percentage viewed at comparable post ages, with early 0–10-second retention only if actually available from platform analytics. Secondary: same-response saves/views, shares, substantive comments. The hook experiment remains **planned**, not testing. Do not invent platform IDs or call manual variants randomized A/B tests.
