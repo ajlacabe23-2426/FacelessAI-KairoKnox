@@ -95,11 +95,12 @@ export function eligibleArchive(archive,experiment,{now=new Date().toISOString()
       (o.distribution_period??v.distribution_period??null)!==(experiment.distribution_period??null)?"different distribution period":
       v.experiment_id===experiment.experiment_id?"same experiment":
       !isNum(o.views)||o.views<minViews?"below minimum views":
+      isNum(experiment.comparison_age_hours)&&Math.abs(hoursOld(o.published_at,o.collected_at)-experiment.comparison_age_hours)>(experiment.age_tolerance_hours??4)?"outside comparison age":
       !isNum(hoursOld(o.published_at,now))||hoursOld(o.published_at,now)<0||hoursOld(o.published_at,now)>days*24?"outside time range":null;
     if(reason){excluded.push({id:v.variant_id??v.post_id??null,reason});continue;}
     const key=v.experiment_id??"standalone:"+o.post_id;
     const prior=byExp.get(key);
-    if(!prior||new Date(o.collected_at)>new Date(prior.observation.collected_at))byExp.set(key,{id:v.variant_id??o.post_id,experiment_id:key,observation:o,features:v.features||{}});
+    if(!prior||new Date(o.collected_at)>new Date(prior.observation.collected_at))byExp.set(key,{id:v.variant_id??o.post_id,experiment_id:key,observation:o,duration_seconds:v.duration_seconds??null,features:v.features||{}});
   }
   return {eligible:[...byExp.values()],excluded};
 }
@@ -108,6 +109,8 @@ export function postMortem({experiment,archive=[],now=new Date().toISOString()})
   if(experiment.status!=="testing"&&experiment.status!=="reviewed")err("Post-mortems require testing/reviewed experiment");
   if(!Array.isArray(experiment.variants)||experiment.variants.length!==2)err("Exactly two assigned variants required");
   const problems=[],variants=[];
+  if(!isNum(experiment.comparison_age_hours)||experiment.comparison_age_hours<=0)
+    problems.push({issue:"predeclared comparison age is missing"});
   for(const v of experiment.variants){
     if(!v.variant_id||!v.platform_post_id||!v.post_url)problems.push({variant:v.variant_id??null,issue:"missing assigned ID or published URL"});
     if(v.media_verified!==true||v.source_map_verified!==true)problems.push({variant:v.variant_id,issue:"media or original-to-cut map unverified"});
@@ -119,6 +122,8 @@ export function postMortem({experiment,archive=[],now=new Date().toISOString()})
     if(!screen.complete)problems.push({variant:v.variant_id,issue:"screen coverage incomplete",gaps:screen.gaps});
     const o=selectObservation(v.observations||[],experiment.comparison_age_hours??null);
     if(!o)problems.push({variant:v.variant_id,issue:"metrics unavailable"});
+    else if(isNum(experiment.comparison_age_hours)&&Math.abs(hoursOld(o.published_at,o.collected_at)-experiment.comparison_age_hours)>(experiment.age_tolerance_hours??4))
+      problems.push({variant:v.variant_id,issue:"observation is not at the predeclared comparison age"});
     const windows=threeSecondWindows(o?.retention??[],v.duration_seconds);
     variants.push({variant_id:v.variant_id,platform_post_id:v.platform_post_id??null,
       source_map_coverage:sourceMap,speech_coverage:speech,screen_coverage:screen,
@@ -133,10 +138,34 @@ export function postMortem({experiment,archive=[],now=new Date().toISOString()})
   const lib=eligibleArchive(archive,experiment,{now});
   const archiveRates=lib.eligible.map(e=>ratePerThousand(e.observation.saves,e.observation.views)).filter(isNum);
   const enough=lib.eligible.length>=20&&archiveRates.length>=20;
+  const threshold=enough?percentileContinuous(archiveRates,.8):null;
+  const winners=enough?lib.eligible.filter(e=>ratePerThousand(e.observation.saves,e.observation.views)>=threshold):[];
+  const winnerWindows=new Map();
+  for(const winner of winners){
+    if(!isNum(winner.duration_seconds))continue;
+    for(const window of threeSecondWindows(winner.observation.retention,winner.duration_seconds).valid){
+      const key=window.start.toFixed(6);
+      if(!winnerWindows.has(key))winnerWindows.set(key,[]);
+      winnerWindows.get(key).push(window.relative_loss);
+    }
+  }
+  const winnerWindowReference=[...winnerWindows.entries()].map(([key,losses])=>({
+    start:Number(key),end:Number(key)+3,eligible_winner_count:losses.length,
+    median_relative_loss:percentileContinuous(losses,.5)}));
+  for(const variant of variants){
+    variant.winner_window_comparisons=variant.retention_windows.valid.map(w=>{
+      const matched=winnerWindowReference.find(x=>approx(x.start,w.start));
+      return {start:w.start,end:w.end,own_relative_loss:w.relative_loss,
+        winner_median_relative_loss:matched?.median_relative_loss??null,
+        difference:matched? w.relative_loss-matched.median_relative_loss:null,
+        winner_coverage_count:matched?.eligible_winner_count??0};
+    });
+  }
   return {experiment_id:experiment.experiment_id,generated_at:now,objective:experiment.objective??null,
     decision_rule:experiment.decision_rule??null,comparison_age_hours:experiment.comparison_age_hours??null,
     variants,archive:{eligible_count:lib.eligible.length,paired_rate_count:archiveRates.length,
-      threshold_p80_saves_per_1000:enough?percentileContinuous(archiveRates,.8):null,
+      threshold_p80_saves_per_1000:threshold,eligible_winner_count:winners.length,
+      winner_window_reference:winnerWindowReference,
       status:enough?"threshold calculated":"insufficient archive",excluded:lib.excluded},
     suggested_status:problems.length?"testing":"reviewed",coverage_gaps:problems,
     cautions:["A retention dip identifies when viewers left, not why.","Unknown retention seconds remain unknown.","Different distribution periods or post ages can confound comparisons."]};
