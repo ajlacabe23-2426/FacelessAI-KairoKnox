@@ -35,7 +35,8 @@ class Episode013PreproductionTests(unittest.TestCase):
         self.assertIn("$359+", s)
         self.assertIn("i love hiking", s)
         self.assertNotIn("99 percentage points", s)
-        self.assertIn("no media rendering", b)
+        self.assertIn("fraser voiceover is not included", b)
+        self.assertIn("nothing was published", b)
         self.assertIn("other models behaved differently", b)
 
     def test_character_mix_and_approved_story_persist(self):
