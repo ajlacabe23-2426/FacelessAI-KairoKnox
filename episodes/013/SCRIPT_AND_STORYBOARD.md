@@ -1,6 +1,6 @@
 # Episode 013 — Script, Shot List & Edit Blueprint
 **Draft v1 | target 36–39 seconds | 9:16 at 1080 × 1920, 30 fps**
-**Narration:** established Kairo Core voice (Fraser), dry/curious delivery, not bombastic. Timecodes are EDITING TARGETS, not verified audio timestamps. The actual transcript and cut maps will be measured from rendered media.
+**Narration:** established Kairo Core voice (Fraser), dry/curious delivery, not bombastic. Timecodes are EDITING TARGETS, not verified audio timestamps. The actual transcript and cut maps will be measured from rendered media. All sample scenes are not live AI output.
 
 ## Full original narration draft (approximately 81 words)
 > One review changed an AI shopper's choice.
@@ -23,7 +23,7 @@
 
 | Draft cut time | Action / original visual | Spoken line | Editorial purpose |
 |---|---|---|---|
-| 00:00–00:02.8 | First frame: eight **fictional** fitness-watch cards, one with a large SELECTED halo. A review bubble enters and selection flips to another watch. Large text: **ONE REVIEW. DIFFERENT PICK.** Smaller legible corner label: **ILLUSTRATIVE RECREATION**. No slow Kairo intro. | "One review changed an AI shopper's choice." | Consequence-first hook, answer visible instantly |
+| 00:00–00:02.8 | First frame: eight **fictional** fitness-watch cards, one with a large SELECTED halo. A review bubble enters and selection flips to another watch. Large text: **ONE REVIEW. DIFFERENT PICK.** Smaller legible corner label: **ILLUSTRATIVE RECREATION — NOT LIVE AI OUTPUT**. No slow Kairo intro. | "One review changed an AI shopper's choice." | Consequence-first hook, answer visible instantly |
 | 00:02.8–00:05.5 | Three match cuts: watches unchanged, price row unchanged, selection outline different. **SAME SPECS / NEW PICK**. Make a short click/chime at change. | "Same watches. Same prices. Different pick." | Establish tension without adding jargon |
 | 00:05.5–00:10.2 | Push through product cards; Kairo's approved masked bust appears in a corner (not dominating screen). A source flag arrives: **WHARTON • ~26,000 SIMULATED TESTS**. Source credit small but readable. | "Wharton ran about twenty-six thousand AI shopping tests." | Specific evidence arrives before the 10-second mark |
 | 00:10.2–00:17.8 | Original simplified split-screen: left "PRODUCT GRID ONLY" (8 watches); right "GRID + PRIOR REVIEW". Source card with original generic text. On right, halo switches to another watch. | "Agents compared eight fitness watches. But after seeing one outside review first, some changed favorites." | Visual explanation of controlled study manipulation |
