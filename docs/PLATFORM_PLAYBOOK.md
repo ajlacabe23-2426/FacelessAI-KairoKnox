@@ -1,5 +1,5 @@
 # Kairo Knox — Platform-Specific Editorial Playbook
-Version: 2026-10-27. Strategy is tailored, not a universal algorithm workaround.
+Version: 2026-10-30. Strategy is tailored, not a universal algorithm workaround.
 
 ## Audience roles
 | Platform | Primary role | Typical content | Default call to action |
@@ -7,8 +7,12 @@ Version: 2026-10-27. Strategy is tailored, not a universal algorithm workaround.
 | TikTok | Discovery and curiosity | Strong hook, brief demonstration or analysis, visual payoff | One thoughtful question |
 | YouTube Shorts | Searchable evergreen lessons and discovery | Accurate titled explainer or demo, strong first seconds | Related lesson or question |
 | Instagram Reels | Visual storytelling and sharing | Polished Kairo visuals, self-contained idea and subtitles | Share or discuss genuinely useful insight |
+| Instagram carousels | Save-worthy practical learning | Original 5–9 slide evidence-led frameworks, diagrams or checklists | Save a genuinely useful reference or answer a concrete question |
 | Threads (personal account) | Conversation, documentation, credibility, genuine debate | Short Kairo Debate Drops, documented build logs, technical decisions and informal discussion | Invite a reasoned perspective or counterexample |
 | GitHub | Verifiable evidence and method | Public-safe technical changelogs, demo/CI evidence, research notes and workflow | Link only to information approved to share |
+
+## Carousel-native editorial standard
+For a carousel, write ten original, truthful hook candidates; select a concrete cover; default to seven slides, one major point per slide and short primary slide copy. Use a progression of context → tension → evidence → explanation → practical payoff → question, adapting the order where the topic calls for it. Put at least one genuinely useful checklist, framework or diagram within the deck and cite sources without making slides unreadable. Do not reproduce another creator's wording or visual design, even when researching high performers. Follow the [Creative Director eight-step loop](CREATIVE_DIRECTOR.md) and compare saves/reach and shares/reach against comparable posts where reliable analytics are available.
 
 ## Threads: discussion and build-documentation first
 **Do not auto-publish the Core Episode, Micro Learning or Signal Cut MP4 to Threads.** Threads is its own editorial surface; video may appear occasionally when a native explanation or demonstration is specifically compelling and the user approves it.
