@@ -1,5 +1,5 @@
 # Kairo Knox — Measurement and Controlled Improvements
-Version: 2026-10-27.
+Version: 2026-10-30.
 
 ## Rule: observe first, do not infer an algorithm penalty from a few posts
 Posting too often, the wrong audience, weak video openings, format mismatch, recent account connection, content topic and data delays could all contribute to lower views. Do not claim causality from anecdotal before/after comparisons.
@@ -14,6 +14,9 @@ At approximately 24 hours, 48 hours and seven days (when provider data becomes a
 - Instagram shares may be used as a proxy for distribution; the connector may not expose private “sends” separately. Do not call every share a DM send.
 - Search/FYP/source breakdown if available; follower growth attributable to post only when actually supported.
 - Report unavailable metrics as **N/A**, not zero, and never mix views with reach in a denominator.
+
+## Instagram carousel reporting
+For each original carousel, record slide count; cover type; topic; publish timestamp; reach or impressions (which metric); saves, shares, comments and profile actions when available. Compute **save rate = saves / reach** and **share rate = shares / reach** only when a valid reach denominator is available. Record slide progression or dwell data only if the provider actually exposes it; do not invent swipe-through rates. Compare with the **median of similar carousels on the same account at comparable ages**. Mark unavailable data N/A. Evaluate whether a practical checklist, diagram or framework genuinely earns saves, without inferring a causal platform boost.
 
 ## Threads reporting per post
 Record topic bucket (**Debate Drop** / documentation / practical insight / optional entertainment discussion / occasional video), post date, views, replies, reposts, quotes, likes, profile visits if available, and meaningful follow-up conversations. Prefer **median views and median replies per original text post** over one viral outlier. For debates, distinguish substantive comments and distinct viewpoints from low-effort reactions; note how often a debate creates a promising organic follow-up subject. Track replies written to others separately when possible. Never imply higher views prove a ranking algorithm favored debate.
@@ -35,6 +38,9 @@ Hypothesis: original project documentation and **short, good-faith Debate Drops*
 - After the three clips, assess 48-hour and seven-day performance versus comparably aged Core Episodes and Micro Learning posts.
 - Change **one or two** aspects (hook length, subject, clip duration, question style or posting time), not every variable simultaneously.
 - Favor audience relevance and substantive saves/shares over vanity counts alone.
+
+## Eight-step Creative Director iteration
+Each week, inspect up to the latest 10 posts with usable metrics, grouped by platform and format. Distinguish tested results from creative hypotheses; use per-platform, age-matched median baselines rather than comparing raw numbers across platforms. Log three hypotheses with **one changed primary variable**, a metric and the earliest fair review window. Initial candidates: concrete vs abstract opening (three-second hold/normalized watch), checklist placement (carousel saves per reach), and evidence-led debate questions (substantive replies per view when available). Missing analytics or fewer than 10 posts do not establish failure; report the actual sample size. The workflow in [CREATIVE_DIRECTOR.md](CREATIVE_DIRECTOR.md) defines the full process.
 
 ## Weekly 10-minute review ritual
 1. Which two videos got the best normalized watch time and helpful interactions?
