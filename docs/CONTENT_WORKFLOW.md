@@ -1,5 +1,5 @@
 # Kairo Knox — Production and Publishing Workflow
-Version: 2026-10-27. Editorial policy; not an automatic publishing job.
+Version: 2026-10-30. Editorial policy; not an automatic publishing job.
 
 ## Mission and lanes
 - **Core Episodes**: researched AI, technology, cybersecurity, robotics and societal implications.
@@ -8,6 +8,9 @@ Version: 2026-10-27. Editorial policy; not an automatic publishing job.
 - **Kairo Debate Drops (Threads-first)**: original 1–3 sentence prompts identifying meaningful tradeoffs in AI, entertainment, games, technology, marketing, business and society. These are text-led conversations, not another video quota. Valuable debates can inspire optional evidence-checked Threads-native video proposals, subject to review, source-rights and final publication approval.
 
 Maintain Kairo Knox's consistent masked analyst identity and established visual/audio language. Reuse approved assets first. Higgsfield may be used for approved production. Use established voice profiles as specified for an individual piece; no blanket permission to purchase credits.
+
+## Creative Director research and packaging loop
+Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the eight-step [Creative Director standard](CREATIVE_DIRECTOR.md): study relevant, appropriately sourced comparable successes; identify their *structure*; write original accurate hooks; give each slide/scene a distinct job; build a real save-worthy payoff; ask a substantive question; plan platform-native adaptations; and evaluate measured results rather than assuming virality. Treat outside cover wording as a pattern to analyze, **not text to copy**. For Instagram carousels, default to seven short slides but adapt to topic complexity. Record source dates, permissions and missing metrics honestly.
 
 ## Mandatory stage gates
 1. **Discover & pitch**: topic, intended viewer, one-sentence claim, audience benefit, format, evidence plan.
@@ -34,6 +37,7 @@ Maintain Kairo Knox's consistent masked analyst identity and established visual/
 - Publication remains subject to the user's final approval for each video and post.
 
 ## Preflight quality checklist
+- [ ] Creative Director brief prepared with original hooks, useful payoff and platform-specific plan
 - [ ] Opening actually communicates the subject within 2 seconds
 - [ ] Every numerical and scientific claim sourced and caveated where required
 - [ ] Clip rights or licenses and attribution reviewed
