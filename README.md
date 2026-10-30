@@ -1,10 +1,12 @@
 # FacelessAI-KairoKnox
 
-Kairo Knox: original short-form storytelling, practical Micro Learning, and Signal Cuts exploring the intersection of AI, security, robotics, business, marketing, investing concepts, games, and society.
+Kairo Knox: original short-form storytelling, practical Micro Learning, and Signal Cuts exploring the intersection of AI, security, robotics, business, marketing, investing concepts, games, and society. **Chronicles** is an additional, clearly fictional animated adventure lane; existing content continues.
 
 ## Editorial operations
 
 - [Creative Director — eight-step original-content research and optimization loop](docs/CREATIVE_DIRECTOR.md)
+- [Chronicles — original cyberpunk dark Art Deco animated series bible](docs/CHRONICLES_SERIES_BIBLE.md)
+- [Chronicles pilot 001 — The Obsidian Protocol 45-second storyboard and prompt pack](docs/CHRONICLES_PILOT_001.md)
 - [Production, approval and publishing workflow](docs/CONTENT_WORKFLOW.md)
 - [Platform playbook — including Threads discussion/documentation strategy](docs/PLATFORM_PLAYBOOK.md)
 - [Measurement and two-week audience experiment](docs/MEASUREMENT.md)
