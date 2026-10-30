@@ -4,9 +4,9 @@
 
 This gate addresses the prior critique: retain Kairo himself as the recognizable masked protagonist, remove the "real / not real" news pivot, test melancholic noir visuals, and move narration toward a personal adventure rather than a current-events bulletin.
 
-### Existing character visual used (candidate; requires owner's explicit canon confirmation)
+### Selected visual identity — owner confirmation received
 - Original user Library image: `Futuristic AI Analyst in Holographic Control Room.png` (1254x1254). The angular graphite helmet, sharp luminous blue-white V visor, and circular ear component closely match `Kairo Knox AI Phone Agent Storyboard.png` from the same Library.
-- This is **not** a newly invented replacement face. We reused established Kairo artwork. Exact approved character identity for production still requires owner review before full-motion image-to-video rendering.
+- This is **not** a newly invented replacement face. We reused established Kairo artwork. The owner selected the **second reference**, the fully enclosed graphite helmet with a sharp luminous blue-white V-shaped visor and circular side elements (as in the `Kairo Knox AI Phone Agent Storyboard.png`). Treat this as the identity-locked helmet concept for the pilot; retain its geometry in every motion shot.
 - Do not substitute the different hooded, human-eyed `Hooded Cyberpunk Masked Sentinel.png` character for Kairo.
 - The opening animatic is created locally from the portrait source; no new Higgsfield character video was generated and no new full fight was rendered.
 
@@ -27,10 +27,16 @@ This gate addresses the prior critique: retain Kairo himself as the recognizable
 - Explicit final human review remains required before any release.
 
 ### Next acceptance tests (stage gates)
-1. Owner confirms the exact V-visor Kairo art matches channel canon, or supplies the approved reference if it differs.
+1. **PASSED:** Owner selected the second, fully enclosed V-visor Kairo design; do not use the hooded, human-eyed mask design.
 2. Generate an image-to-video **single readable non-graphic first confrontation** with Kairo and VESPER-9 from character-anchored reference frames; track starting/ending pose, screen position, scale, rain and near-black grade.
 3. Test first-person voice acting in context with restrained original ambience, Nyra radio contrast and a quiet machine voice; dialogue intelligibility on a phone.
 4. Check live motion, character morphology, subtitles, continuity and audio before rendering additional shots.
 5. Finish sequential scenes, full mix, MP4/ZIP QA, then obtain separate explicit approval before social publication.
 
 Reference creative plan: [Rewritten Episode 001](CHRONICLES_EP001_FICTION_REWRITE.md).
+
+### Latest preflight after identity selection
+- Reused approved-style Kairo portrait and prepared a 720×1280 crop (`KairoKnox_Reference_Frame_9x16.png`) for a single image-to-video motion test; format/crop only, original mask preserved.
+- Higgsfield `kling3_0_turbo` quoted 7.5 credits for a 5-second 720p 9:16 image-to-video scene. 25.95 credits available at quote time.
+- The attempt to upload the reference image to Higgsfield failed due to inaccessible upload host from the execution environment (DNS resolution failure). **No image upload confirmed and no new video rendering job submitted.** No 7.5-credit scene charge was incurred; awaiting a supported upload pathway, not permission to change Kairo's mask.
+- Existing opening animatic and Fraser voice test remain the only completed new-format renders.
