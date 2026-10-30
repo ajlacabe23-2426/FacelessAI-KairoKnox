@@ -5,7 +5,10 @@ Version: 2026-10-30. Editorial policy; not an automatic publishing job.
 - **Core Episodes**: researched AI, technology, cybersecurity, robotics and societal implications.
 - **Micro Learning**: one practical, demonstrable, repeatable lesson for every two regular Core Episodes. Show meaningful inputs, outputs, limitations, and safety boundaries.
 - **Signal Cuts**: a distinct original editorial series linking AI with business, algorithms, advertising, investing concepts, entertainment and gaming, consumer behavior, economics, and society. Do not simply repost or repackage the same Kairo episode. Use source material only with appropriate rights and meaningful original commentary.
+- **Kairo Knox: Chronicles**: an additional original fictional animated adventure lane. Cyberpunk dark Art Deco + mecha-anime-influenced worldbuilding, clearly labeled fiction, featuring adult human/machine conflict with non-graphic action and moral consequences. Follow [series bible](CHRONICLES_SERIES_BIBLE.md) and [pilot 001](CHRONICLES_PILOT_001.md). It does not replace the existing lanes, and it requires locked original characters, shot-level continuity reviews, separate spending estimates and explicit final publishing approval.
 - **Kairo Debate Drops (Threads-first)**: original 1–3 sentence prompts identifying meaningful tradeoffs in AI, entertainment, games, technology, marketing, business and society. These are text-led conversations, not another video quota. Valuable debates can inspire optional evidence-checked Threads-native video proposals, subject to review, source-rights and final publication approval.
+
+**Chronicles is not news footage.** Label fictional animation as such, avoid borrowed franchise-specific visual designs and music, and keep fictional world events separate from sourced technology claims.
 
 Maintain Kairo Knox's consistent masked analyst identity and established visual/audio language. Reuse approved assets first. Higgsfield may be used for approved production. Use established voice profiles as specified for an individual piece; no blanket permission to purchase credits.
 
@@ -29,6 +32,7 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 - Core rotation remains **two episodes : one Micro Learning**. Insert **at most one Signal Cut weekly** until its pilot performance is reviewed; adjust the overall release count rather than piling onto the usual cadence.
 - Aim for **24–48 hours between primary releases on the same platform**. Timing and frequency are hypotheses; they are not evidence of algorithmic suppression.
 - Do not release multiple freshly produced titles in the same hour on a single video platform merely because they are ready.
+- Chronicles may be produced as an independent pilot, but any release must fit the same limited posting capacity and receive per-platform approval. Do not silently spend the remaining Higgsfield credit balance on a complete action sequence; test a short shot, review, then budget the remaining work.
 - Produce in batches independently of distribution. Production capacity must not force publishing frequency.
 - Prioritize the limited Metricool monthly posting allowance for high-value releases. Never schedule merely to occupy an open slot.
 - Proposed Signal Cuts pilot windows (America/Chicago, NOT scheduled): **Oct 30 at 10:00 AM; Nov 4 at 6:00 PM; Nov 9 at 10:00 AM**. Move a window if a Core Episode or Micro Learning would collide or final review is incomplete.
