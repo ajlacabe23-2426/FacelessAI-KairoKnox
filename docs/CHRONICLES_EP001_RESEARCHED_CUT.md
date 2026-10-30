@@ -1,3 +1,5 @@
+> **Archived technical proof of concept (2026-10-30).** This documentary-to-fiction draft and private review cut have been creatively superseded by [Episode 001 fictional rewrite](CHRONICLES_EP001_FICTION_REWRITE.md). The lead fighter is now Kairo Knox himself. Do NOT publish this archived version as the canonical episode. Keep it as private production test history.
+
 # Kairo Knox: Chronicles — Episode 001 review cut
 Title: **The Guardian's Choice** (in the fictional *Obsidian Protocol* world)
 Production date: 2026-10-30
