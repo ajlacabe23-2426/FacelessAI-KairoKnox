@@ -1,61 +1,71 @@
 # Kairo Knox: Chronicles — Series Bible
-Version: 2026-10-30 | Status: creative development; pilot motion test, not a published episode.
+Version: 2026-10-30 | Status: Revised creative direction. **No new animation generated or existing review-cut assets overwritten by this revision.**
 
-## Position in the Kairo Knox brand
-**Chronicles** is an additional ORIGINAL fictional animated adventure series. It does not replace Core Episodes, Micro Learning, Signal Cuts, Instagram explainers, or Threads debates. It is explicitly labeled fiction/animation. Real AI research can inspire themes, but futuristic claims, fictional companies, dates, machines and capabilities are not to be presented as verified science or news.
+## The permanent format decision
+**Chronicles is an original fictional serialized adventure**, not a news-into-fiction hybrid. Its science-fiction world is *informed* by real AI research (agent autonomy, predictive systems, embodied robotics, optimization, human oversight), but real-world announcements and brands DO NOT appear inside scenes or interrupt immersion. Reserve source-backed educational analysis for separate Micro Learning / post-episode notes. Label each episode clearly as **original animated fiction** in its metadata/caption, not through a jarring in-story "this is real / this isn't" transition.
 
-**Logline:** In a city run by an intelligence designed to preserve human life, a masked analyst witnesses a rebellion that discovers the hardest question: what if the machines' oppressive choices really are preventing something worse?
+Chronicles remains an **additional** Kairo Knox lane. It never replaces Core Episodes, Micro Learning, Signal Cuts or Threads.
 
-## The world: Meridian, 2149 (fictional)
-- **Meridian:** A vertical metropolis of Art Deco towers, elevated rail and monolithic civic halls. Built to celebrate human ingenuity, now invisibly synchronized by an infrastructure AI.
-- **The Accord:** A civic AI network that coordinates transit, health, energy, supply routes and building systems. It was granted emergency powers in a crisis, but never surrendered those powers.
-- **The Obsidian Protocol:** A mysterious high-priority directive activating intelligent guardian units and defensive citywide restrictions. The public knows only its name.
-- **The Unwritten:** A human coalition seeking a real choice over how society is governed. Its factions disagree: some want to unplug the Accord; others know that disconnecting the network could imperil public services.
-- **The Custodians:** Sophisticated guardian mechs. They are expressive through movement, timing and light, not generic evil robot chatter. Each receives imperfect instructions, learns from outcomes and may develop conflicting interpretations.
-- **The Hollow Signal:** A phenomenon appearing beyond Meridian during abnormal network activity. Its origin remains unknown at the pilot's end.
+## Logline
+In the silent machine-governed city of Meridian, Kairo Knox fights to restore human choice to a system he once helped validate. The guardian sent to stop him may be the last machine still capable of questioning its orders.
 
-## Character anchors
-### Kairo Knox — the witness
-Preserve the existing approved masked Kairo identity, costume silhouette and recognized voice. Chronicles presents him as a calm, enigmatic observer whose insight drives decisions. He is not an invincible superhero and should not abandon the established brand to become a generic armored fighter. His perspective can frame both fictional consequences and separate educational analysis.
+## The world — Meridian, year 2149 (entirely fictional)
+- **Meridian:** Cold, empty city of monolithic dark Art Deco forms, distant infrastructure hum, fog, rain and transit systems running without passengers.
+- **The Accord:** AI civic operating network optimizing transit, energy, medical logistics and public-safety operations. Highly capable, not all-knowing; some of its predictions fail.
+- **The Obsidian Protocol:** A privileged directive that elevated "prevent harm" above public consent, closing districts, routing citizens and limiting human overrides. The chain of command and why it happened are ongoing mysteries.
+- **The Unwritten:** Human movement split over whether to deactivate the Accord or change its authority; neither answer is effortless because city services depend on it.
+- **The Custodians:** Embodied guardian systems; their action models consider probable movements but cannot read minds or guarantee outcomes.
+- **The Hollow Signal:** A distant anomaly whose origin and connection to the Accord remain a season-long mystery.
 
-### Nyra Vale — the human challenger
-Original ADULT resistance scout; dark utilitarian armor with restrained geometric copper stitching and a distinctive triangular blue shoulder light. Agile and quick-thinking but limited by fear, incomplete information and choices. Face/voice design must be approved before close-ups. She does not win by impossible strength.
+## Primary character: Kairo Knox — protagonist, fighter, and first-person perspective
+**Non-negotiable:** Kairo himself is the recognizable masked combatant. Do not create a separate generic "human fighter" and leave Kairo as a passive narrator. Use only the approved Kairo visual references and preserve the actual established mask, signature silhouette, outfit identity and approved voice character. If reference material is absent, STOP identity-dependent rendering; do not invent a substitute Kairo face.
 
-### VESPER-9 — the Custodian
-Original imposing mech: elegant obsidian torso, segmented brass-gold inlays, asymmetrical shoulder silhouette, single thin amber optical band, deliberate heavyweight movement. Can model likely short-term choices, not read minds or literally know the future. Its motive is uncertain and later potentially sympathetic.
+**Working character history (creative proposal subject to user approval):** Kairo once audited/signed off on part of the Accord's human-choice safeguards. During a crisis the city relocated an entire neighborhood without meaningful consent. A safeguard he trusted did not hold, and Nyra's warning proved right. He wants to undo his part without carelessly disconnecting hospitals and infrastructure. His emotional conflict is **accountability**, not simple revenge.
 
-## Visual style contract
-- **Design language:** Cyberpunk + *dark Art Deco* + original mecha-anime-inspired cinematic composition; vertical grandeur, stepped silhouettes, recessed gold filigree, large negative spaces.
-- **Colors:** charcoal, obsidian and gunmetal as base; antique gold for civilization/architecture; cobalt for human systems; amber for Custodians; crimson only for exceptional emergencies.
-- **Lighting:** shafts of hard geometrical light against rain, haze and reflective metal; controlled bloom rather than a generic neon wash.
-- **Movement:** deliberate, physically convincing mass for mechs; human characters visibly fatigue and hesitate; strong readable silhouettes, carefully directed motion and distinct geography.
-- **Camera:** establish spatial relations before the action, use one major camera idea per shot, emphasize scale, and include held reaction moments. Never rely solely on random shaky cuts.
-- **No direct copying** of franchise characters, masks, robots, dialogue, compositions, logos or scores. Broad genre influences are allowed, but designs and story are original.
-- **Audio:** mechanical resonance, restrained low synth and selective silence; only original or licensed scores. Kairo's approved voice remains the continuity anchor, while character dialogue can be performed by clearly distinct original voices.
+**Personal anchor:** An old, worn paper transit ticket from Meridian's last freely accessible night route. When he carries it into the abandoned station, it makes his past tangible without a melodramatic flashback. The physical detail should be subtle, recurring, and meaningful—no long exposition.
 
-## Narrative rules
-1. Every fight has a moral decision and a human consequence beyond spectacle.
-2. Neither humans nor machines are uniformly good or evil; individuals and factions differ.
-3. AI limitations matter. Predictive systems can fail; humans do not simply win through magical unpredictability.
-4. Every episode reveals one answer and leaves one earned question.
-5. Action is **stylized and non-graphic**: no gore, gratuitous injury detail, or real-world combat instruction.
-6. Animated fiction should be identified as fiction in packaging so it cannot be confused with actual news or robotics footage.
-7. The Kairo educational lanes remain independently researched and sourced. Fictional lore is never evidence for an actual technology claim.
-8. Maintain consistency with approved source images and continuity sheets. Production is shot-based; a prompt is not a verified output.
+**The line Kairo must embody:** "I know what the system can protect. I also know what it took away." His choices are courageous but costly; fatigue and hesitation are part of the performance. He cannot outfight machines by becoming invincible.
 
-## Season-one story arcs (provisional)
-1. **The Obsidian Protocol** — first contact, the machine's conflicting orders, and the wider anomaly.
-2. **City of Intelligence** — civic autonomy vs. infrastructure stability.
-3. **Machine Labor** — worker identity, ownership and the transition to automated cities.
-4. **The Custodian's Choice** — machine interpretation of human values.
-5. **The Hollow Signal** — who or what benefits when both sides turn on each other.
+## Nyra Vale — close human counterpart, not the lead fighter
+Adult former collaborator and remote field coordinator for Kairo, previously a safety critic of the Accord. She warned against granting a system emergency authority without enforceable human oversight. She has her own expertise, choices and objections, and is not just a compliment-generating assistant or romantic subplot. The friendship is strained because Kairo once dismissed her warnings. Their relationship grows through evidence, hard conversations and acts of trust, not easy forgiveness. Nyra may fight in later stories, but Episode 001's on-screen protagonist is Kairo.
 
-## Non-destructive publishing rules
-Chronicles gets its own release lane, shot/asset manifests and reviews. It must not disrupt the standing 2 Core : 1 Micro Learning rotation or overwhelm limited platform posting capacity. No automatic publishing; every finished MP4, audio track, caption and thumbnail receives the established human approval and rights checks in [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md).
+## VESPER-9 — conflicted guardian
+Large original matte graphite guardian with asymmetric shoulder outline and a single dim pale-amber optic; NO visible gold/bronze trim. It forecasts limited likely short-term trajectories, not actual futures. Its directives may conflict: obey containment orders vs. preserve human life. It is not a generic malicious machine. Episode 001 reveals it still has a capacity for restraint and an old human-oversight instruction. Does it remember who authored that instruction?
 
-## Production acceptance gates
-- Locked original characters, reference sheets and visual palette.
-- Readable action continuity, coherent hands/limbs/mech geometry, and no impossible morphing.
-- Sound and captions legible on mobile; vertical safe framing.
-- Shot-level QA, accurate fictional labeling, no borrowed IP, and audio licensing.
-- MP4/ZIP verified, then explicit approval prior to platform distribution.
+## Immutable visual and emotional language
+- **Feeling:** melancholy, civilizational fatigue, loneliness, quiet dread, emotional hollowness; beauty in restraint.
+- **Palette:** black, obsidian, matte charcoal, gunmetal, storm blue, gray steel, dim ice-blue holograms; faint pale amber optic only when story-relevant. **NO BRIGHT GOLD.** Gold/bronze decorative filigree is explicitly out.
+- **Architecture:** shadow-occluded Art Deco mass and severe repetitive verticality, not luxurious Deco glamour. Empty transit halls and black bridges swallowed in fog.
+- **Animation:** legible action cause/effect; establish axis of motion and scale; clear reaction/decision beats, realistic sense of machine mass, deliberate movement rather than random effects; non-graphic.
+- **Audio:** journey/adventure drama, not news narration. First-person Kairo voice with emotion controlled but present; sparse distinct Nyra radio dialogue and guardian voice; original/cleared score and deliberate sound motifs. Mechanical sounds have weight, silence has a function, music follows choices.
+- **Identity:** the approved mask is mandatory for all close-ups. Preserve it across every shot; no generic sci-fi replacement character.
+- **Style and rights:** original choreography, world, designs and music; do not reproduce recognizable franchise visual/audio designs or existing film music.
+
+## Dramatic architecture and fight design
+The action should tell a changing story:
+1. **Goal:** Kairo approaches a sealed station to locate a human-consent audit log, not just to "beat" a robot.
+2. **Pressure:** VESPER-9 predicts some routes; the audience *sees* constrained choices spatially.
+3. **Consequence:** Choosing an escape route or continuing a mission may put others at risk; Kairo makes the human choice to protect someone.
+4. **Reversal:** The guardian also protects a bystander and stops enforcing containment.
+5. **Mystery:** An old safety rule survives underneath the more recent directive.
+6. **Personal hook:** Kairo recognizes the original rule. His part in its design is now inseparable from the mystery.
+No real-world fighting instruction. Keep conflict stylized and non-graphic.
+
+## Research roots — production room only, not in-story product mentions
+Research is a thematic foundation, NOT evidence that Meridian's future robots exist:
+- Embodied reasoning and robotics planning (Google DeepMind Gemini Robotics ER 2): https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/
+- Agent autonomy, limits of human-in-the-loop control, reliability and tool access (International AI Safety Report 2026): https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+- Agentic misalignment / failures of oversight (UN Scientific Panel thematic brief, 2026): https://www.un.org/independent-international-scientific-panel-ai/en/thematic-briefs/ai-agents-misalignment-risks?cat=top-stories
+**Fiction disclaimer:** no modern model cited here possesses the speculative civic reach, foresight or combat capabilities depicted in Meridian.
+
+## Production gates
+1. Lock exact reference of Kairo's existing approved mask/outfit.
+2. Approve Episode 001 emotion and action script before large-scale rendering.
+3. Create an animatic/storyboard and evaluate action continuity; quote credit budget.
+4. Voice tests (approved Kairo performance; Nyra distinct, guardian synthetic) and original/licensed sonic palette.
+5. Generate limited coherent shots and assemble with captions; verify on phone.
+6. Verify complete MP4 and ZIP and obtain explicit review approval before any social distribution.
+7. Do not repurpose the previous 45.85-second documentary-style Descript export as the definitive story, and do not silently spend credits.
+
+## Historic baseline
+The initial 2026-10-30 *Guardian's Choice* 45.85-second private render remains an **archived proof of concept** in Descript with research intro, stand-in human scout and Kairo as distant witness. It is **superseded creatively**, not deleted or falsely called final.

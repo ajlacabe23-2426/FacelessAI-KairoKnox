@@ -6,8 +6,9 @@ Kairo Knox: original short-form storytelling, practical Micro Learning, and Sign
 
 - [Creative Director — eight-step original-content research and optimization loop](docs/CREATIVE_DIRECTOR.md)
 - [Chronicles — original cyberpunk dark Art Deco animated series bible](docs/CHRONICLES_SERIES_BIBLE.md)
-- [Chronicles pilot 001 — The Obsidian Protocol 45-second storyboard and prompt pack](docs/CHRONICLES_PILOT_001.md)
-- [Chronicles researched episode 001 — The Guardian's Choice, script and original animation cut notes](docs/CHRONICLES_EP001_RESEARCHED_CUT.md)
+- [Chronicles Episode 001 — revised fictional Kairo-led adventure script, choreography and sound design](docs/CHRONICLES_EP001_FICTION_REWRITE.md)
+- [Earlier proof-of-concept pilot storyboard (archived creative direction)](docs/CHRONICLES_PILOT_001.md)
+- [Original news-plus-fiction proof-of-concept production record (archived; not canonical)](docs/CHRONICLES_EP001_RESEARCHED_CUT.md)
 - [Production, approval and publishing workflow](docs/CONTENT_WORKFLOW.md)
 - [Platform playbook — including Threads discussion/documentation strategy](docs/PLATFORM_PLAYBOOK.md)
 - [Measurement and two-week audience experiment](docs/MEASUREMENT.md)

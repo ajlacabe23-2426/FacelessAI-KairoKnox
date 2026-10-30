@@ -1,3 +1,5 @@
+> **Archived storyboard (2026-10-30).** Kairo is now the principal on-screen fighter, not a narrator/witness. The current fiction-only revised Episode 001 treatment is [here](CHRONICLES_EP001_FICTION_REWRITE.md). Do not use this historic template for new shots without adapting identities and removing gold.
+
 # Chronicles Pilot 001 — THE OBSIDIAN PROTOCOL
 Version: 2026-10-30 | 45-second proof-of-concept | Fiction / non-graphic animated sci-fi
 Status: scripted and storyboarded; **not** a complete 45-second rendered MP4.
