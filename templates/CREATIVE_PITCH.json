@@ -1,0 +1,27 @@
+{
+  "title": "",
+  "intended_viewer": "",
+  "audience_benefit": "",
+  "hook_consequence": "",
+  "hook_prediction": "",
+  "visible_proof": "",
+  "teachable_payoff": "",
+  "sources": [],
+  "optional_humor": "",
+  "platform": "tiktok",
+  "rights_status": "needs_review",
+  "unsupported_claims": false,
+  "uncleared_rights": false,
+  "misleading_footage": false,
+  "sensitive_data": false,
+  "unsafe_demo": false,
+  "ratings": {
+    "hook_clarity": 0,
+    "viewer_relevance": 0,
+    "payoff": 0,
+    "teachability": 0,
+    "personality_humor": 0,
+    "visual_credibility": 0,
+    "platform_measurement": 0
+  }
+}

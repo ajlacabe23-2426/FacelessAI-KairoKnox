@@ -1,0 +1,13 @@
+# Local observations/media/transcripts may contain private material.
+data/
+reports/
+.local/
+*.mp4
+*.mov
+*.wav
+*.zip
+.env
+.env.*
+__pycache__/
+*.pyc
+.pytest_cache/
