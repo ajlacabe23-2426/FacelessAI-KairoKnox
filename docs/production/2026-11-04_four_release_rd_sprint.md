@@ -36,25 +36,16 @@ Source-rights note: these sources support factual narration and attributed on-sc
 **Fact gate:** A previously referenced "75-point study result" is UNSOURCED in current verified records: do not narrate it as fact unless original research and context are recovered. Watch prices are illustrative, not live retail prices.
 **Save value:** small 3-question pre-purchase checklist. **Discussion:** "Would you let an AI pay on your behalf, or only compare?"
 
-## Core Episode 014 — The Visitors Who Weren't Human
-**State:** user-approved replacement for discarded "The Employee You Never Hired" pitch. Original research-based cyber-noir documentary; no real-visitor footage or invented analytics presented as fact.
-**Length target:** 70–85 seconds. **Audience:** internet users, creators, developers, commerce/marketing professionals.
-**Thesis:** AI agents are already navigating websites and interacting with digital workflows, potentially changing how the web is designed, discovered, and monetized.
-**Credible central source:** Microsoft Clarity, *How AI agents browse the web*, October 29, 2026. Analyzed over 5.2 million AI-agent-related web sessions. Caution: observed checkout-related or form events do **not** prove that an autonomous agent independently completed a purchase. Label the exact methodology/source in the cut.
-**Cover directions:** "The Visitors Who Weren't Human" / "The Internet Has New Visitors" / "Who Is Actually Browsing?"
-**Original narration, production-lock draft:**
-"The streets are empty. The storefronts are dark. But the websites are busy. A different kind of visitor is arriving: not a person with a mouse, but software browsing on someone's behalf. Microsoft Clarity studied millions of website sessions associated with AI agents. Researchers observed activities including form submissions and checkout-related events. That doesn't prove every agent made a purchase on its own. It tells us something stranger: the web is no longer navigated only by humans. What happens to search, advertising and customer service when a machine is part of the audience? Will websites be designed to persuade people, or to answer an agent's questions? The internet was built for human attention. Next, it may have to earn a machine's trust. Who decides where the agents go? I'm Kairo Knox."
+## Core Episode 014 — THE VISITORS WHO WEREN'T HUMAN (APPROVED; SUPERSEDES 'THE EMPLOYEE YOU NEVER HIRED')
+**State:** Approved investigative story, factual source checked November 4, 2026; voice/visual production in progress. **Format:** 9:16 original video, target 75–85 seconds, narrator Fraser.
+**Thesis:** Websites built for humans are increasingly encountering agentic browser sessions. Their analytics must separate recorded events from autonomous task completion.
+**Source:** Microsoft Clarity research published 2026-10-29, https://clarity.microsoft.com/blog/agentic-analytics-what-agents-do-on-websites/ ; Microsoft follow-up 2026-11-04 https://clarity.microsoft.com/blog/clarity-connects-agents-llms-people/ . Studied **more than 5.2 million** agentic-classified sessions across **230,511** projects from Aug 13–Sep 9, 2026. Agentic sessions CAN INCLUDE human handoffs. Recorded form/checkout/bookings are independent non-mutually-exclusive **events, not proof AI finished transactions**. No claims of malicious bots or autonomous purchases.
 
-**Shot map:** 
-- 00–07: Rainy empty cyber-noir Art Deco retail district. A fictional storefront dashboard counter increases; **on-screen label: ILLUSTRATIVE ANALYTICS**, not an actual data capture.
-- 07–18: Invisible digital visitor represented by abstract light trail entering a web storefront; no person/creature depicted.
-- 18–32: Source card: Microsoft Clarity Oct 29, sample of over 5.2M sessions. "Agent-associated web sessions" is the unit, **not 5.2M unique robots**.
-- 32–45: Checkout-related and form events illustrated, with on-screen caution: "EVENT ≠ CONFIRMED AUTONOMOUS PURCHASE".
-- 45–65: Web-design implications posed as questions, not reported facts: advertising, service, search experience.
-- 65–85: Return to the empty street / "WHO CHOOSES WHERE AGENTS GO?" / logo outro.
+**Final narration draft, Fraser:**
+"At midnight, every storefront is empty. Yet the visitor counter keeps climbing. Who's browsing? Not always humans. Microsoft Clarity studied over five point two million website sessions involving AI agents, across more than two hundred thirty thousand projects. Some recorded searches, forms, appointment bookings, and checkout events. But there's an important limit: a session involving an agent can also include a human taking over. A checkout event isn't proof that a machine independently completed a purchase. Still, the web is meeting a different kind of visitor: software navigating toward a goal on somebody else's behalf. Imagine a website built to persuade a person. What changes when its next visitor is an agent? And how will a business know whether it served a customer, a helpful assistant, or a mistake? When the visitor isn't always human, the internet needs a new way to understand who's at the door. If AI explores the web for you, what will you stop seeing?"
 
-**Visual language:** empty city and luminous glass storefronts, holographic page architecture, blue-white on black; never splice real screenshots or trademarked logos into AI-made footage. Masked analyst references may be reused only after identity QA. **Save value:** 3 checkpoints when reading agentic-commerce claims: [1] Was it observed? [2] Was it autonomous? [3] Was the outcome completed? **Discussion:** "If an AI browses for you, how much of the web will you still see?"
-**Fact/rights controls:** No real person/web visitor inferred; no made-up business outcomes; no third-party footage; source overlay cites research. Fictional dashboard labeled.
+**Scene map:** 0–8 deserted noir commercial boulevard, HUD visitor counter labeled ILLUSTRATIVE, no fake measured statistics; 8–17 blue agent-light trails in vacant glass windows; 17–30 SOURCE CARD "5.2M agent-associated sessions / 230,511 projects / Clarity, Oct 29 2026"; 30–44 custom UI of searches/forms/bookings/checkout events; 44–55 caution card "Agentic session ≠ independent completion; human handoff possible"; 55–68 split-screen human browsing versus agent activity, explicitly conceptual; 68–85 Kairo dark reflective investigator silhouette and question.
+**Visual direction:** cold electric blue, graphite, noir cyberpunk dark Art Deco; use previously approved masked Kairo visual references only for identity-visible shots; no stock/unlicensed video. **Save payoff:** three checks for a business website: classify traffic / distinguish session events / examine human handoff. **Question:** "When your AI browses for you, what part of the web will disappear from your view?" **Video not published.**
 
 ## Signal Cut 004 — The Robot Has a Contract. Now What?
 **State:** new sourced commentary, no render. **Length:** ~50–60s.
@@ -93,8 +84,15 @@ Source-rights note: these sources support factual narration and attributed on-sc
 | Piece | Truth/rights | Hook | Value | Distinctness | Status |
 |---|---|---|---|---|---|
 | Ep 013 | sourced shopping statistics; prior 75-point claim held | price comparison | 3 shopping checks | consumer decision-making | DRAFT / assets unresolved |
-| Ep 014 | Microsoft Clarity sample; fictional dashboard labeled | empty city / unseen visitors | observed-vs-autonomous-vs-completed | agentic web browsing | DRAFT / production submitted |
+| Ep 014 | official Microsoft Clarity study; agent/human handoff caveat | eerie empty city/traffic | classify/events/handoff | AI reshaping the web | APPROVED SCRIPT / video production underway |
 | SC 004 | company release; 2027 *planned* explicit | commercial humanoids | demo/deploy/scale | robotics market reality | DRAFT / not rendered |
 | ML 007 | MDN/RFC semantics | 403 | working offline simulation | coding demo | DRAFT / not rendered |
 
 No live published links, video exports, third-party footage rights or engagement performance are asserted by this brief.
+
+## Build execution update — 2026-11-04
+- User explicitly approved building four films and new Episode 14 concept. The production budget is being applied to ORIGINAL B-roll / narration, not third-party footage.
+- Descript Agent Underlord blocked by account AI-credit limit, so the project has switched to direct original video creation; Descript cannot be claimed as a ready edit.
+- Three 5-second original Kling Turbo B-roll jobs submitted: EP13 `82720a80-f0fd-4308-97ce-d7b679eb90a3`; EP14 `6e2be088-937a-4671-9d96-c0e781f356f9`; Signal Cut 004 `c2bbe0e3-1f54-4020-a43c-fff150fefa8b`. Subject to QA; no claim completed yet.
+- Fraser voice narration jobs submitted: EP13 `af8407b2-8cce-497d-b772-2e5a9573c9dc`, EP14 `fbc1ff99-58c8-4135-b121-6d2ab46dc08b`. The remaining two initial narration submissions encountered seed_audio rate limits; do not imply they were generated.
+- No publication authorization inferred from production approval. MP4 deliverables and production source code to follow separately as verified.
