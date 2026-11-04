@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kairo Knox · API Status Lab</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 25% 0%,#153253,#080e1b 60%);color:#eef7ff;min-height:100dvh;display:flex;justify-content:center}
+main{width:min(100%,560px);padding:26px 20px 42px}
+.kicker{font-weight:800;letter-spacing:.18em;color:#6ecbff;font-size:11px}
+h1{font-size:clamp(27px,7vw,38px);line-height:1.1;margin:16px 0 8px}
+p{color:#b6c7d8;line-height:1.5;margin:7px 0}
+.panel{border:1px solid #284d6b;background:#0d1b2bcf;border-radius:17px;padding:18px;margin:18px 0;box-shadow:0 12px 32px #01040b77}
+legend{font-size:12px;color:#a5c4d9;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+button{width:100%;padding:14px 12px;margin:6px 0;border:1px solid #365b75;border-radius:12px;background:#162d43;color:#f2f9ff;font-weight:750;text-align:left;cursor:pointer;font-size:14px}
+button:focus-visible{outline:3px solid #8be3ff;outline-offset:2px}
+button:hover{background:#20425f}
+.small{color:#9bb1c3;font-size:12px}
+.status{font-size:clamp(23px,7vw,33px);font-weight:850;padding:8px 0;letter-spacing:.02em}
+.ok{color:#6bf4c1}.warn{color:#ffcb6d}.deny{color:#ff899a}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#060d17;border:1px solid #24384c;padding:14px;border-radius:12px;font-size:12px;line-height:1.6;min-height:110px}
+.tag{font-size:12px;border:1px solid #36617d;border-radius:8px;padding:4px 8px;display:inline-block;color:#a8d9ff}
+.note{font-size:12px;color:#a1b6c8}
+footer{font-size:12px;color:#92b2c7;margin-top:20px}
+</style></head><body><main>
+<div class="kicker">KAIRO KNOX / MICRO LEARNING 007</div>
+<h1>One API.<br>Three responses.</h1>
+<p>A safe, interactive simulation. No credentials, internet, or real server needed.</p>
+<div class="panel">
+<legend>Make a simulated request</legend>
+<button data-code="200">01 · GET /lessons/public — anyone</button>
+<button data-code="401">02 · GET /lessons/private — guest</button>
+<button data-code="403">03 · POST /admin/publish — signed-in viewer</button>
+</div>
+<div class="panel" aria-live="polite" aria-atomic="true">
+<div class="tag" id="request">NO REQUEST YET</div>
+<div class="status" id="status">Choose a request</div>
+<p id="explain">The result will appear here.</p>
+<pre id="payload">{ "demo": true, "status": "idle" }</pre>
+</div>
+<p class="note"><strong>Quick rule:</strong> 200 = it worked · 401 = not authenticated · 403 = authenticated, but no permission (in this example).</p>
+<footer>Original learning demo · all requests simulated in your browser · Source: MDN HTTP Response Status Codes / RFC 9110</footer>
+<script>
+const data={
+"200":{request:"GET /lessons/public",title:"200 OK",klass:"ok",explain:"The server successfully handled the request.",payload:{lesson:"API Basics",visibility:"public",ok:true}},
+"401":{request:"GET /lessons/private",title:"401 Unauthorized",klass:"warn",explain:"This request lacks valid authentication. In a real API, the server should challenge for authentication.",payload:{error:"authentication_required",login_status:"guest",demo:true}},
+"403":{request:"POST /admin/publish",title:"403 Forbidden",klass:"deny",explain:"The simulated user is signed in, but only admins may publish. Repeating the same request will not grant permission.",payload:{error:"insufficient_permissions",role:"viewer",required_role:"admin",demo:true}}
+};
+document.querySelectorAll("button[data-code]").forEach(button=>button.addEventListener("click",()=>{
+const record=data[button.dataset.code];document.getElementById("request").textContent=record.request;
+const status=document.getElementById("status");status.textContent=record.title;status.className="status "+record.klass;
+document.getElementById("explain").textContent=record.explain;
+document.getElementById("payload").textContent=JSON.stringify(record.payload,null,2);
+}));
+</script></main></body></html>
