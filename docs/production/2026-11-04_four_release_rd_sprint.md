@@ -1,5 +1,5 @@
 # KAIRO KNOX — FOUR-RELEASE RESEARCH & DEVELOPMENT SPRINT
-Date: 2026-11-04 (America/Chicago) | Status: DRAFT — RESEARCH AND SCRIPTS ONLY
+Date: 2026-11-04 (America/Chicago) | Status: SCRIPT LOCKED / NARRATION AND B-ROLL GENERATION SUBMITTED / FINAL CUTS NOT YET VERIFIED
 Formats: Core Ep 013, Core Ep 014, Signal Cut 004, Micro Learning 007
 Editorial: masked Kairo investigator; 45% mysterious investigator / 55% witty analyst; black enclosed helmet, blue-white V-shaped visor, circular side lights, dark tactical/armored silhouette. Keep existing *Chronicles* fiction completely separate.
 
@@ -36,17 +36,25 @@ Source-rights note: these sources support factual narration and attributed on-sc
 **Fact gate:** A previously referenced "75-point study result" is UNSOURCED in current verified records: do not narrate it as fact unless original research and context are recovered. Watch prices are illustrative, not live retail prices.
 **Save value:** small 3-question pre-purchase checklist. **Discussion:** "Would you let an AI pay on your behalf, or only compare?"
 
-## Core Episode 014 — The Employee You Never Hired
-**State:** new researched script, no render. **Length:** ~75–85s.
-**Audience:** businesses, developers, tech-curious viewers. **Claim:** an AI agent's power depends on the permissions and tools it receives, not its eloquence.
-**Cover options:** "Your AI Employee Has Keys." / "Who Gave That Agent Permission?" / "It Can Work. But Can You Stop It?"
-**Narrative structure:** detective mystery with an *illustrative* customer-support workflow; no real company breach is implied.
+## Core Episode 014 — The Visitors Who Weren't Human
+**State:** user-approved replacement for discarded "The Employee You Never Hired" pitch. Original research-based cyber-noir documentary; no real-visitor footage or invented analytics presented as fact.
+**Length target:** 70–85 seconds. **Audience:** internet users, creators, developers, commerce/marketing professionals.
+**Thesis:** AI agents are already navigating websites and interacting with digital workflows, potentially changing how the web is designed, discovered, and monetized.
+**Credible central source:** Microsoft Clarity, *How AI agents browse the web*, October 29, 2026. Analyzed over 5.2 million AI-agent-related web sessions. Caution: observed checkout-related or form events do **not** prove that an autonomous agent independently completed a purchase. Label the exact methodology/source in the cut.
+**Cover directions:** "The Visitors Who Weren't Human" / "The Internet Has New Visitors" / "Who Is Actually Browsing?"
+**Original narration, production-lock draft:**
+"The streets are empty. The storefronts are dark. But the websites are busy. A different kind of visitor is arriving: not a person with a mouse, but software browsing on someone's behalf. Microsoft Clarity studied millions of website sessions associated with AI agents. Researchers observed activities including form submissions and checkout-related events. That doesn't prove every agent made a purchase on its own. It tells us something stranger: the web is no longer navigated only by humans. What happens to search, advertising and customer service when a machine is part of the audience? Will websites be designed to persuade people, or to answer an agent's questions? The internet was built for human attention. Next, it may have to earn a machine's trust. Who decides where the agents go? I'm Kairo Knox."
 
-**Proposed Fraser narration (original):**
-"There's a new employee in the building. No badge. No desk. It can read messages, update records, and answer customers while everyone else sleeps. We call it an AI agent. But I have one question: who handed it the keys? Imagine a customer-support assistant that reads outside text and has permission to send messages and modify account records. One misleading instruction hidden in that outside material could push it toward something nobody requested. The real danger isn't that the AI sounds too human. It's that software with broad access can act before anyone notices. NIST is studying how agents should establish identity and authority. OWASP recommends minimum necessary permissions, careful handling of untrusted material, and human confirmation for high-risk actions. Three questions before your next AI rollout: What can it READ? What can it CHANGE? And who can STOP it? Smart answers are useful. Accountable actions are essential. What would you never let an AI do without asking first?"
+**Shot map:** 
+- 00–07: Rainy empty cyber-noir Art Deco retail district. A fictional storefront dashboard counter increases; **on-screen label: ILLUSTRATIVE ANALYTICS**, not an actual data capture.
+- 07–18: Invisible digital visitor represented by abstract light trail entering a web storefront; no person/creature depicted.
+- 18–32: Source card: Microsoft Clarity Oct 29, sample of over 5.2M sessions. "Agent-associated web sessions" is the unit, **not 5.2M unique robots**.
+- 32–45: Checkout-related and form events illustrated, with on-screen caution: "EVENT ≠ CONFIRMED AUTONOMOUS PURCHASE".
+- 45–65: Web-design implications posed as questions, not reported facts: advertising, service, search experience.
+- 65–85: Return to the empty street / "WHO CHOOSES WHERE AGENTS GO?" / logo outro.
 
-**Shot map:** 0–5 dark Art Deco office corridor, glowing inactive employee badge; 5–16 Kairo appears with 3 permission icons; 16–32 fictional customer-support panel and labeled "ILLUSTRATIVE SCENARIO"; 32–47 show risk as redrawn permission map, no attack instructions; 47–62 source cards NIST and OWASP, least privilege; 62–76 lock/unlock/confirmation graphic; 76–85 payoff/CTA.
-**Save value:** READ / CHANGE / STOP checklist. **Discussion:** "Which business action should always require human approval?" **Accuracy gate:** No claim that fictional attack actually happened; no fake product screen presented as real.
+**Visual language:** empty city and luminous glass storefronts, holographic page architecture, blue-white on black; never splice real screenshots or trademarked logos into AI-made footage. Masked analyst references may be reused only after identity QA. **Save value:** 3 checkpoints when reading agentic-commerce claims: [1] Was it observed? [2] Was it autonomous? [3] Was the outcome completed? **Discussion:** "If an AI browses for you, how much of the web will you still see?"
+**Fact/rights controls:** No real person/web visitor inferred; no made-up business outcomes; no third-party footage; source overlay cites research. Fictional dashboard labeled.
 
 ## Signal Cut 004 — The Robot Has a Contract. Now What?
 **State:** new sourced commentary, no render. **Length:** ~50–60s.
@@ -85,7 +93,7 @@ Source-rights note: these sources support factual narration and attributed on-sc
 | Piece | Truth/rights | Hook | Value | Distinctness | Status |
 |---|---|---|---|---|---|
 | Ep 013 | sourced shopping statistics; prior 75-point claim held | price comparison | 3 shopping checks | consumer decision-making | DRAFT / assets unresolved |
-| Ep 014 | NIST and OWASP; fiction labeled | AI employee with keys | read/change/stop | AI governance | DRAFT / not rendered |
+| Ep 014 | Microsoft Clarity sample; fictional dashboard labeled | empty city / unseen visitors | observed-vs-autonomous-vs-completed | agentic web browsing | DRAFT / production submitted |
 | SC 004 | company release; 2027 *planned* explicit | commercial humanoids | demo/deploy/scale | robotics market reality | DRAFT / not rendered |
 | ML 007 | MDN/RFC semantics | 403 | working offline simulation | coding demo | DRAFT / not rendered |
 
