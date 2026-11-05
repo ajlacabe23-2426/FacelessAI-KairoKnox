@@ -20,3 +20,12 @@ Kairo Knox: original short-form storytelling, practical Micro Learning, and Sign
 **Policy:** Producing a video, approving an idea and granting final publication approval are separate steps. Do not publish a video, post or cut without user review and explicit final approval. Do not store unfinished/unlicensed source clips, credentials, or sensitive client data in this repository.
 
 Latest editorial workflow refresh: 2026-10-30. This repository documentation does not by itself change social account settings, schedule any content, or certify performance improvements.
+
+## Current private production handoff (2026-11-04)
+
+- [ML007 visual production brief](docs/production/ML007_VISUAL_PRODUCTION_BRIEF.md)
+- [ML007 timecoded render-ready UI animation plan](docs/production/ML007_RENDER_READY_SCENE_PLAN.md)
+- [ML007 reproducible offline visual renderer](scripts/render_ml007_visual.py)
+- [ML007 v2 visual review receipt](docs/production/ML007_VISUAL_V2_REVIEW_RECEIPT.md)
+
+This visual-only Micro Learning upgrade does not modify EP13, EP14, or Signal Cut 004; publication remains separately approval-gated.
