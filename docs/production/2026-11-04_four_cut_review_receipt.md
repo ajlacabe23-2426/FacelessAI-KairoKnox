@@ -33,3 +33,13 @@ Higgsfield balance at start: **332.94**. Current balance after generation: **230
 - `scripts/render_kairo_slate.py`
 
 Publishing remains **NO-GO** until review cuts are improved and approved.
+
+## ML007 visual-only follow-up — v2 supplemental review
+
+Keep the four original v1 MP4 and the v1 ZIP unchanged. A separate upgraded Micro Learning v2 review cut was rendered from existing `ml_voice.wav` and an original no-network simulated UI animation, then uploaded and confirmed:
+
+- File: `Kairo_Knox_ML007_visual_v2_PRIVATE_REVIEW.mp4`
+- Runtime: **59.000s**; H.264 **720×1280**, AAC audio; **1,490,897 bytes**; upload HTTP 200, confirmed uploaded.
+- Review: https://d2ol7oe51mr4n9.cloudfront.net/user_3KLAB8V6seR0aGTk7raFFu7JUlM/e841cbf6-b820-4b84-bc60-2e2506f5a5a4.mp4
+- No new Higgsfield paid generations; original Fraser narration reused.
+- All other three original video reviews unaffected. No publication.
