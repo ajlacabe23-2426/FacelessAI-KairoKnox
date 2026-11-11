@@ -3,6 +3,8 @@ Date: 2026-11-11
 Status: PRODUCING / NO-GO for social publishing
 Scope: Facebook Chronicles 002 (“Is This AI?”) and Kairo Chronicles 002 (“The Null Archive”)
 
+> **PRODUCTION PROVIDER UPDATE — 2026-11-11:** Higgsfield subscription has been canceled and the service is **excluded from all future production planning, generation, budget proposals, and delivery**. Prior Higgsfield balances and saved reference elements mentioned below are HISTORICAL only, not an available production workflow. Do not call Higgsfield tools, spend Higgsfield credits, or require an active Higgsfield plan. Reuse any properly owned exported identity reference materials without depending on that platform. Candidate replacement workflow, not yet purchased or connected: **Runway Act-Two** for performance-driven facial/gesture animation (5 Runway credits per second; requires Standard or higher), **Hedra Character 3** for affordable speech-driven test scenes (published API estimate 5 US cents/second at 720p), **Luma Dream Machine** as optional cinematic motion supplement, and **DaVinci Resolve Free** for finishing. Evaluate one 6–8-second *fully animated* performance pilot before committing to any recurring subscription. Keep all public posts on hold until approved.
+
 ## Direction locked
 User-approved visual reference: Nov 10, 2026, ~44.6-second benchmark clip with warm, polished, stylized 3D animated-film characters, textured environments, soft cinematic light, believable facial performance, real conversational lip-sync, motivated shots, and held emotional beats. **A voiceover with slow zooms across still images is not animation.** Do not represent it as final video.
 
