@@ -1,0 +1,24 @@
+{
+  "name": "kairo-coded-animation",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render:pilot": "remotion render src/index.ts MicroLearningPilot out/micro-learning-pilot.mp4 --codec=h264 --concurrency=1",
+    "render:smoke": "remotion render src/index.ts MicroLearningPilot out/smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/gsap": "4.0.539",
+    "gsap": "3.14.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.539",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}
