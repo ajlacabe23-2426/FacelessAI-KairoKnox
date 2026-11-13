@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProgressRail} from './ProgressRail';
 import {useGsapTimeline} from '@remotion/gsap';
 import {
   AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig,
@@ -19,9 +20,6 @@ const Scene: React.FC<{tag:string;subtitle:string;children:React.ReactNode}> = (
     </div>
     <div style={{fontSize:27,letterSpacing:3,fontWeight:800,color:aqua,marginBottom:50}}>{tag}</div>
     <div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center'}}>{children}</div>
-    <div style={{position:'absolute',left:78,right:78,bottom:167,background:'rgba(13,10,33,0.96)',borderRadius:23,padding:'25px 30px',textAlign:'center',fontSize:39,lineHeight:1.2,fontWeight:800}}>
-      {subtitle}
-    </div>
     <div style={{position:'absolute',bottom:89,left:78,fontSize:21,color:'#9b9ab6'}}>
       ORIGINAL ILLUSTRATION · RECOMMENDERS VARY BY PLATFORM
     </div>
@@ -64,7 +62,7 @@ const Signals:React.FC=()=>{
      <div style={{width:425,display:'flex',flexDirection:'column',gap:26}}>
        {chips.map(([label,value],i)=>{
          const p=spring({fps,frame:frame-i*25,config:{damping:170,stiffness:90}});
-         return <div key={label} style={{...card,padding:'32px 30px',transform:`translateX(${(1-p)*100}px)`,opacity:p}}>
+         return <div key={label} style={{...card,padding:'32px 30px',transform:`translateX(${(1-p)*100}px) translateY(${Math.sin(frame/14+i)*3}px)`,opacity:p}}>
            <div style={{fontSize:21,color:'#d3b8e8',letterSpacing:2,fontWeight:900}}>{label}</div>
            <div style={{fontSize:51,color:i===0?aqua:'#fff',fontWeight:900,marginTop:9}}>{value}</div>
          </div>;
@@ -76,7 +74,9 @@ const Signals:React.FC=()=>{
 
 const Loop:React.FC=()=>{
  const frame=useCurrentFrame();const flow=fade(frame,25,130);
- const x=340+420*flow;
+ const orbit=(frame%180)/180;
+ const x=orbit<.36?180+570*(orbit/.36):orbit<.5?750+73*((orbit-.36)/.14):orbit<.69?823:orbit<.87?823-710*((orbit-.69)/.18):113;
+ const y=orbit<.36?170:orbit<.5?170+75*((orbit-.36)/.14):orbit<.69?245+165*((orbit-.5)/.19):orbit<.87?410:410-145*((orbit-.87)/.13);
  return <Scene tag="STEP 2 / RANKING" subtitle="A model can use signals to choose what appears next.">
    <div style={{fontSize:78,fontWeight:900,marginBottom:80}}>THE <span style={{color:accent}}>FEEDBACK</span><br/>LOOP</div>
    <svg width="930" height="530" viewBox="0 0 930 530" style={{overflow:'visible'}}>
@@ -87,7 +87,7 @@ const Loop:React.FC=()=>{
        fill="none" stroke="#644f88" strokeWidth="14" strokeLinecap="round"/>
      <path d="M180 170 L750 170" stroke="url(#pulse)" strokeWidth="14" strokeLinecap="round"
        strokeDasharray="570" strokeDashoffset={570*(1-flow)}/>
-     <circle cx={Math.min(x,745)} cy="170" r="25" fill={aqua} style={{filter:'drop-shadow(0 0 18px #7df7e8)'}}/>
+     <circle cx={x} cy={y} r="25" fill={aqua} style={{filter:'drop-shadow(0 0 18px #7df7e8)'}}/>
      <rect x="32" y="102" width="275" height="145" rx="24" fill="#25193f" stroke="#c99cf0" strokeWidth="3"/>
      <text x="169" y="165" fontSize="32" fontWeight="900" fill="#fff" textAnchor="middle">YOUR</text>
      <text x="169" y="206" fontSize="32" fontWeight="900" fill={aqua} textAnchor="middle">ACTIONS</text>
@@ -124,5 +124,6 @@ export const SignalCutPilot:React.FC<Props>=({narrationFile})=>(
   <Sequence from={405} durationInFrames={255}><Loop/></Sequence>
   <Sequence from={660} durationInFrames={240}><Close/></Sequence>
   {narrationFile?<Audio src={staticFile(narrationFile)}/>:null}
+  <ProgressRail accent={accent}/>
  </AbsoluteFill>
 );
