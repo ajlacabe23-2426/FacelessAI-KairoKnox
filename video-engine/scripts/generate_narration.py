@@ -41,7 +41,7 @@ EPISODES = {
         (10.90, "Each is only one clue.", 13.5),
         (13.85, "A ranking system weighs many signals.", 22.0),
         (16.85, "Then it chooses what content to recommend next.", 22.0),
-        (20.35, "And the cycle repeats.", 22.0),
+        (20.35, "It repeats.", 22.0),
         (22.35, "Relevance isn't the same as truth.", 30.0),
         (25.45, "Choose your sources. Question your feed.", 30.0),
     ],
