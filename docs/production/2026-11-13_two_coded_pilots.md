@@ -1,6 +1,6 @@
 # 2026-11-13 — two code-first review episodes
 
-Status: **PRIVATE CUT RENDERING / NOT APPROVED / NOT PUBLISHED**.
+Status: **TWO PRIVATE REVIEW MP4s RENDERED AND MEDIA-VALIDATED / CREATIVE REVIEW PENDING / NOT APPROVED / NOT PUBLISHED**.
 
 ## Scope
 Two **separate** 30-second 1080×1920 Remotion compositions, with low-cost original graphics, GSAP deterministic timeline transitions, original narrative and a temporary open-weight synthesized voice (Kokoro-82M, Apache-2.0 model), and a sparse fully original synthesized ambience bed. GitHub review job renders at 0.75 scale (810×1440), 30 fps to control testing cost; a final native-resolution acceptance render is required.
@@ -22,3 +22,11 @@ Two **separate** 30-second 1080×1920 Remotion compositions, with low-cost origi
 
 ## Output location
 GitHub Actions review artifacts from `.github/workflows/episode-review-renders.yml`, not the repository's public source tree. The artifacts expire after seven days. Audio files and MP4 binaries are intentionally ignored by Git and are not published.
+
+## Actual technical acceptance receipt (2026-11-13)
+- [GitHub Actions review run #43443767398](https://github.com/ajlacabe23-2426/FacelessAI-KairoKnox/actions/runs/43443767398) **completed SUCCESS**. Job installed pinned video dependencies, passed TypeScript, generated Kokoro voice tracks, rendered both full 30-second videos, validated them with FFprobe and uploaded artifact **#14047138116** (`kairo-coded-episode-review-cuts`).
+- Micro Learning output: **H.264 / 810×1440 / 30 fps / AAC audio / 30.016 s / 2,058,914 bytes**.
+- Signal Cut output: **H.264 / 810×1440 / 30 fps / AAC audio / 30.016 s / 1,961,881 bytes**.
+- Two exported MP4s were retrieved and independently checked for full decode and audio: no ffmpeg decoding error; non-silent RMS approximately 0.024 each, zero samples above 0.99 after PCM decode.
+- Representative 12-frame sheets were inspected per video: correct general sequence, original dark-blue and purple visual styles, animated titles/diagram changes; however mobile labels are small and several scenes remain comparatively static. **Creative-quality acceptance is pending**, including user review, natural narration pacing, and exact subtitle timing.
+- Render-scale was 75% of the 1080x1920 source for the affordable pilot. This output is **not** a native-resolution release master. No social uploads, paid generation calls, publishing or branch merges performed.
