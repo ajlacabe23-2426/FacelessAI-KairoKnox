@@ -47,6 +47,9 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 - [ ] Clip rights or licenses and attribution reviewed
 - [ ] No private client data, internal tokens, credentials, or exploitable live security details
 - [ ] Kairo identity, voice, styling, captions, and vertical crop coherent
+- [ ] Coded-animation-first option evaluated for all relevant teaching/motion-graphic shots; paid generation is an explicit exception, not a default
+- [ ] GSAP visuals are frame-deterministic; full native-size render and sampled keyframes were inspected, not just a 2-second smoke test
+- [ ] Narration is actually present where required; original speech, caption sync, and final audio have been reviewed
 - [ ] Rendered MP4/ZIP verified and ready to inspect
 - [ ] Each platform caption is distinct and readable
 - [ ] Final user review and publishing approval obtained
