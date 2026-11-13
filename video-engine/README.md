@@ -1,6 +1,6 @@
 # Kairo Knox — code-first animation pilot (review only)
 
-An original, **silent visual-only** 30-second, vertical, 1080x1920 / 30 fps Micro Learning proof of concept, built in Remotion and GSAP. Topic: how an app uses an API. Demo data are invented and explicitly labeled illustrative. This is NOT a delivered episode, voiced master, or approved publication.
+Two original 30-second, vertical, 1080x1920 / 30 fps compositions built in Remotion and GSAP: **MicroLearningPilot** (how an app obtains data through an API) and **SignalCutPilot** (illustrative recommendation feedback loop). The default Studio compositions are silent; narrated private review renders can be generated with the optional open-weight TTS step below. These are **not** publication-approved masters.
 
 ## Install and preview
 
@@ -24,6 +24,20 @@ ffprobe -v error -show_entries format=duration -show_entries stream=width,height
 The smoke command renders just two seconds at half-size to exercise the renderer. It does not pass the full visual/audio acceptance gate. For a narration file that you **own or have permission to use**, put it in `video-engine/public/` (ignored by Git), then set `narrationFile` as a Remotion input prop such as `{"narrationFile":"voiceover.wav"}`. The default video has **no audio**. Captions visible in the sample are visual teaching cards, not synchronized, accessible spoken-word subtitles.
 
 Keep all outputs and private audio **outside Git**. Do not publish, commit private voices, or treat a successful build as video approval. Compare local master at native resolution for motion, phone-safe crop, source accuracy, voice/caption sync, audio peak level, and a verified duration with ffprobe. Hand off a locally rendered file for explicit final review.
+
+## Two-episode private review render (open-weight voice option)
+
+`scripts/generate_narration.py` uses Kokoro-82M with the original `am_michael` test voice. It is not the named production voice, and the model requires a one-time open-weight download. Review licensing for any actual commercial workflow.
+
+```sh
+# Requires Python 3.11+, FFmpeg and espeak-ng
+python -m pip install 'kokoro==0.9.4' 'soundfile==0.13.1'
+python scripts/generate_narration.py --outdir public
+npx remotion render src/index.ts MicroLearningPilot out/micro-learning-review.mp4 --props=render-micro.json --codec=h264
+npx remotion render src/index.ts SignalCutPilot out/signal-cut-review.mp4 --props=render-signal.json --codec=h264
+```
+
+The GitHub Actions `episode-review-renders.yml` creates reduced-scale (810×1440) narrated MP4s **only for review**, passes FFprobe duration/codec/audio preflight and uploads them as short-lived GitHub Action artifacts. Do not interpret CI or a successful audio stream as a real creative/voice/captions signoff. See [two-episode validation receipt](../docs/production/2026-11-13_two_coded_pilots.md). No connected account is authorized for social posting.
 
 ## Architecture and spend policy
 
