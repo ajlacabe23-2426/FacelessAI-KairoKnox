@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import textwrap
 from pathlib import Path
 
@@ -23,8 +24,8 @@ VOICE = "am_michael"
 # Keeps the video structure and captions aligned with the actual TTS output.
 EPISODES = {
     "micro": [
-        (0.50, "Here's how your app loads fresh information.", 5.0),
-        (2.95, "It's a request, then a response.", 5.0),
+        (0.50, "How does your app get fresh data?", 5.0),
+        (2.95, "It asks. A server replies.", 5.0),
         (5.35, "Your phone sends an HTTP request to a server.", 14.5),
         (9.45, "For example, it asks for the latest articles.", 14.5),
         (14.85, "The server sends back a response containing data.", 23.0),
@@ -33,8 +34,8 @@ EPISODES = {
         (26.3, "That's the basic idea behind an API.", 30.0),
     ],
     "signal": [
-        (0.4, "Your feed isn't reading your mind.", 5.0),
-        (2.70, "It's learning from what you do.", 5.0),
+        (0.4, "Your feed isn't mind reading.", 5.0),
+        (2.70, "It learns from your actions.", 5.0),
         (5.30, "Watch time can be a signal.", 13.5),
         (7.80, "So can likes, shares, or skipping a post.", 13.5),
         (10.90, "Each is only one clue.", 13.5),
@@ -157,17 +158,28 @@ def main():
             allotted = limit - start
             if allotted < .5:
                 raise RuntimeError("Invalid narrator slot")
-            # Choose a natural speaking pace first. If a cue is long, permit a slightly
-            # quicker delivery but never truncate or silently overlap the next line.
-            for speed in (1.08, 1.16, 1.24):
-                waveform = synthesize(pipeline, text, speed=speed)
-                actual = len(waveform)/SAMPLE_RATE
-                if actual <= allotted:
-                    break
-            else:
-                raise RuntimeError(
-                    f"{name} line {index+1}: {actual:.2f}s cannot fit {allotted:.2f}s: {text}"
+            # Produce one steady-rate natural voice. A small atempo adjustment can
+            # accommodate unpredictable TTS duration while preserving pitch.
+            speed = 1.13
+            waveform = synthesize(pipeline, text, speed=speed)
+            actual = len(waveform)/SAMPLE_RATE
+            if actual > allotted:
+                tempo = actual/allotted
+                if tempo > 1.22:
+                    raise RuntimeError(
+                        f"{name} line {index+1}: {actual:.2f}s requires {tempo:.2f}x speed; shorten the copy: {text}"
+                    )
+                rendered = subprocess.run(
+                    ["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error",
+                     "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1", "-i", "pipe:0",
+                     "-af", f"atempo={tempo+0.015:.4f}", "-f", "f32le", "pipe:1"],
+                    input=waveform.astype(np.float32).tobytes(), capture_output=True, check=True
                 )
+                waveform = np.frombuffer(rendered.stdout, dtype=np.float32).copy()
+                actual = len(waveform)/SAMPLE_RATE
+                if actual > allotted:
+                    raise RuntimeError(f"{name} line {index+1}: atempo output still too long")
+                print(f"{name} line {index+1}: gently time-fitted at {tempo:.2f}x", flush=True)
             at = round(start*SAMPLE_RATE)
             mix[at:at+len(waveform)] += .79*waveform
             segments.append((start, min(DURATION, start+actual+.13), text))
