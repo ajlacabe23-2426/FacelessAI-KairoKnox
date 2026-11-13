@@ -6,7 +6,9 @@
     "studio": "remotion studio src/index.ts",
     "render:pilot": "remotion render src/index.ts MicroLearningPilot out/micro-learning-pilot.mp4 --codec=h264 --concurrency=1",
     "render:smoke": "remotion render src/index.ts MicroLearningPilot out/smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "render:signal": "remotion render src/index.ts SignalCutPilot out/signal-cut-pilot.mp4 --codec=h264 --concurrency=1",
+    "render:signal:smoke": "remotion render src/index.ts SignalCutPilot out/signal-smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59"
   },
   "dependencies": {
     "@remotion/gsap": "4.0.539",
