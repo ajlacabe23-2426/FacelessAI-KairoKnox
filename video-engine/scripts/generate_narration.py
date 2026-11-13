@@ -25,7 +25,7 @@ VOICE = "am_michael"
 EPISODES = {
     "micro": [
         (0.50, "How does your app get fresh data?", 5.0),
-        (2.95, "It asks. A server replies.", 5.0),
+        (2.95, "Here's the request.", 5.0),
         (5.35, "Your phone sends an HTTP request to a server.", 14.5),
         (9.45, "For example, it asks for the latest articles.", 14.5),
         (14.85, "The server sends back a response containing data.", 23.0),
@@ -35,7 +35,7 @@ EPISODES = {
     ],
     "signal": [
         (0.4, "Your feed isn't mind reading.", 5.0),
-        (2.70, "It learns from your actions.", 5.0),
+        (2.70, "Your actions leave clues.", 5.0),
         (5.30, "Watch time can be a signal.", 13.5),
         (7.80, "So can likes, shares, or skipping a post.", 13.5),
         (10.90, "Each is only one clue.", 13.5),
