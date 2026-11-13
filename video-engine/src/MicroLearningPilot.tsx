@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProgressRail} from './ProgressRail';
 import {useGsapTimeline} from '@remotion/gsap';
 import {
   AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile,
@@ -24,11 +25,6 @@ const Shell: React.FC<{eyebrow: string; children: React.ReactNode; caption: stri
       <div style={{flex: 1, display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
         {children}
       </div>
-      <div style={{
-        position: 'absolute', left: 78, right: 78, bottom: 195,
-        fontSize: 40, fontWeight: 800, lineHeight: 1.2, textAlign: 'center',
-        background: 'rgba(5,11,26,0.9)', padding: '22px 18px', borderRadius: 20,
-      }}>{caption}</div>
       <div style={{position:'absolute',left:78,bottom:103,color:'#94afcc',fontSize:23}}>
         KAIRO KNOX / ORIGINAL CODED VISUAL
       </div>
@@ -64,7 +60,7 @@ const Request: React.FC = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const enter = spring({fps,frame,config:{damping:200,stiffness:95}});
-  const send = interpolate(frame, [45, 102], [0, 1], clamp);
+  const send = interpolate(frame % 160, [18, 108], [0, 1], clamp);
   return (
     <Shell eyebrow="STEP 1  /  REQUEST" caption="The app sends a request to a server.">
       <div style={{fontSize:75,fontWeight:900,marginBottom:64}}>THE APP <span style={{color:cyan}}>ASKS</span></div>
@@ -85,7 +81,7 @@ const Request: React.FC = () => {
         <div style={{...panel,padding:35,width:280,transform:`translateY(${(1-enter)*-70}px)`,opacity:enter}}>
           <div style={{fontSize:32,fontWeight:800}}>SERVER</div>
           <div style={{marginTop:34,display:'flex',flexDirection:'column',gap:24}}>
-            {[0,1,2].map(n=><div key={n} style={{height:57,borderRadius:12,background:'#193456',border:'2px solid #345879'}}/>)}
+            {[0,1,2].map(n=><div key={n} style={{height:57,borderRadius:12,background:'#193456',border:'2px solid #345879',opacity:0.68+0.28*Math.sin(frame/15+n)}}/>)}
           </div>
         </div>
       </div>
@@ -148,5 +144,6 @@ export const MicroLearningPilot: React.FC<PilotProps> = ({narrationFile}) => (
     <Sequence from={435} durationInFrames={255}><Response/></Sequence>
     <Sequence from={690} durationInFrames={210}><Takeaway/></Sequence>
     {narrationFile ? <Audio src={staticFile(narrationFile)}/> : null}
+    <ProgressRail accent={cyan}/>
   </AbsoluteFill>
 );
