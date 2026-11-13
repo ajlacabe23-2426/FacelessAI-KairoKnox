@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       - 'video-engine/src/**'
-      - 'video-engine/scripts/generate_narration.py'
+      - 'video-engine/scripts/**'
       - 'video-engine/render-*.json'
       - '.github/workflows/episode-review-renders.yml'
   workflow_dispatch:
@@ -47,6 +47,11 @@ jobs:
       - name: Render complete Signal Cut private review MP4
         working-directory: video-engine
         run: npx remotion render src/index.ts SignalCutPilot out/signal-cut-review.mp4 --props=render-signal.json --codec=h264 --concurrency=2 --scale=1
+      - name: Burn narration-matched captions and master the audio
+        working-directory: video-engine
+        run: |
+          python scripts/finalize_episode.py micro
+          python scripts/finalize_episode.py signal
       - name: Verify length, video/audio streams and aspect ratios
         working-directory: video-engine
         run: |
@@ -72,9 +77,13 @@ jobs:
       - name: Upload review videos (not a publication)
         uses: actions/upload-artifact@v4
         with:
-          name: kairo-coded-episode-review-cuts
+          name: kairo-code-first-posting-candidates-private
           path: |
-            video-engine/out/micro-learning-review.mp4
-            video-engine/out/signal-cut-review.mp4
+            video-engine/out/micro-learning-posting-candidate.mp4
+            video-engine/out/signal-cut-posting-candidate.mp4
+            video-engine/out/micro-learning-poster.png
+            video-engine/out/signal-cut-poster.png
+            video-engine/out/micro-captions.srt
+            video-engine/out/signal-captions.srt
           if-no-files-found: error
           retention-days: 7
