@@ -1,0 +1,89 @@
+name: Two coded episode cuts — private review artifacts
+on:
+  pull_request:
+    paths:
+      - 'video-engine/src/**'
+      - 'video-engine/scripts/**'
+      - 'video-engine/render-*.json'
+      - '.github/workflows/episode-review-renders.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-private-review:
+    if: github.event_name != 'pull_request' || startsWith(github.head_ref, 'feat/coded-animation-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout review-only source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install open-source voice and media dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install --disable-pip-version-check "kokoro==0.9.4" "soundfile==0.13.1"
+      - name: Install pinned video engine packages
+        working-directory: video-engine
+        run: npm install --no-audit --no-fund
+      - name: Check composition TypeScript
+        working-directory: video-engine
+        run: npm run typecheck
+      - name: Generate original temporary spoken audio and background tone
+        working-directory: video-engine
+        run: python scripts/generate_narration.py --outdir public
+      - name: Render complete Micro Learning private review MP4
+        working-directory: video-engine
+        run: npx remotion render src/index.ts MicroLearningPilot out/micro-learning-review.mp4 --props=render-micro.json --codec=h264 --concurrency=2 --scale=1
+      - name: Render complete Signal Cut private review MP4
+        working-directory: video-engine
+        run: npx remotion render src/index.ts SignalCutPilot out/signal-cut-review.mp4 --props=render-signal.json --codec=h264 --concurrency=2 --scale=1
+      - name: Burn narration-matched captions and master the audio
+        working-directory: video-engine
+        run: |
+          python scripts/finalize_episode.py micro
+          python scripts/finalize_episode.py signal
+      - name: Verify length, video/audio streams and aspect ratios
+        working-directory: video-engine
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          for name in ("micro-learning-review.mp4", "signal-cut-review.mp4"):
+              path = Path("out") / name
+              assert path.stat().st_size > 200_000, (name, "file too small")
+              result = json.loads(subprocess.check_output([
+                  "ffprobe","-v","error","-show_entries","format=duration","-show_entries",
+                  "stream=codec_name,codec_type,width,height,r_frame_rate","-of","json",str(path)],text=True))
+              duration=float(result["format"]["duration"])
+              streams=result["streams"]
+              video=[s for s in streams if s["codec_type"]=="video"]
+              audio=[s for s in streams if s["codec_type"]=="audio"]
+              assert 29.9 <= duration <= 30.1,(name,duration)
+              assert len(video)==1 and video[0]["width"]==1080 and video[0]["height"]==1920,(name,video)
+              assert video[0]["r_frame_rate"]=="30/1",(name,video)
+              assert len(audio)>=1,(name,"missing narration/audio")
+              print(name, "PASS",round(duration,3),"s",path.stat().st_size,"bytes",streams)
+          PY
+      - name: Upload review videos (not a publication)
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-code-first-posting-candidates-private
+          path: |
+            video-engine/out/micro-learning-posting-candidate.mp4
+            video-engine/out/signal-cut-posting-candidate.mp4
+            video-engine/out/micro-learning-poster.png
+            video-engine/out/signal-cut-poster.png
+            video-engine/out/micro-captions.srt
+            video-engine/out/signal-captions.srt
+          if-no-files-found: error
+          retention-days: 7
