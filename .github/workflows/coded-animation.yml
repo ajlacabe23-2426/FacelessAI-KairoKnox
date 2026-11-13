@@ -31,6 +31,8 @@ jobs:
       - name: Render two seconds of original coded visuals
         working-directory: video-engine
         run: npm run render:smoke
+      - name: Install FFprobe for media inspection
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
       - name: Inspect video encoding, dimensions, and smoke duration
         working-directory: video-engine
         run: |
