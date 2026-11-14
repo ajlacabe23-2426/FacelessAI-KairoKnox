@@ -29,8 +29,8 @@ const Rls:React.FC<Props>=({narrationFile})=>{
  const beat=beats.find(b=>sec>=b[0]&&sec<b[1])??beats[5];
  const idx=beats.indexOf(beat),local=f-beat[0]*fps;
  const enter=spring({fps,frame:local,config:{damping:180,stiffness:95}});
- const pulse=interpolate(local%120,[0,100],[0,1],clamp);
- const user=idx===5&&sec>=48?'B':'A';
+ const pulse=interpolate(local,[0,(beat[1]-beat[0])*fps],[0,1],clamp);
+ const user='A';
  const visible=readRows(user,idx>=4);
  return <AbsoluteFill style={{background:'radial-gradient(ellipse at 20% 10%,#173b5b 0%,#0a1b2d 38%,#06101c 77%)',color:c.ink,fontFamily:'Arial, sans-serif',padding:'165px 76px 240px',boxSizing:'border-box'}}>
  <div style={{position:'absolute',top:75,left:76,color:c.cyan,fontWeight:900,letterSpacing:4,fontSize:26}}>KAIRO KNOX / MICRO LEARNING</div>
@@ -45,7 +45,7 @@ const Rls:React.FC<Props>=({narrationFile})=>{
  {idx===3&&<><Label>POSTGRESQL / SUPABASE READ POLICY</Label><div style={{...panel,fontFamily:'monospace',fontSize:31,lineHeight:1.55,color:'#d3f2ff',whiteSpace:'pre-wrap',overflowWrap:'break-word'}}>
  {'ALTER TABLE invoices\n  ENABLE ROW LEVEL SECURITY;\n\nCREATE POLICY own_read\nON invoices FOR SELECT\nTO authenticated\nUSING (owner_id = auth.uid());'}</div><div style={{fontSize:31,color:c.muted,marginTop:25}}>Evaluate ownership per row.</div></>}
  {idx===4&&<><Label color={c.green}>POLICY ON • USER A READ</Label><div style={{...panel,fontFamily:'monospace',fontSize:35,marginBottom:22}}>SELECT * FROM invoices;</div>{records.map((r,i)=><Row key={r.id} r={r} allowed={visible.includes(r)} local={local} delay={i*16}/>)}<div style={{...panel,borderColor:c.green,color:c.green,fontSize:32,fontWeight:900}}>1 returned row • 1 filtered</div></>}
- {idx===5&&<><Label>ISOLATION TEST / USER {user}</Label>{records.map((r,i)=><Row key={r.id} r={r} allowed={visible.includes(r)} local={local} delay={i*8}/>)}<div style={{...panel,marginTop:10,fontSize:30,lineHeight:1.3}}>Test reads AND writes as ordinary users. Use separate write policies.</div><div style={{fontSize:26,color:c.muted,marginTop:24}}>Never test as a privileged service role.</div></>}
+ {idx===5&&<><Label>SIMULATED READ TEST / BOTH USERS</Label>{['A','B'].map((identity,i)=>{const result=readRows(identity,true);const pass=result.length===1&&result.every(r=>r.owner===identity);const p=interpolate(local,[i*12,i*12+16],[0,1],clamp);return <div key={identity} style={{...panel,marginBottom:18,opacity:p,transform:`translateX(${(1-p)*45}px)`,borderColor:pass?c.green:c.red}}><div style={{fontSize:30,fontWeight:800}}>User {identity} • signed in</div><div style={{fontSize:35,marginTop:10,color:c.ink,fontWeight:800}}>{result.map(r=>r.label).join(', ')||'No rows'}</div><div style={{fontSize:24,marginTop:9,color:pass?c.green:c.red}}>{pass?'PASS • own row only':'FAIL • unexpected rows'}</div></div>})}<div style={{...panel,marginTop:10,fontSize:30,lineHeight:1.3}}>Test writes separately as ordinary users. Define explicit write policies.</div><div style={{fontSize:26,color:c.muted,marginTop:24}}>Privileged roles can bypass RLS.</div></>}
  </div>
  <div style={{position:'absolute',bottom:100,left:76,color:c.muted,fontWeight:700,fontSize:24}}>AUTHENTICATION ≠ AUTHORIZATION</div>
  {narrationFile?<Audio src={staticFile(narrationFile)}/>:null}<ProgressRail accent={c.cyan}/></AbsoluteFill>;
