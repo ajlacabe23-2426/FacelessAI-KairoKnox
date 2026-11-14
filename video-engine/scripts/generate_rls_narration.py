@@ -16,9 +16,9 @@ SCENES = [
     (0, 7, ["Logged in does not mean your data is safe.", "Watch the database."]),
     (7, 15, ["Two accounts share an invoices table.", "Each row has an owner."]),
     (15, 22, ["Assume both users have table read access.", "Both invoices are exposed."]),
-    (22, 32, ["Enable row level security in PostgreSQL.", "A Supabase select policy checks the owner", "against the signed in user's identity."]),
-    (32, 43, ["Run the same query as user A.", "Only A's invoice comes back.", "The database filters the other row."]),
-    (43, 54, ["Repeat as user B. Verify isolation.", "Test writes with separate policies.", "Authentication is not authorization."]),
+    (22, 32, ["Enable row level security.", "The read policy matches the owner to your user ID."]),
+    (32, 43, ["Run the same query as user A.", "Only your own invoice returns.", "The database filters the rest."]),
+    (43, 54, ["Repeat the test as user B.", "Test write policies too.", "Authentication is not authorization."]),
 ]
 GAP = .19
 RATE = 1.10
