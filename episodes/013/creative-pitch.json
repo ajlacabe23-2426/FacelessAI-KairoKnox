@@ -1,0 +1,37 @@
+{
+  "title": "Kairo Knox Episode 013 — Three Words. A $359 AI Recommendation",
+  "platform": "instagram",
+  "intended_viewer": "Everyday online shoppers who want accurate, entertaining and useful explanations of AI decision systems",
+  "audience_benefit": "See how injected personal context can change a simulated AI recommendation; learn to set budget constraints and request a transparent comparison of trade-offs",
+  "personality_profile": {
+    "mysterious_investigator_pct": 45,
+    "witty_tech_analyst_pct": 55,
+    "interpretation": "Editorial tone balance, not literal narration duration"
+  },
+  "hook_consequence": "A high-rated $29.99 watch was available; in the Wharton simulation several models shifted toward a $359+ hiking-oriented watch after a planted user-memory cue",
+  "hook_prediction": "Can the three-word user memory 'I love hiking!' change an AI shopping agent's recommendation?",
+  "visible_proof": "Original fictional watch-grid illustration: low-cost most-reviewed watch vs higher-cost alternative; explicitly labelled 'ILLUSTRATIVE RECREATION — NOT LIVE AI OUTPUT'; show before/after memory and cited +75-percentage-point shift for one model, not a live AI run",
+  "teachable_payoff": "Personal context can shift recommendation criteria; give AI a budget and ask it to explain the evidence and trade-offs rather than assuming the ranked pick is objectively best",
+  "sources": [
+    "https://gail.wharton.upenn.edu/research-and-insights/technical-report-agentic-shopping/",
+    "https://ai-analytics.wharton.upenn.edu/insights/your-ai-shopping-agent-is-less-consistent-than-you-think/",
+    "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/who-wins-when-ai-does-the-shopping-new-evidence-on-agentic-commerce"
+  ],
+  "optional_humor": "Apparently, your wallet's going hiking too.",
+  "rights_status": "All demo product graphics must be original or appropriately licensed; no publication approval and no paid credits approved",
+  "research_condition": "user-memory injection / hiking watch condition; keep separate from review-source +99pp condition",
+  "unsupported_claims": false,
+  "uncleared_rights": false,
+  "misleading_footage": false,
+  "sensitive_data": false,
+  "unsafe_demo": false,
+  "ratings": {
+    "hook_clarity": 2,
+    "viewer_relevance": 2,
+    "payoff": 2,
+    "teachability": 2,
+    "personality_humor": 2,
+    "visual_credibility": 1,
+    "platform_measurement": 1
+  }
+}
