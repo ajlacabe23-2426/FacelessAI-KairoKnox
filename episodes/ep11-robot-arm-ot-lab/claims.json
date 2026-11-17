@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Super Intelligence Reached OT Systems and Moved Equipment",
+      "publisher": "Booz Allen Hamilton",
+      "published_on": "2026-10-08",
+      "url": "https://www.boozallen.com/insights/cyber/frontier-si-reaches-ot-systems.html"
+    },
+    {
+      "id": "S2",
+      "title": "Booz Allen Reports Frontier AI Reached All Eight OT Lab Objectives",
+      "publisher": "Cloud Security Alliance AI Safety Initiative",
+      "published_on": "2026-10-14",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-ai-ot-lab-booz-allen-20261014-csa/"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Booz Allen reported all eight planned objectives completed in its isolated operational technology lab.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "In one controlled test models reached the industrial control network in just over sixteen minutes.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "In a different test a frontier AI model found and moved a robotic arm within minutes.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Every exploit and action that could have physical consequences required human approval.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Some defenses blocked or slowed actions; these are not real-world unapproved factory attacks.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "The models were unnamed and the experiment's results lack full independent public reproduction.",
+      "source_ids": [
+        "S2"
+      ]
+    }
+  ]
+}

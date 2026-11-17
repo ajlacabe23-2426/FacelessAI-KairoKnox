@@ -30,3 +30,9 @@ Latest editorial workflow refresh: 2026-10-30. This repository documentation doe
 - [ML007 v2 visual review receipt](docs/production/ML007_VISUAL_V2_REVIEW_RECEIPT.md)
 
 This visual-only Micro Learning upgrade does not modify EP13, EP14, or Signal Cut 004; publication remains separately approval-gated.
+
+## Historical research records (review-only)
+
+- [Original evidence-first editorial standards](docs/RESEARCH_WORKFLOW.md), [claim registry](episodes/registry.json) and [earlier research roadmap](docs/ROADMAP.md) are archived planning/evidence sources, not evidence of a new release.
+- [Episode 011 research packet](episodes/ep11-robot-arm-ot-lab/README.md) and [Episode 013 review package](episodes/013/CREATIVE_BRIEF.md) require new factual verification, creative/voice continuity review and explicit per-platform approval before publishing.
+- [Content-intelligence local tools](content_intelligence/) add review-first tests and proposals; no unattended production, purchases or publishing.

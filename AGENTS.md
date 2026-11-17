@@ -18,3 +18,7 @@ When working in this repository, read docs/CONTENT_INTELLIGENCE.md and prompts/K
 - Fewer claims and clearer visible demonstrations are better than filler.
 - A completed draft, successfully executed test, and published post are distinct states; never conflate them.
 - User retains final approval for editing charges, footage/rights decisions, and each publication.
+
+**Established Kairo delivery direction:** 45% investigative clarity and 55% witty, grounded tech explanation; maintain the existing masked identity, approved voice continuity and original teaching payoff. This is a creative balance, not a numerical dialogue quota.
+
+The historical source-governance contract is preserved for audit at `docs/legacy/AGENT_GOVERNANCE_2026-10-10.md`; current instructions above take precedence.

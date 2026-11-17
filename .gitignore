@@ -15,3 +15,15 @@ video-engine/node_modules/
 video-engine/out/
 video-engine/public/
 video-engine/.cache/
+node_modules/
+coverage/
+dist/
+temp/
+.cache/
+.DS_Store
+Thumbs.db
+*.mp3
+*.m4a
+*.psd
+*.aep
+*.prproj
