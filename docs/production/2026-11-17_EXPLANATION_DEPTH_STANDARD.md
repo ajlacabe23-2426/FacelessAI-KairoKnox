@@ -23,6 +23,41 @@ The Nov 17 three 13.5-second proof-of-concept cuts received positive owner feedb
 
 Durations are editorial estimates, not rigid scene quotas. Prefer ~45–65 seconds when a real explanation justifies it. Do not stretch a weak idea or cut necessary caveats to satisfy runtime.
 
+## Audience progression — intelligent but accessible (v1.1)
+**Editorial center of gravity:** topics should demand *one meaningful inference* from an interested viewer. Target the curious, capable non-expert who enjoys solving a problem—not someone seeking dictionary definitions, and not an expert certification lecture. No patronizing, “everyone knows this,” or empty jargon.
+
+### Three levels (not three audience categories)
+- **Level 2: Counterintuitive foundations.** Use a familiar thing to uncover a hidden rule, e.g., “Why a password is not the same as an authenticated session.” 10–20% of videos, usually as prerequisites.
+- **Level 3: Systems thinking — DEFAULT.** Connect **two mechanisms**, show their interaction and one failure mode or tradeoff, e.g., session credential + access scope, automation + incident-response window, update deployment + critical dependency. ~60–70% of releases.
+- **Level 4: Strategic consequences.** A sophisticated but demonstrable decision: risk vs convenience, least privilege vs business workflow, reliability vs rollout speed, LTV vs churn. ~15–25% of releases; make the technical system visible before discussing strategy.
+
+Percentages are programming targets, **not** proven audience or algorithm preferences. Do not force the mix when evidence or useful stories are missing. Mark each episode L2/L3/L4 in its creative brief; don't label it “beginner/intermediate” in the video.
+
+### Curiosity -> understanding -> insight
+A successful episode asks a fair question that initially requires a little thought, then moves from familiar analogy to actual mechanism, reveals a *non-obvious dependency or tradeoff*, and gives an example in which the viewer could mentally predict the outcome. The payoff is **“Now I see why.”**
+
+**Production requirements:**
+- Start with a real dilemma, not “What is [term]?”
+- Teach at most two necessary new technical terms; first explain them visually.
+- Include **one cognitive turn**: a counterexample, failed assumption, second-order effect, conditional choice, or tradeoff. Show two possible outcomes if appropriate.
+- Show why the causal link works and where the explanation stops; never replace the mechanism with rhetoric or unsupported “always.”
+- Close with an *earned question or implication* that is naturally developed in the next installment, not artificial “part 2 to learn the answer” bait.
+- Each episode must stand alone. Include a 3–5-second prerequisite recap only when needed. A sequence should reward return viewers, not punish newcomers.
+
+### Planned connective topic tracks (illustrative, not automatically approved releases)
+| Track | L2: entry paradox | L3: deeper system | L4: worthwhile tradeoff |
+|---|---|---|---|
+| Identity & cybersecurity | Why password verification isn't the same as a lasting login | How session credentials, OAuth delegated permissions and scopes differ | How access boundaries and revocation design change blast radius |
+| Defensive intelligence | Why the *same* alert matters differently under compressed timelines | How telemetry, triage, identity risk and containment depend on each other | When to prioritize automation, guardrails or analyst investigation |
+| Reliability & business | Why a small outage fraction can disable big services | How staged rollouts, shared dependencies and failover interact | The economics of redundancy vs downtime, with illustrative numbers |
+| Cloud & APIs | Why APIs throttle otherwise-valid requests | How backpressure, queues, retries and idempotency interact | How reliability and cost change with scale |
+| AI agents & identity | Why an assistant responding is different from an agent taking action | How tool privileges, authorization and human review constrain agents | Delegation boundaries, auditability and speed vs security |
+| Business decisions | Why reported profit does not equal spendable cash | How working capital, payment timing and growth can create a cash crunch | When to optimize growth, margin or cash resilience |
+
+These are *editorial pitches*, not completed research, scripts, production approval or verified claims. Verify current facts and high-stakes claims before each episode. For fictional examples, show the illustrative status conspicuously.
+
+**Quality gate added:** a reviewer should be able to state (i) one previously hidden mechanism, (ii) one consequential tradeoff or failure mode, and (iii) one new question the episode equips them to investigate. If only a definition can be recalled, the concept is too shallow for the default L3 lane.
+
 ## Hard editorial gates
 - Every factual claim with a number or causality needs a dated, trustworthy source. Label a dramatization as an illustration; do not portray it as historical footage.
 - A real mechanism **must visibly change state**, e.g., signed-out -> verified -> session issued -> authenticated requests; or update -> critical dependency unavailable -> downstream service impact.
