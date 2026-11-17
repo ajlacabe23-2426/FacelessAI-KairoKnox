@@ -1,0 +1,41 @@
+name: Code-first video visual smoke (no publishing)
+on:
+  pull_request:
+    paths:
+      - 'video-engine/**'
+      - '.github/workflows/coded-animation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Node for Remotion render
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned first-party dependencies (first pilot; lockfile still pending)
+        working-directory: video-engine
+        run: npm install --no-audit --no-fund
+      - name: Typecheck scene implementation
+        working-directory: video-engine
+        run: npm run typecheck
+      - name: Render two seconds of original coded visuals
+        working-directory: video-engine
+        run: npm run render:smoke
+      - name: Install FFprobe for media inspection
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Inspect video encoding, dimensions, and smoke duration
+        working-directory: video-engine
+        run: |
+          ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate -show_entries format=duration -of json out/smoke.mp4
+          test -s out/smoke.mp4
+      # No artifact upload, paid asset calls, social publishing or external deployment.

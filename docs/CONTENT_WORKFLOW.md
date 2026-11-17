@@ -19,7 +19,7 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 1. **Discover & pitch**: topic, intended viewer, one-sentence claim, audience benefit, format, evidence plan.
 2. **Evidence & rights**: verify all factual assertions using trustworthy sources, distinguish reported results from independently validated results, capture source URLs and publication dates, confirm rights/permissions for any outside video, audio, logos and images. Credit sources where appropriate. A transformation or attribution alone does not automatically confer rights.
 3. **Script**: write a compelling truthful first 1–2 seconds; a clearly identifiable question/tension; useful development; qualified takeaway; one substantive viewer question. Avoid sensational unsupported certainty or engagement bait.
-4. **Production**: approved character reference, established branding and voice, subtitles, phone-safe framing, intelligible narration; check timing, aspect ratio, frames and audio. Preserve the user-approved material and keep drafts separate from approved outputs.
+4. **Production**: **code-first visual pass** for suitable Micro Learning, Signal Cuts, and explanatory Core Episode shots: author original Remotion/GSAP scenes and reusable SVG/React components before considering paid media generation. Use the [video-engine pilot](../video-engine/README.md) and log actual scene method, code version, assets/rights and an itemized external-cost estimate. If a shot needs actual acting/lip-sync/complex 3D, do not substitute pans over stills; send it to the separately approved character-animation path. Then assemble approved character references, established branding and voice, subtitles, phone-safe framing, and intelligible narration; check timing, aspect ratio, frames and audio. Preserve the user-approved material and keep drafts separate from approved outputs.
 5. **Review cut**: render and verify the MP4 plus a ZIP of finished deliverables. Inspect playability and content integrity. Do not claim the artifacts exist without checking them.
 6. **Final human approval**: user reviews the finished cut and platform copy. No automatic publishing, post creation, or approval bypass. A prior idea approval is not final publishing approval.
 7. **Platform packaging**: tailor captions/cover/title/tags for each platform; verify links; consult the distribution rules in PLATFORM_PLAYBOOK.md.
@@ -47,6 +47,9 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 - [ ] Clip rights or licenses and attribution reviewed
 - [ ] No private client data, internal tokens, credentials, or exploitable live security details
 - [ ] Kairo identity, voice, styling, captions, and vertical crop coherent
+- [ ] Coded-animation-first option evaluated for all relevant teaching/motion-graphic shots; paid generation is an explicit exception, not a default
+- [ ] GSAP visuals are frame-deterministic; full native-size render and sampled keyframes were inspected, not just a 2-second smoke test
+- [ ] Narration is actually present where required; original speech, caption sync, and final audio have been reviewed
 - [ ] Rendered MP4/ZIP verified and ready to inspect
 - [ ] Each platform caption is distinct and readable
 - [ ] Final user review and publishing approval obtained

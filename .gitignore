@@ -11,3 +11,7 @@ reports/
 __pycache__/
 *.pyc
 .pytest_cache/
+video-engine/node_modules/
+video-engine/out/
+video-engine/public/
+video-engine/.cache/

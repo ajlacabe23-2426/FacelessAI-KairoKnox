@@ -11,6 +11,7 @@ Kairo Knox: original short-form storytelling, practical Micro Learning, and Sign
 - [Earlier proof-of-concept pilot storyboard (archived creative direction)](docs/CHRONICLES_PILOT_001.md)
 - [Original news-plus-fiction proof-of-concept production record (archived; not canonical)](docs/CHRONICLES_EP001_RESEARCHED_CUT.md)
 - [Production, approval and publishing workflow](docs/CONTENT_WORKFLOW.md)
+- [Code-first Remotion + GSAP visual pilot (requires independent render/review)](video-engine/README.md)
 - [**Executable Content Intelligence: Creative Director, post-mortem, edit trials, weekly learning**](docs/CONTENT_INTELLIGENCE.md)
 - [Platform playbook — including Threads discussion/documentation strategy](docs/PLATFORM_PLAYBOOK.md)
 - [Measurement and two-week audience experiment](docs/MEASUREMENT.md)
