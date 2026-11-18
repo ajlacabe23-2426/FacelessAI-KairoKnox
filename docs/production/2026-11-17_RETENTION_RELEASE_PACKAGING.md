@@ -67,7 +67,7 @@ Each proposed cut needs a small record:
 ## Implementation links
 - [Explanation-depth revision](2026-11-17_EXPLANATION_DEPTH_STANDARD.md) sets causality and narration continuity in three active scripts.
 - [Canonical production workflow](../CONTENT_WORKFLOW.md) retains research, production, QA and owner publishing approval.
-- [Distribution Hub retention preflight and scorecard](https://github.com/ajlacabe23-2426/portfolio-distribution-hub/blob/feat/kairo-retention-production-measurement-20261117/docs/GROWTH_14_DAY_RELEASE_GATES.md) contains Python validation, private input contract, synthetic fixtures and CI tests.
+- [Distribution Hub retention preflight and scorecard](https://github.com/ajlacabe23-2426/portfolio-distribution-hub/pull/40) contains Python validation, private input contract, synthetic fixtures and CI tests.
 - Existing Content Intelligence post-mortem & weekly learning remain canonical for experiment state transitions. A green structural score does not make an episode ready to publish.
 
 ## Never infer
