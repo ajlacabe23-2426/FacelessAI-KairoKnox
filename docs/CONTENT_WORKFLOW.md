@@ -15,6 +15,12 @@ Maintain Kairo Knox's consistent masked analyst identity and established visual/
 ## Creative Director research and packaging loop
 Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the eight-step [Creative Director standard](CREATIVE_DIRECTOR.md): study relevant, appropriately sourced comparable successes; identify their *structure*; write original accurate hooks; give each slide/scene a distinct job; build a real save-worthy payoff; ask a substantive question; plan platform-native adaptations; and evaluate measured results rather than assuming virality. Treat outside cover wording as a pattern to analyze, **not text to copy**. For Instagram carousels, default to seven short slides but adapt to topic complexity. Record source dates, permissions and missing metrics honestly.
 
+## Explanation Depth v1 — mandatory for educational explainers
+
+Keep the natural narration, cinematic continuity and smooth cuts that were approved in the November 17 proof-of-concept reviews, **while requiring an actual explanation** rather than just a fact or headline. For Micro Learning, Signal Cuts and nonfiction Kairo core episodes with a teaching premise, every full-length production brief must show: **what it is -> how it works -> why it matters -> a sourced example or labeled hypothetical -> practical action and limitation -> earned payoff**. The central mechanism must be an animated cause-and-effect demonstration with explicit inputs, state changes and outcomes. Runtime expands only when that demonstration justifies it. Preserved short cuts remain controls; a deeper script is not a rendered full-length master.
+
+Canonical detail: [Explanation Depth v1](production/2026-11-17_EXPLANATION_DEPTH_STANDARD.md) and the [three revised episode shot plans](production/2026-11-17_THREE_EPISODE_DEPTH_REVISIONS.md). New narration must pass a complete listening review in the approved voice, not just audio-stream verification. Do not quietly change voices or publish without final review.
+
 ## Mandatory stage gates
 1. **Discover & pitch**: topic, intended viewer, one-sentence claim, audience benefit, format, evidence plan.
 2. **Evidence & rights**: verify all factual assertions using trustworthy sources, distinguish reported results from independently validated results, capture source URLs and publication dates, confirm rights/permissions for any outside video, audio, logos and images. Credit sources where appropriate. A transformation or attribution alone does not automatically confer rights.
@@ -43,6 +49,7 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 ## Preflight quality checklist
 - [ ] Creative Director brief prepared with original hooks, useful payoff and platform-specific plan
 - [ ] Opening actually communicates the subject within 2 seconds
+- [ ] Explicit cause-and-effect mechanism, real/labeled example, actionable implication, and meaningful limitation demonstrably present (Explanation Depth v1)
 - [ ] Every numerical and scientific claim sourced and caveated where required
 - [ ] Clip rights or licenses and attribution reviewed
 - [ ] No private client data, internal tokens, credentials, or exploitable live security details
@@ -55,3 +62,9 @@ Before pitching a carousel, episode, Micro Learning or Signal Cut, follow the ei
 - [ ] Final user review and publishing approval obtained
 - [ ] Release does not crowd another primary post
 - [ ] Publish result and measurement checkpoints logged
+
+
+## Retention-first review addendum (2026-11-17)
+For new Core, Micro Learning and Signal Cut proposals, follow the [retention-first release packaging](production/2026-11-17_RETENTION_RELEASE_PACKAGING.md) **in addition to** the existing explanation-depth and technical quality requirements. The opening must make the subject and stakes observable in the first three seconds. The script must demonstrate input -> change -> output -> limitation, rather than using merely decorative visuals. Final mastered audio/consistent narration, caption synchronization, genuine motion, phone playback, rights verification and distinct platform-native copy are separate mandatory manual gates. A plan passing structural checks is **not** a finished video.
+
+The two-week plan (two Micro Learning, two Signal Kut and two Core) is a capacity-bound experimental proposal, not permission to produce paid assets or schedule release. Keep a predeclared primary variable and comparable-age performance check; missing connected-platform metrics remain unknown, not zero. Keep personal Threads conversations in a distinct cohort from Kairo-branded work. The Distribution Hub pilot provides an offline preflight/scorecard, while the original Content Intelligence engine retains post-mortem/trial workflow and human publication approval.
