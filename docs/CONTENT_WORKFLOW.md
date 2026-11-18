@@ -62,3 +62,9 @@ Canonical detail: [Explanation Depth v1](production/2026-11-17_EXPLANATION_DEPTH
 - [ ] Final user review and publishing approval obtained
 - [ ] Release does not crowd another primary post
 - [ ] Publish result and measurement checkpoints logged
+
+
+## Retention-first review addendum (2026-11-17)
+For new Core, Micro Learning and Signal Cut proposals, follow the [retention-first release packaging](production/2026-11-17_RETENTION_RELEASE_PACKAGING.md) **in addition to** the existing explanation-depth and technical quality requirements. The opening must make the subject and stakes observable in the first three seconds. The script must demonstrate input -> change -> output -> limitation, rather than using merely decorative visuals. Final mastered audio/consistent narration, caption synchronization, genuine motion, phone playback, rights verification and distinct platform-native copy are separate mandatory manual gates. A plan passing structural checks is **not** a finished video.
+
+The two-week plan (two Micro Learning, two Signal Kut and two Core) is a capacity-bound experimental proposal, not permission to produce paid assets or schedule release. Keep a predeclared primary variable and comparable-age performance check; missing connected-platform metrics remain unknown, not zero. Keep personal Threads conversations in a distinct cohort from Kairo-branded work. The Distribution Hub pilot provides an offline preflight/scorecard, while the original Content Intelligence engine retains post-mortem/trial workflow and human publication approval.
