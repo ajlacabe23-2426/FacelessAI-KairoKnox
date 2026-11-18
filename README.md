@@ -40,5 +40,5 @@ This visual-only Micro Learning upgrade does not modify EP13, EP14, or Signal Cu
 
 ### November 17 retention-first production upgrade (review candidate)
 - [Retention-first production, audiovisual QA, six-video experiment and platform packaging](docs/production/2026-11-17_RETENTION_RELEASE_PACKAGING.md).
-- Complements explanation-depth PR #21; integrates with [Distribution Hub's offline creative preflight and age-matched scorecard](https://github.com/ajlacabe23-2426/portfolio-distribution-hub/blob/feat/kairo-retention-production-measurement-20261117/docs/GROWTH_14_DAY_RELEASE_GATES.md).
+- Complements explanation-depth PR #21; integrates with [Distribution Hub's offline creative preflight and age-matched scorecard](https://github.com/ajlacabe23-2426/portfolio-distribution-hub/pull/40).
 - These are reviewable standards and code, **not** finished MP4s, restored TikTok insights, scheduled posts or evidence of increased retention.
