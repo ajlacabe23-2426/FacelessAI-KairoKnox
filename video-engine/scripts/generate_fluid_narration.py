@@ -127,7 +127,7 @@ WrapStyle: 2
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Voice,DejaVu Sans,57,&H00FFFFFF,&H00FFFFFF,&H000C1220,&H98070D18,-1,0,0,0,100,100,0,0,3,18,0,2,90,90,275,1
+Style: Voice,DejaVu Sans,46,&H00FFFFFF,&H00FFFFFF,&H00101722,&HA0071020,-1,0,0,0,100,100,0,0,3,16,0,2,115,115,285,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -138,10 +138,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         if not 0 <= start < end <= DURATION:
             raise RuntimeError(f"Invalid caption timing: {start}, {end}")
         clean = re.sub(r"[{}]", "", phrase)
-        wrapped = textwrap.wrap(clean, 36, break_long_words=False, break_on_hyphens=False)
-        if len(wrapped) > 2:
-            wrapped = textwrap.wrap(clean, 44, break_long_words=False, break_on_hyphens=False)
-        if len(wrapped) > 2:
+        wrapped = textwrap.wrap(clean, 30, break_long_words=False, break_on_hyphens=False)
+        if len(wrapped) > 3:
             raise RuntimeError("Phrase is too long for a readable subtitle: " + clean)
         ass.append(f"Dialogue: 0,{stamp(start)},{stamp(end)},Voice,,0,0,0,,"
                    + r"{\fad(90,110)}" + r"\N".join(wrapped) + "\n")
