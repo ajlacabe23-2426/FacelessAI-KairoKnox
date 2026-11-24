@@ -12,7 +12,11 @@
     "motion:check": "node scripts/check-cinema.mjs",
     "render:cinema:smoke": "remotion render src/index.ts KairoCinematic60 out/cinema-smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-119",
     "render:cinema": "remotion render src/index.ts KairoCinematic60 out/cinema-1080x1920-60fps.mp4 --codec=h264 --concurrency=1",
-    "render:cinema:4k": "remotion render src/index.ts KairoCinematic60 out/cinema-2160x3840-60fps.mp4 --codec=h264 --concurrency=1 --scale=2"
+    "render:cinema:4k": "remotion render src/index.ts KairoCinematic60 out/cinema-2160x3840-60fps.mp4 --codec=h264 --concurrency=1 --scale=2",
+    "fluid:check": "node scripts/check-fluid.mjs",
+    "render:NvidiaEconomyFluid60": "remotion render src/index.ts NvidiaEconomyFluid60 out/NvidiaEconomyFluid60.mp4 --codec=h264 --concurrency=2",
+    "render:AgentProgrammingFluid60": "remotion render src/index.ts AgentProgrammingFluid60 out/AgentProgrammingFluid60.mp4 --codec=h264 --concurrency=2",
+    "render:PromptEngineeringFluid60": "remotion render src/index.ts PromptEngineeringFluid60 out/PromptEngineeringFluid60.mp4 --codec=h264 --concurrency=2"
   },
   "dependencies": {
     "@remotion/gsap": "4.0.539",
