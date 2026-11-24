@@ -63,13 +63,97 @@ const VectorWorld: React.FC<{
   const t=frame/fps;
   const items=beat.rows;
   const progress=delay(frame,18,55);
-  const w=850,h=490;
-  const cy=237;
+  const w=850,h=610;
+  const cy=300;
   const xPositions=items.map((_,i)=>120+(i/(Math.max(1,items.length-1)))*610);
   const mode:VisualMode=beat.mode;
   const isCode=mode==='code'||mode==='prompt';
   const isMarket=mode==='market';
   const isComparative=mode==='compare'||mode==='audit'||mode==='policy';
+  if(isComparative || mode==='checklist' || mode==='timeline'){
+    const isTimeline=mode==='timeline';
+    const isCompare=mode==='compare';
+    const isAudit=mode==='audit';
+    const activeIndex=Math.floor(Math.max(0,t)*.63)%items.length;
+    const front=delay(frame,8,44);
+    return <div style={{width:w,height:h,position:'relative',overflow:'hidden',
+      perspective:1200,borderRadius:33,border:'1px solid '+accent+'36',
+      background:'radial-gradient(ellipse at 17% 18%,'+accent+'1A,transparent 70%),linear-gradient(140deg,#102238CC,#050F1CD9)',
+      boxShadow:'0 25px 80px #000B,inset 0 0 80px '+accent+'13'}}>
+      <div style={{position:'absolute',width:140,height:860,top:-90,
+        left:-220+((t*.27)%1.5)*1100,transform:'rotate(-16deg)',
+        background:'linear-gradient(90deg,transparent,'+accent+'26,transparent)',
+        filter:'blur(35px)',pointerEvents:'none'}}/>
+      <svg width={w} height={h} viewBox={'0 0 '+w+' '+h} style={{position:'absolute',inset:0,pointerEvents:'none'}}>
+        <defs><linearGradient id={'panel-ribbon-'+beat.id} x1="0" x2="1">
+          <stop offset="0" stopColor={accent} stopOpacity=".09"/>
+          <stop offset=".5" stopColor={accent} stopOpacity=".85"/>
+          <stop offset="1" stopColor={secondary} stopOpacity=".11"/>
+        </linearGradient></defs>
+        <path d={isTimeline?'M80 315 C270 275,580 345,780 305':'M60 85 C580 50,180 520,800 560'}
+          stroke={'url(#panel-ribbon-'+beat.id+')'} strokeWidth="8" fill="none"
+          opacity={front*.8} strokeDasharray="15 24" strokeDashoffset={-(frame*1.3)}/>
+        {Array.from({length:6},(_,i)=>{
+          const x=(t*64+i*133)%930-40;
+          return <circle key={i} cx={x} cy={isTimeline?305+23*Math.sin(t+i):120+46*i}
+            r={2+i%3} fill={accent} opacity=".2"/>;
+        })}
+      </svg>
+      {isTimeline?
+        <div style={{position:'absolute',left:36,right:36,top:175,
+          display:'flex',alignItems:'center',justifyContent:'space-between',gap:14}}>
+          {items.map((item,i)=>{
+            const ent=springEnter(frame,fps,11+i*17);
+            const pulse=(Math.sin(t*1.1+i*.9)+1)/2;
+            return <div key={item.label} style={{flex:1,height:235,
+              borderRadius:28,padding:'26px 18px',boxSizing:'border-box',textAlign:'center',
+              background:'linear-gradient(160deg,#183449F2,#091A2BEC)',
+              border:'2px solid '+(i===activeIndex?accent:secondary)+'66',
+              boxShadow:'0 18px 55px #0009, 0 0 '+(12+pulse*33)+'px '+accent+'1D',
+              opacity:clamp01(ent),transform:'translate3d(0,'+((1-ent)*76+Math.sin(t*.65+i)*5)+'px,0) rotateY('+((1-ent)*-18)+'deg)'}}>
+              <div style={{fontFamily:mono,color:'#BBD2E5',fontSize:22,letterSpacing:1.5}}>{item.label}</div>
+              <div style={{marginTop:47,fontWeight:900,fontFamily:sans,fontSize:27,lineHeight:1.12,color:i===activeIndex?accent:'#F2F9FF'}}>{item.value}</div>
+              <div style={{height:5,width:pct(.35+.5*pulse),background:accent,
+                borderRadius:4,margin:'30px auto 0',boxShadow:'0 0 14px '+accent}}/>
+            </div>;
+          })}
+        </div>:
+        <div style={{position:'absolute',inset:'25px 26px',
+          display:'flex',flexDirection:isCompare?'row':'column',gap:18,alignItems:'stretch',
+          flexWrap:isCompare?'wrap':'nowrap',alignContent:'center'}}>
+          {items.map((item,i)=>{
+            const ent=springEnter(frame,fps,12+i*17);
+            const emphasis=isAudit&&i===items.length-1?'#F8BC94':i===activeIndex?accent:secondary;
+            const width=isCompare?(i===items.length-1?'100%':'calc(50% - 9px)'):'100%';
+            return <div key={item.label} style={{flex:isCompare?'0 0 '+width:1,minHeight:0,
+              position:'relative',borderRadius:27,overflow:'hidden',
+              border:'2px solid '+emphasis+'6C',boxSizing:'border-box',
+              background:'linear-gradient(115deg,#183448F2,#081526F2)',
+              boxShadow:'0 15px 47px #0009,inset 0 1px 0 #FFFFFF24',
+              padding:isCompare?'33px 23px':'25px 40px',
+              display:'flex',flexDirection:isCompare?'column':'row',
+              alignItems:isCompare?'flex-start':'center',justifyContent:'space-between',
+              opacity:clamp01(ent),
+              transform:'translate3d('+((1-ent)*65)+'px,'+(Math.sin(t*.55+i)*5)+'px,0) rotateY('+((1-ent)*-11)+'deg)'}}>
+                <div style={{position:'absolute',left:0,top:0,bottom:0,width:6,
+                  background:emphasis,boxShadow:'0 0 29px '+emphasis}}/>
+                <div style={{fontFamily:mono,fontSize:24,letterSpacing:1.4,
+                  fontWeight:800,color:'#BED2E4'}}>{isCompare?'0'+(i+1)+' / ':''}{item.label}</div>
+                <div style={{fontFamily:sans,fontSize:isCompare?29:34,fontWeight:900,
+                  letterSpacing:-.4,color:emphasis,textAlign:'left'}}>{item.value}</div>
+                {isCompare?<div style={{height:6,width:pct(.48+.3*Math.sin(t*.43+i)**2),
+                  background:emphasis,borderRadius:5,boxShadow:'0 0 20px '+emphasis}}/>:null}
+            </div>;
+          })}
+        </div>}
+      <div style={{position:'absolute',bottom:14,left:32,right:32,
+        display:'flex',justifyContent:'space-between',fontFamily:mono,
+        fontSize:15,letterSpacing:2,color:'#8CAAC4'}}>
+        <span>{isTimeline?'CHRONOLOGY':'EVIDENCE / DECISION GRAPH'}</span>
+        <span>{String(Math.floor(t*60)%999).padStart(3,'0')} / DETERMINISTIC</span>
+      </div>
+    </div>;
+  }
   if(isCode){
     return <div style={{height:h,width:w,position:'relative',borderRadius:29,
       border:'1px solid '+accent+'60',boxShadow:'0 28px 95px #000D, inset 0 1px 0 #FFFFFF15',
@@ -115,22 +199,22 @@ const VectorWorld: React.FC<{
         <feGaussianBlur stdDeviation="8"/>
       </filter>
     </defs>
-    {Array.from({length:9},(_,i)=>
+    {Array.from({length:12},(_,i)=>
       <line key={'grid'+i} x1="0" x2={w} y1={45+i*51} y2={45+i*51}
         stroke="#8ECAED" opacity=".08" strokeWidth="1"/>)}
     {isMarket
       ? items.map((item,i)=>{
-          const barHeight=(0.48+i*0.20)*(240+30*Math.sin(t*.45+i));
+          const barHeight=(0.73+i*0.10)*(380+24*Math.sin(t*.45+i));
           const x=58+i*270;
           const enter=delay(frame,14+i*12,75);
           return <g key={i}>
-            <rect x={x} y={390-barHeight*enter} rx="22" width="190" height={barHeight*enter}
+            <rect x={x} y={510-barHeight*enter} rx="22" width="190" height={barHeight*enter}
               fill={i===0?accent:secondary} fillOpacity=".13" stroke={i===0?accent:secondary} strokeOpacity=".65"/>
-            <rect x={x+17} y={390-barHeight*enter+18} rx="14" width="156" height="8"
+            <rect x={x+17} y={510-barHeight*enter+18} rx="14" width="156" height="8"
               fill={i===0?accent:secondary} opacity={.55+Math.sin(t*.6+i)*.25}/>
-            <text x={x+95} y={400-barHeight*enter+barHeight*enter*.62}
+            <text x={x+95} y={520-barHeight*enter+barHeight*enter*.62}
               textAnchor="middle" fill="#F3FAFF" fontWeight="800" fontSize={i===0?'45':'38'}>{item.value}</text>
-            <text x={x+95} y="438" fill="#ABC0D7" textAnchor="middle" fontSize="20" letterSpacing="1.4">{item.label}</text>
+            <text x={x+95} y="567" fill="#ABC0D7" textAnchor="middle" fontSize="20" letterSpacing="1.4">{item.label}</text>
           </g>;
         })
       : <>
@@ -155,7 +239,7 @@ const VectorWorld: React.FC<{
             const x=xPositions[i];
             const y=cy+(i%2?38:-34);
             const ent=springEnter(frame,fps,8+i*15);
-            const r=(isComparative?81:69)+4*Math.sin(t*.9+i);
+            const r=101+5*Math.sin(t*.9+i);
             return <g key={i} opacity={clamp01(ent)}
               transform={'translate(0 '+((1-ent)*56)+')'}>
               <circle cx={x} cy={y} r={r+19} fill={accent} fillOpacity=".05"
@@ -163,17 +247,16 @@ const VectorWorld: React.FC<{
               <circle cx={x} cy={y} r={r} fill="#0C2334" stroke={i===1?secondary:accent} strokeOpacity=".85" strokeWidth="3"/>
               <circle cx={x} cy={y} r={r-15} fill="#112337" fillOpacity=".84" stroke="#B3D9F9" strokeOpacity=".1"/>
               <text x={x} y={y-7} textAnchor="middle" fill="#A5BDCE" fontWeight="800"
-                fontSize={Math.max(15,Math.min(21,190/(item.label.length*.7)))}>{item.label}</text>
+                fontSize={Math.max(20,Math.min(28,270/(item.label.length*.7)))}>{item.label}</text>
               <text x={x} y={y+23} textAnchor="middle" fill={i===1?secondary:accent} fontWeight="800"
-                fontSize={Math.max(14,Math.min(23,240/(item.value.length*.69)))}>{item.value}</text>
+                fontSize={Math.max(19,Math.min(29,310/(item.value.length*.69)))}>{item.value}</text>
               <circle cx={x} cy={y} r={r+30} fill="none" stroke={accent} strokeDasharray="8 24"
                 strokeWidth="1.3" strokeOpacity=".22"
                 transform={'rotate('+(t*(i%2?13:-10))+' '+x+' '+y+')'}/>
             </g>;
           })}
         </>}
-    {mode==='timeline'&&<path d={'M92 440 H758'} stroke={accent} strokeWidth="4"
-      strokeDasharray="18 10" strokeDashoffset={-(frame*.65)} opacity=".56"/>}
+
   </svg>;
 };
 
@@ -203,15 +286,15 @@ const FluidScene: React.FC<{beat:FluidBeat;episode:FluidEpisode;localFrame:numbe
         })}
       </div>
       <div style={{position:'absolute',top:560,left:86,right:86,
-        fontFamily:sans,fontSize:29.5,lineHeight:1.4,color:'#C0D2E7',
+        fontFamily:sans,fontSize:34,lineHeight:1.38,color:'#C0D2E7',
         opacity:clamp01(descEnter),
         transform:'translate3d(0,'+((1-descEnter)*32)+'px,0)'}}>
         {beat.caption}
       </div>
     </CinematicCamera>
     <CinematicCamera globalFrame={globalFrame} fps={fps} depth={.83}>
-      <div style={{position:'absolute',left:114,right:112,top:830,
-        transform:'translate3d('+(Math.sin(t*.51)*9)+'px,'+(Math.cos(t*.63)*6)+'px,0)'}}>
+      <div style={{position:'absolute',left:114,right:112,top:790,
+        transform:'translate3d('+(Math.sin(t*.51)*23)+'px,'+(Math.cos(t*.63)*12)+'px,0) scale('+(1.012+.014*Math.sin(t*.37))+')'}}>
         <VectorWorld beat={beat} frame={localFrame} fps={fps} accent={episode.accent} secondary={episode.secondary}/>
       </div>
     </CinematicCamera>
