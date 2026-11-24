@@ -29,7 +29,7 @@ SCRIPTS: dict[str, list[tuple[str, str]]] = {
         ("Nvidia surged about thirty one percent.", "But does one stock rally mean the whole economy is healthy?"),
         ("Its board voted to bring founder Jensen Huang back.", "The decision came before the public November twenty third announcement."),
         ("Nearly a trillion dollars of market value returned.", "That is stock valuation, not a trillion dollars of new economic output."),
-        ("Follow the AI supply chain.", "Chipmakers, data centers, electricity providers, and customers all face real costs."),
+        ("Follow the AI supply chain.", "Chipmakers, data centers, power, and customers all face costs."),
         ("Borrowing costs and inflation still affect the economy.", "A sharp tech rally does not make those pressures disappear."),
         ("Nvidia acknowledged senior government input.", "Trump said he intervened. Neither fact alone proves illegal trading."),
         ("Shares also moved before the announcement.", "But earlier public signals and a wider rebound offer alternative explanations."),
