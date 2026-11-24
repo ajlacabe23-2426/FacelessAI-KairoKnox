@@ -5,6 +5,8 @@ import {SignalCutPilot} from './SignalCutPilot';
 import {CinematicEngine} from './cinema/CinematicEngine';
 import {cinematicPlan} from './cinema/plan';
 import {durationOf, validateCinemaPlan} from './cinema/schema';
+import {FluidDocumentary} from './episodes/FluidDocumentary';
+import {fluidEpisodes, getDuration} from './episodes/episodePlans';
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -43,5 +45,17 @@ export const RemotionRoot: React.FC = () => (
       return {durationInFrames: durationOf(plan)};
     }}
   />
+  {fluidEpisodes.map((episode) => (
+    <Composition
+      key={episode.id}
+      id={episode.id}
+      component={FluidDocumentary}
+      width={episode.width}
+      height={episode.height}
+      fps={episode.fps}
+      durationInFrames={getDuration(episode)}
+      defaultProps={{episode, narrationFile: ''}}
+    />
+  ))}
   </>
 );
