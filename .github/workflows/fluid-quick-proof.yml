@@ -3,6 +3,10 @@ on:
   push:
     paths:
       - '.github/workflows/fluid-quick-proof.yml'
+  pull_request:
+    paths:
+      - 'video-engine/src/episodes/**'
+      - '.github/workflows/fluid-quick-proof.yml'
   workflow_dispatch:
 permissions:
   contents: read
