@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: cinematic-private-review-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   cinematic-cloud-review:
     name: Full 1080p 60fps private render
@@ -35,6 +39,8 @@ jobs:
       - name: Export review poster
         working-directory: video-engine
         run: npx remotion still src/index.ts KairoCinematic60 out/kairo-cinematic-v2-poster.png --frame=170
+      - name: Install FFprobe for exact media validation
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
       - name: Check every-frame master metadata
         working-directory: video-engine
         run: |
