@@ -1,0 +1,61 @@
+name: Kairo three films - original offline neural narration review
+on:
+  push:
+    paths:
+      - '.github/workflows/three-fluid-narration-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  voice-previsualization:
+    strategy:
+      fail-fast: false
+      matrix:
+        film: [NvidiaEconomyFluid60, AgentProgrammingFluid60, PromptEngineeringFluid60]
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install open source voice and media runtime
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install --disable-pip-version-check "kokoro==0.9.4" "soundfile==0.13.1"
+      - name: Generate temporary neural narration and waveform measured subtitles
+        working-directory: video-engine
+        run: python scripts/generate_fluid_narration.py ${{ matrix.film }} --outdir out
+      - name: Verify duration and caption count
+        working-directory: video-engine
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import soundfile as sf
+          stem="${{ matrix.film }}_TEMP_REVIEW_NARRATION"
+          a=Path("out")/(stem+".wav")
+          data, sample_rate=sf.read(a)
+          assert sample_rate==24000, sample_rate
+          assert abs(len(data)/sample_rate-68.0)<.005
+          meta=json.loads((Path("out")/(stem+"_TIMING.json")).read_text())
+          assert len(meta["cues"])==18
+          assert not meta["voice_approved"] and not meta["publish_authorized"]
+          assert (Path("out")/(stem+".srt")).stat().st_size>600
+          assert (Path("out")/(stem+".ass")).stat().st_size>1000
+          print("REVIEW NARRATION PASS",stem,sample_rate,len(data),len(meta["cues"]))
+          PY
+      - name: Save voice, subtitle and actual timing records
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-review-voice-${{ matrix.film }}
+          path: |
+            video-engine/out/${{ matrix.film }}_TEMP_REVIEW_NARRATION.wav
+            video-engine/out/${{ matrix.film }}_TEMP_REVIEW_NARRATION.srt
+            video-engine/out/${{ matrix.film }}_TEMP_REVIEW_NARRATION.ass
+            video-engine/out/${{ matrix.film }}_TEMP_REVIEW_NARRATION_TIMING.json
+          if-no-files-found: error
+          retention-days: 14
