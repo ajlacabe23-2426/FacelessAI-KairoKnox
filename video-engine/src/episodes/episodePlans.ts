@@ -27,7 +27,7 @@ export const fluidEpisodes: readonly FluidEpisode[] = [
         {label:'NOV 12',value:'CEO TRANSITION'},{label:'NOV 22',value:'BOARD VOTE'},{label:'NOV 23',value:'PUBLIC RELEASE'}
       ],'NVIDIA 8-K / NOVEMBER 23, 2026'),
       scene('capital','MARKET CAPITALIZATION','NEARLY $1T\nREGAINED.','A huge repricing of one company can pull index results upward. It does not measure every household or business.','market',[
-        {label:'EQUITY VALUE',value:'NEAR $1T'},{label:'SCOPE',value:'COMPANY VALUE'},{label:'NOT',value:'NEW CASH GDP'}
+        {label:'EQUITY VALUE',value:'NEAR $1T'},{label:'SCOPE',value:'STOCK'},{label:'NOT',value:'NEW GDP'}
       ],'MARKET CAPITALIZATION IS NOT DIRECT ECONOMIC OUTPUT'),
       scene('stack','THE REAL ECONOMY','FOLLOW\nTHE MONEY.','AI investment reaches chipmakers, electricity suppliers, data-center builders and the businesses paying for compute.','network',[
         {label:'CHIPS',value:'COMPUTE'},{label:'POWER',value:'GRID'},{label:'BUYERS',value:'CAPEX'}
@@ -133,6 +133,7 @@ export const validateFluid = (p: FluidEpisode): void => {
   const seen = new Set<string>();
   p.scenes.forEach(s=>{
     if (seen.has(s.id) || s.duration < 300 || s.rows.length < 2 || !s.headline.trim()) throw new Error('Invalid beat '+s.id);
+    if (s.mode === 'market' && s.rows.some(row => row.value.length > 9)) throw new Error('Market chart labels must fit mobile bar width: '+s.id);
     seen.add(s.id);
   });
 };
