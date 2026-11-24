@@ -8,7 +8,11 @@
     "render:smoke": "remotion render src/index.ts MicroLearningPilot out/smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59",
     "typecheck": "tsc --noEmit",
     "render:signal": "remotion render src/index.ts SignalCutPilot out/signal-cut-pilot.mp4 --codec=h264 --concurrency=1",
-    "render:signal:smoke": "remotion render src/index.ts SignalCutPilot out/signal-smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59"
+    "render:signal:smoke": "remotion render src/index.ts SignalCutPilot out/signal-smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-59",
+    "motion:check": "node scripts/check-cinema.mjs",
+    "render:cinema:smoke": "remotion render src/index.ts KairoCinematic60 out/cinema-smoke.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-119",
+    "render:cinema": "remotion render src/index.ts KairoCinematic60 out/cinema-1080x1920-60fps.mp4 --codec=h264 --concurrency=1",
+    "render:cinema:4k": "remotion render src/index.ts KairoCinematic60 out/cinema-2160x3840-60fps.mp4 --codec=h264 --concurrency=1 --scale=2"
   },
   "dependencies": {
     "@remotion/gsap": "4.0.539",

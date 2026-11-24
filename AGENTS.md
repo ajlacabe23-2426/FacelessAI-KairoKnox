@@ -22,3 +22,8 @@ When working in this repository, read docs/CONTENT_INTELLIGENCE.md and prompts/K
 **Established Kairo delivery direction:** 45% investigative clarity and 55% witty, grounded tech explanation; maintain the existing masked identity, approved voice continuity and original teaching payoff. This is a creative balance, not a numerical dialogue quota.
 
 The historical source-governance contract is preserved for audit at `docs/legacy/AGENT_GOVERNANCE_2026-10-10.md`; current instructions above take precedence.
+
+
+## Mandatory cinematic code policy (2026-11-24)
+
+For every NEW code-driven Kairo Knox, Micro Learning, Signal Kut, AI Masterclass or Chronicles explainer, use the [cinematic v2 specification](docs/CINEMATIC_ENGINE_V2.md) and [typed Remotion scene graph](video-engine/src/cinema/) as the default. The older 30fps pilots are retained for history, not treated as quality benchmarks. All novel coded scenes must use deterministic 60fps frame sampling, explicit cubic Bézier/spring motion, continuous parallax, layered foreground/mid/background, bound light and film texture, responsive original vector graphics, and safe source-accurate text. Run motion:check, typecheck and cinematic smoke; verify final exported media independently before declaring creative acceptance. No fake motion-quality ratings or narrated-audio claims. Do not auto-publish or spend model credits.
