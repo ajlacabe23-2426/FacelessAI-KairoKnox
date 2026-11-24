@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/three-fluid-narration-review.yml'
+      - 'video-engine/scripts/generate_fluid_narration.py'
   workflow_dispatch:
 permissions:
   contents: read
