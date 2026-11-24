@@ -35,7 +35,10 @@ export const RemotionRoot: React.FC = () => (
     durationInFrames={durationOf(cinematicPlan)}
     defaultProps={{plan: cinematicPlan, narrationFile: '', bands: []}}
     calculateMetadata={({props}) => {
-      const plan = props.plan ?? cinematicPlan;
+      const possiblePlan: unknown = props.plan;
+      const plan = possiblePlan && typeof possiblePlan === 'object' && 'beats' in possiblePlan
+        ? possiblePlan as typeof cinematicPlan
+        : cinematicPlan;
       validateCinemaPlan(plan);
       return {durationInFrames: durationOf(plan)};
     }}
