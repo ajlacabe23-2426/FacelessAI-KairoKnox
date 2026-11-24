@@ -1,0 +1,78 @@
+name: Kairo Cinematic v2 — cloud render review
+on:
+  push:
+    paths:
+      - '.github/workflows/cinematic-full-review.yml'
+      - 'video-engine/src/cinema/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cinematic-private-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cinematic-cloud-review:
+    name: Full 1080p 60fps private render
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout approved source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Remotion dependencies
+        working-directory: video-engine
+        run: npm install --no-audit --no-fund
+      - name: Verify code-driven motion policy
+        working-directory: video-engine
+        run: npm run motion:check && npm run typecheck
+      - name: Render complete cinematic demonstration at native 60fps
+        working-directory: video-engine
+        run: npx remotion render src/index.ts KairoCinematic60 out/kairo-cinematic-v2-1080x1920-60fps-visual-demo.mp4 --codec=h264 --concurrency=2 --crf=22
+      - name: Export review poster
+        working-directory: video-engine
+        run: npx remotion still src/index.ts KairoCinematic60 out/kairo-cinematic-v2-poster.png --frame=170
+      - name: Install FFprobe for exact media validation
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Check every-frame master metadata
+        working-directory: video-engine
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          path=Path('out/kairo-cinematic-v2-1080x1920-60fps-visual-demo.mp4')
+          assert path.exists() and path.stat().st_size > 500_000
+          metadata=json.loads(subprocess.check_output(
+            ['ffprobe','-v','error','-show_entries','format=duration',
+             '-show_entries','stream=codec_name,codec_type,width,height,r_frame_rate,nb_frames',
+             '-of','json',str(path)],text=True))
+          video=next(s for s in metadata['streams'] if s['codec_type']=='video')
+          assert (video['width'],video['height']) == (1080,1920),video
+          assert video['codec_name']=='h264',video
+          assert video['r_frame_rate']=='60/1',video
+          assert int(video['nb_frames'])==672,video
+          assert abs(float(metadata['format']['duration'])-11.2)<0.05,metadata
+          assert Path('out/kairo-cinematic-v2-poster.png').stat().st_size > 10_000
+          print('FULL REMOTION RENDER PASS',metadata,'bytes',path.stat().st_size)
+          PY
+      - name: Add clear visual-only review status
+        working-directory: video-engine
+        run: |
+          printf 'Kairo Cinematic Engine v2 - Visual Demonstration\nStatus: PRIVATE REVIEW ONLY\nSize: 1080x1920, 60 FPS, 672 frames / 11.2 seconds\nNarration: none. Captions: scene teaching cards, not speech-synchronized subtitles.\nThis is a technical demonstration, not a publishable episode.\n' > out/REVIEW_NOTES.txt
+      - name: Provide full MP4 and poster for mobile review
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-cinematic-v2-private-1080p60-review
+          path: |
+            video-engine/out/kairo-cinematic-v2-1080x1920-60fps-visual-demo.mp4
+            video-engine/out/kairo-cinematic-v2-poster.png
+            video-engine/out/REVIEW_NOTES.txt
+          if-no-files-found: error
+          retention-days: 14

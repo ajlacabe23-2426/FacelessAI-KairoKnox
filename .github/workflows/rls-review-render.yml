@@ -1,0 +1,69 @@
+name: Micro Learning RLS — private review artifact
+on:
+  pull_request:
+    paths:
+      - 'video-engine/src/rls-entry.tsx'
+      - 'video-engine/scripts/generate_rls_narration.py'
+      - '.github/workflows/rls-review-render.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render-rls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: video-engine
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install render and speech dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install --disable-pip-version-check "kokoro==0.9.4" "soundfile==0.13.1"
+          npm install --no-audit --no-fund
+      - name: Verify scene types
+        run: npm run typecheck
+      - name: Generate narration and exact captions
+        run: python scripts/generate_rls_narration.py --outdir public
+      - name: Render 54-second private cut
+        run: |
+          npx remotion render src/rls-entry.tsx RlsIsolation out/rls-review.mp4 --props=render-micro.json --codec=h264 --concurrency=2 --scale=1
+      - name: Master audio and embed speech captions
+        run: |
+          ffmpeg -hide_banner -loglevel error -y -i out/rls-review.mp4 -vf subtitles=out/micro-captions.ass -af 'highpass=f=65,acompressor=threshold=0.08:ratio=2:attack=18:release=180,loudnorm=I=-16:TP=-1.8:LRA=10,alimiter=limit=0.92' -c:v libx264 -preset medium -crf 18 -r 30 -pix_fmt yuv420p -c:a aac -b:a 192k -ar 48000 -ac 2 -movflags +faststart out/micro-learning-rls-review.mp4
+          ffmpeg -hide_banner -loglevel error -y -ss 2 -i out/micro-learning-rls-review.mp4 -frames:v 1 out/micro-learning-rls-cover.png
+      - name: Decode and verify exact final file
+        run: |
+          ffmpeg -v error -xerror -i out/micro-learning-rls-review.mp4 -f null -
+          python - <<'PY'
+          import json, subprocess, pathlib
+          p=pathlib.Path('out/micro-learning-rls-review.mp4')
+          d=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]))
+          v=[s for s in d['streams'] if s['codec_type']=='video']
+          a=[s for s in d['streams'] if s['codec_type']=='audio']
+          assert len(v)==1 and (v[0]['width'],v[0]['height'],v[0]['r_frame_rate'])==(1080,1920,'30/1')
+          assert len(a)==1 and a[0]['codec_name']=='aac'
+          assert 53.9<=float(d['format']['duration'])<=54.2
+          assert p.stat().st_size>350000
+          assert pathlib.Path('out/micro-captions.srt').stat().st_size>200
+          print('TECHNICAL PASS / PRIVATE HUMAN REVIEW REQUIRED', p, d['format']['duration'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kairo-rls-micro-learning-private-review
+          path: |
+            video-engine/out/micro-learning-rls-review.mp4
+            video-engine/out/micro-learning-rls-cover.png
+            video-engine/out/micro-captions.srt
+          if-no-files-found: error
+          retention-days: 7
