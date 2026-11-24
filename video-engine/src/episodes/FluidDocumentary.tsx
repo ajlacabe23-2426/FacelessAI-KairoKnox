@@ -256,8 +256,7 @@ const VectorWorld: React.FC<{
             </g>;
           })}
         </>}
-    {mode==='timeline'&&<path d={'M92 440 H758'} stroke={accent} strokeWidth="4"
-      strokeDasharray="18 10" strokeDashoffset={-(frame*.65)} opacity=".56"/>}
+
   </svg>;
 };
 
