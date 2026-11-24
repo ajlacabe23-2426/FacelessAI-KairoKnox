@@ -1,5 +1,8 @@
 name: Kairo Three Fluid Episodes - native 60fps private review
 on:
+  push:
+    paths:
+      - '.github/workflows/three-fluid-review.yml'
   pull_request:
     paths:
       - 'video-engine/src/episodes/**'
