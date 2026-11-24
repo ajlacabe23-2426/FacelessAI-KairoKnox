@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/cinematic-full-review.yml'
+      - 'video-engine/src/cinema/**'
   workflow_dispatch:
 
 permissions:
