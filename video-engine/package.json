@@ -16,7 +16,13 @@
     "fluid:check": "node scripts/check-fluid.mjs",
     "render:NvidiaEconomyFluid60": "remotion render src/index.ts NvidiaEconomyFluid60 out/NvidiaEconomyFluid60.mp4 --codec=h264 --concurrency=2",
     "render:AgentProgrammingFluid60": "remotion render src/index.ts AgentProgrammingFluid60 out/AgentProgrammingFluid60.mp4 --codec=h264 --concurrency=2",
-    "render:PromptEngineeringFluid60": "remotion render src/index.ts PromptEngineeringFluid60 out/PromptEngineeringFluid60.mp4 --codec=h264 --concurrency=2"
+    "render:PromptEngineeringFluid60": "remotion render src/index.ts PromptEngineeringFluid60 out/PromptEngineeringFluid60.mp4 --codec=h264 --concurrency=2",
+    "assets:check": "node scripts/check-assets.mjs --mode plan",
+    "assets:check:ready": "node scripts/check-assets.mjs --mode assets",
+    "assets:test": "node --experimental-strip-types --test tests/asset-cinema.test.mjs tests/asset-motion.test.mjs",
+    "assets:storyboard:agent": "remotion render src/index.ts AgentProgrammingAssets60 out/agent-assets-storyboard.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-479",
+    "assets:storyboard:prompt": "remotion render src/index.ts PromptEngineeringAssets60 out/prompt-assets-storyboard.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-479",
+    "assets:storyboard:car": "remotion render src/index.ts CarBuyingAssets60 out/car-assets-storyboard.mp4 --codec=h264 --concurrency=1 --scale=0.5 --frames=0-479"
   },
   "dependencies": {
     "@remotion/gsap": "4.0.539",
