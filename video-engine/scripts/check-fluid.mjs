@@ -15,10 +15,10 @@ for(const path of ['src/episodes/episodePlans.ts','src/episodes/FluidDocumentary
 }
 const plan=readFileSync('src/episodes/episodePlans.ts','utf8');
 const render=readFileSync('src/episodes/FluidDocumentary.tsx','utf8');
-assert.equal((plan.match(/id:'(?:NvidiaEconomyFluid60|AgentProgrammingFluid60|PromptEngineeringFluid60)'/g)||[]).length,3);
+assert.equal((plan.match(/id:'(?:NvidiaEconomyFluid60|AgentProgrammingFluid60|PromptEngineeringFluid60|CarBuyingFluid60)'/g)||[]).length,4);
 assert(plan.includes('overlap:30, fps:60') && plan.includes('width:1080,height:1920'),'All episodes must specify native 60fps 1080p');
 assert(render.includes('CinematicCamera') && render.includes('FilmGrainOverlay') && render.includes('FluidTransition'),'Cinematic engine integration missing');
 assert(render.includes('seededUnit(') && render.includes('springEnter(') && render.includes('cubicBezier('),'Physics + deterministic noise missing');
 assert(render.includes('globalFrame={frame}') && render.includes('Math.sin(t'),'Global continuous motion missing');
 assert(render.includes('ILLUSTRATIVE') && render.includes('VISUAL DIRECTOR CUT'),'Source/simulation transparency missing');
-console.log('Three-episode fluidity and frame-determinism rules: PASS');
+console.log('Four-episode fluidity and frame-determinism rules: PASS');
