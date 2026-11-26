@@ -70,6 +70,62 @@ const VectorWorld: React.FC<{
   const isCode=mode==='code'||mode==='prompt';
   const isMarket=mode==='market';
   const isComparative=mode==='compare'||mode==='audit'||mode==='policy';
+  if(mode==='car'){
+    const drive=springEnter(frame,fps,8);
+    const bob=Math.sin(t*2.1)*5;
+    return <svg width={w} height={h} viewBox="0 0 850 610" role="img"
+      aria-label="Animated original car illustration with verified buyer checklist overlays">
+      <defs>
+        <linearGradient id={'car-body-'+beat.id} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={accent}/>
+          <stop offset=".6" stopColor="#E8F5FF"/>
+          <stop offset="1" stopColor={secondary}/>
+        </linearGradient>
+        <radialGradient id={'car-glow-'+beat.id}>
+          <stop offset="0" stopColor={accent} stopOpacity=".28"/>
+          <stop offset="1" stopColor={accent} stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width={w} height={h} rx="32" fill="#081724"/>
+      <circle cx="620" cy="135" r="290" fill={'url(#car-glow-'+beat.id+')'}/>
+      {Array.from({length:9},(_,i)=><path key={i}
+        d={'M'+((i*135-frame*1.8)%1050-100)+' 452 h78'} stroke={secondary}
+        strokeWidth="6" strokeLinecap="round" opacity=".35"/>)}
+      <path d="M0 457 L850 457 M0 485 L850 485" stroke={accent}
+        strokeWidth="2" strokeOpacity=".44"/>
+      <g transform={'translate('+((1-drive)*-480)+' '+bob+')'}>
+        <ellipse cx="420" cy="439" rx="340" ry="39" fill="#01040A" opacity=".72"/>
+        <path d="M114 340 L166 270 Q191 238 255 235 L546 235 Q604 238 653 305 L740 326
+          Q771 333 771 365 L771 406 Q769 425 742 425 L110 425 Q78 419 78 388 L87 354
+          Q88 345 114 340Z" fill={'url(#car-body-'+beat.id+')'}
+          stroke="#EFFAFF" strokeWidth="5"/>
+        <path d="M249 245 L538 245 Q570 248 596 295 L210 295Z" fill="#0B273B"
+          stroke="#D7F2FF" strokeWidth="3"/>
+        <path d="M395 246 L396 293" stroke="#D7F2FF" strokeWidth="3"/>
+        <path d="M193 308 L632 308" stroke="#13283C" strokeWidth="4" opacity=".55"/>
+        <path d="M130 349 L161 341 M704 342 L745 357" stroke="#FFF5BA"
+          strokeWidth="12" strokeLinecap="round"/>
+        <rect x="414" y="313" width="60" height="10" rx="4" fill="#183D50"/>
+        {[236,639].map((x,i)=><g key={i} transform={'translate('+x+' 417)'}>
+          <circle r="60" fill="#030A14" stroke="#0B1728" strokeWidth="8"/>
+          <circle r="42" fill="#A8DDEB" stroke="#3C6171" strokeWidth="5"/>
+          <g transform={'rotate('+(t*115)+')'}>
+            {Array.from({length:5},(_,j)=><path key={j} transform={'rotate('+(j*72)+')'}
+              d="M-6 -31 L6 -31 L11 -8 L-11 -8Z" fill="#244C60"/>)}
+          </g>
+          <circle r="11" fill="#DDECF2"/>
+        </g>)}
+      </g>
+      <g opacity={delay(frame,55,48)}>
+        {items.map((item,i)=><g key={i} transform={'translate('+(45+i*265)+' 48)'}>
+          <rect width="236" height="107" rx="18" fill="#0A1D2AEF" stroke={accent} strokeOpacity=".65"/>
+          <text x="16" y="36" fontSize="18" fontFamily={mono} fill="#AFCAD6">{item.label}</text>
+          <text x="16" y="78" fontSize="25" fontWeight="800" fill={accent}>{item.value}</text>
+        </g>)}
+      </g>
+      <text x="50" y="565" fontSize="18" letterSpacing="3" fill="#A8BDCB">ORIGINAL VECTOR / BUYER EDUCATION</text>
+    </svg>;
+  }
   if(isComparative || mode==='checklist' || mode==='timeline'){
     const isTimeline=mode==='timeline';
     const isCompare=mode==='compare';
