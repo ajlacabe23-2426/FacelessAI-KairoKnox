@@ -1,11 +1,11 @@
-export type VisualMode = 'market'|'timeline'|'network'|'policy'|'compare'|'code'|'audit'|'prompt'|'checklist';
+export type VisualMode = 'car'|'market'|'timeline'|'network'|'policy'|'compare'|'code'|'audit'|'prompt'|'checklist';
 export type InfoRow = Readonly<{label: string; value: string}>;
 export type FluidBeat = Readonly<{
   id: string; duration: number; eyebrow: string; headline: string; caption: string;
   mode: VisualMode; rows: readonly InfoRow[]; footnote?: string;
 }>;
 export type FluidEpisode = Readonly<{
-  id: 'NvidiaEconomyFluid60'|'AgentProgrammingFluid60'|'PromptEngineeringFluid60';
+  id: 'NvidiaEconomyFluid60'|'AgentProgrammingFluid60'|'PromptEngineeringFluid60'|'CarBuyingFluid60';
   title: string; accent: string; secondary: string; secondaryAccent: string;
   series: string; overlap: 30; fps: 60; width: 1080; height: 1920;
   scenes: readonly FluidBeat[];
@@ -120,6 +120,40 @@ export const fluidEpisodes: readonly FluidEpisode[] = [
       scene('payoff','TAKEAWAY / PROMPT CONTRACT','SPECIFY.\nVERIFY. ITERATE.','The best prompt is not the one that sounds smartest. It is the one whose output can be checked.','checklist',[
         {label:'INPUT',value:'TRUSTED SOURCES'},{label:'OUTPUT',value:'DEFINED FORMAT'},{label:'REVIEW',value:'TEST + REVISE'}
       ],'DO NOT PUT SECRETS OR PRIVATE CLIENT DATA IN PROMPTS')
+    ]
+  },
+  {
+    id:'CarBuyingFluid60',title:'How to buy a car without missing the real cost',series:'MICRO LEARNING / EVERYDAY MONEY',
+    accent:'#F7C873',secondary:'#6BCAD8',secondaryAccent:'#ABDCEC',
+    overlap:30,fps:60,width:1080,height:1920,
+    scenes:[
+      scene('hook','CAR SHOPPING / THE REAL NUMBER','THE PRICE TAG\nIS NOT THE PRICE.','A car listed for $25,000 can cost much more after taxes, title, registration, dealer fees and financing. Start by asking for the total.','car',[
+        {label:'WINDOW',value:'$25,000'},{label:'INVOICE',value:'MORE?'},{label:'ASK',value:'OUT THE DOOR'}
+      ],'ILLUSTRATIVE PRICE / NOT A LOCAL DEALER OFFER'),
+      scene('otd','STEP 01 / ITEMIZED QUOTE','GET THE\nOUT-THE-DOOR PRICE.','Ask each dealer for a written itemized total: vehicle price, applicable taxes, title, registration, mandatory fees and any extras.','audit',[
+        {label:'CAR PRICE',value:'ITEMIZED'},{label:'TAX + TITLE',value:'INCLUDED'},{label:'ALL FEES',value:'EXPLAINED'}
+      ],'FEES AND TAXES VARY BY LOCATION / REQUEST A WRITTEN QUOTE'),
+      scene('fees','STEP 02 / SEPARATE THE EXTRAS','QUESTION\nEVERY ADD-ON.','Paint protection, warranties and service plans can raise the total. Ask which extras are optional and request a revised quote without them.','compare',[
+        {label:'REQUIRED',value:'DOCUMENT'},{label:'OPTIONAL',value:'DECIDE'},{label:'TOTAL',value:'RECALCULATE'}
+      ],'DO NOT ASSUME EVERY DEALER FEE IS REQUIRED BY LAW'),
+      scene('financing','STEP 03 / SHOP THE LOAN','APR IS\nNOT A DETAIL.','Compare lender offers using the APR, amount financed, loan term, monthly payment and total finance charge. Preapproval can help you compare offers.','timeline',[
+        {label:'APR',value:'COMPARE'},{label:'TERM',value:'MONTHS'},{label:'COST',value:'TOTAL'}
+      ],'APR IS A STANDARDIZED ANNUAL BORROWING-COST MEASURE'),
+      scene('payment','STEP 04 / PAYMENT ILLUSION','LOW PAYMENT.\nLONGER LOAN.','A lower monthly payment can come from stretching the loan over more months, increasing total interest. Compare the full repayment amount.','compare',[
+        {label:'MONTHLY',value:'LOWER?'},{label:'LOAN LENGTH',value:'LONGER?'},{label:'INTEREST',value:'CHECK TOTAL'}
+      ],'SAME LOAN PRINCIPAL AND APR ASSUMED FOR TERM COMPARISON'),
+      scene('inspect','STEP 05 / VERIFY THE VEHICLE','DON’T SKIP\nTHE INSPECTION.','For a used car, review its history and arrange an independent mechanical inspection where possible. A clean-looking listing is not proof of condition.','car',[
+        {label:'HISTORY',value:'REVIEW'},{label:'TEST DRIVE',value:'CHECK'},{label:'MECHANIC',value:'INSPECT'}
+      ],'INSPECTION AND VEHICLE HISTORY ARE DIFFERENT CHECKS'),
+      scene('ownership','STEP 06 / BEYOND THE DEALER','BUDGET FOR\nOWNERSHIP.','Before signing, price insurance, fuel or charging, maintenance and expected repairs. The loan payment is only one part of the cost.','network',[
+        {label:'INSURANCE',value:'QUOTE'},{label:'ENERGY',value:'ESTIMATE'},{label:'REPAIRS',value:'BUFFER'}
+      ],'COSTS DEPEND ON DRIVER, VEHICLE, LOCATION AND USE'),
+      scene('contract','STEP 07 / FINAL REVIEW','READ BEFORE\nYOU SIGN.','Compare the final purchase agreement and financing disclosures with the itemized quote. Check the total, APR, term, fees and optional products.','audit',[
+        {label:'QUOTE',value:'MATCH?'},{label:'FINANCING',value:'MATCH?'},{label:'ADD-ONS',value:'AUTHORIZED?'}
+      ],'TAKE TIME TO REVIEW ANY CHANGES TO THE WRITTEN OFFER'),
+      scene('payoff','BUYER CHECKLIST','NEGOTIATE\nTHE TOTAL.','Get the written out-the-door figure, compare financing separately, inspect the car and verify the final contract. Which dealership fee surprises buyers most?','checklist',[
+        {label:'01',value:'WRITTEN TOTAL'},{label:'02',value:'COMPARE APR'},{label:'03',value:'VERIFY + SIGN'}
+      ],'EDUCATIONAL CHECKLIST / NOT INDIVIDUAL FINANCIAL ADVICE')
     ]
   },
 ] as const;
