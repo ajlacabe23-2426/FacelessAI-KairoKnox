@@ -16,7 +16,8 @@
     "fluid:check": "node scripts/check-fluid.mjs",
     "render:NvidiaEconomyFluid60": "remotion render src/index.ts NvidiaEconomyFluid60 out/NvidiaEconomyFluid60.mp4 --codec=h264 --concurrency=2",
     "render:AgentProgrammingFluid60": "remotion render src/index.ts AgentProgrammingFluid60 out/AgentProgrammingFluid60.mp4 --codec=h264 --concurrency=2",
-    "render:PromptEngineeringFluid60": "remotion render src/index.ts PromptEngineeringFluid60 out/PromptEngineeringFluid60.mp4 --codec=h264 --concurrency=2"
+    "render:PromptEngineeringFluid60": "remotion render src/index.ts PromptEngineeringFluid60 out/PromptEngineeringFluid60.mp4 --codec=h264 --concurrency=2",
+    "render:CarBuyingFluid60": "remotion render src/index.ts CarBuyingFluid60 out/CarBuyingFluid60.mp4 --codec=h264 --concurrency=2"
   },
   "dependencies": {
     "@remotion/gsap": "4.0.539",
