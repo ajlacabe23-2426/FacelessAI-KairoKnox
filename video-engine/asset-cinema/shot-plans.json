@@ -1,0 +1,3960 @@
+{
+  "schemaVersion": 2,
+  "frozenBaseline": "cinematic-v2-asset-contract-2026-11-26",
+  "status": "STORYBOARD_AND_CODE_ONLY",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "overlapFrames": 30,
+  "rightsPolicy": "No rights-cleared status until source evidence is supplied; no external or public asset URLs.",
+  "films": [
+    {
+      "id": "AgentProgrammingAssets60",
+      "title": "BUILD AN AI AGENT",
+      "accent": "#58E3DC",
+      "fps": 60,
+      "width": 1080,
+      "height": 1920,
+      "overlapFrames": 30,
+      "shots": [
+        {
+          "id": "hook",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "ONE TASK.\nONE TOOL.",
+          "description": "The safest agent starts small.",
+          "storyboard": "Low-angle analyst enters cinematic command center. Monitor wakes; the single ticket lookup becomes the focus.",
+          "narrationCue": "You do not need a magical autonomous bot. Start with one task, one tool, and one verification loop.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/hook/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.0
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/hook/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.4
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/hook/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.8
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/hook/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.2000000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "boundary",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "DRAW THE\nBOUNDARY",
+          "description": "A system with limits.",
+          "storyboard": "Hand approaches restricted access icon. Barrier illuminates while read-only ticket search stays accessible.",
+          "narrationCue": "Here is our agent: it checks ticket status. It cannot approve access, delete records, or change permissions.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/boundary/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.11
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/boundary/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.51
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/boundary/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.91
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/boundary/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.3100000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "components",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "MODEL. TOOL.\nVALIDATION.",
+          "description": "Three separate responsibilities.",
+          "storyboard": "Orbital camera reveals analyst, terminal, and validation monitor as distinct layers of one workflow.",
+          "narrationCue": "First, define the instructions. Next, expose one typed lookup function. Then validate whatever comes back.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": -4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/components/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.22
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/components/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.62
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/components/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.02
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/components/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.4200000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "function",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "READ-ONLY\nLOOKUP",
+          "description": "A function that cannot write.",
+          "storyboard": "Over-shoulder on analyst entering a ticket ID into a clean code terminal; tool response visible.",
+          "narrationCue": "This Python function reads a local sample database. It accepts one ticket ID and changes absolutely nothing.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -2,
+              "y": 4,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/function/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.33
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/function/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.73
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/function/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.1300000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/function/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.5300000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "connect",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "PERMISSIONS\nIN CODE",
+          "description": "Prompts are not a security boundary.",
+          "storyboard": "Camera tracks a request into a guarded gateway; denied write route darkens.",
+          "narrationCue": "Now attach only that lookup tool to the agent. Permissions are enforced by code, not a friendly prompt.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -25,
+              "y": -3,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/connect/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.44
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/connect/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.8400000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/connect/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.24
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/connect/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.6400000000000001
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "run",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "WATCH THE\nREQUEST",
+          "description": "Ticket T-104 is found.",
+          "storyboard": "Close-up: search signal passes through server, then T-104 OPEN appears on screen.",
+          "narrationCue": "A user asks about ticket T one-oh-four. The agent looks it up and reports the recorded status.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 24,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 46,
+              "y": -10,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/run/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.55
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/run/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.9500000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/run/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.35
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/run/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.7500000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "verify",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "TEST ALL\nTHREE PATHS",
+          "description": "Known. Unknown. Forbidden.",
+          "storyboard": "Three outcome monitors illuminate in sequence; failure is handled, not hidden.",
+          "narrationCue": "Next, we test it: a valid ID, an unknown ID, and a request to change access.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/verify/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.66
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/verify/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.06
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/verify/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.46
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/verify/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.8600000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "protect",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "DENY THE\nWRITE",
+          "description": "Human approval is required.",
+          "storyboard": "Actor reaches toward permission-change control; protective overlay blocks the action.",
+          "narrationCue": "The write request must fail. That is why server-side validation and human approval matter more than model confidence.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/protect/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.77
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/protect/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.17
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/protect/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.57
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/protect/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.9700000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "challenge",
+          "label": "AI MASTERCLASS / AGENT",
+          "headline": "BUILD. TEST.\nREPEAT.",
+          "description": "Inspect the trace before scaling.",
+          "storyboard": "Wide reveal: analyst reviews execution trace, pass/fail indicators, and written test checklist.",
+          "narrationCue": "Your challenge: build this safe lookup, inspect the trace, and write three tests. What would you automate next?",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": -4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/agent/challenge/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.88
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/agent/challenge/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.28
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/agent/challenge/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.6800000000000002
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/agent/challenge/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 2.08
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PromptEngineeringAssets60",
+      "title": "PROMPT AI EFFECTIVELY",
+      "accent": "#BDA8FF",
+      "fps": 60,
+      "width": 1080,
+      "height": 1920,
+      "overlapFrames": 30,
+      "shots": [
+        {
+          "id": "hook",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "THE OUTPUT\nIS VAGUE",
+          "description": "Because the request is vague.",
+          "storyboard": "Character submits a one-line prompt; empty summary drifts into view, with no supporting source.",
+          "narrationCue": "When AI gives a vague answer, adding more words is not always the fix. Give it a testable task.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/hook/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.0
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/hook/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.4
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/hook/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.8
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/hook/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.2000000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "bad",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "BAD PROMPT,\nBAD SPEC",
+          "description": "No audience. No evidence.",
+          "storyboard": "Tight shot of vague input floating above an empty evidence desk; uncertainty becomes visible.",
+          "narrationCue": "Consider this prompt: summarize the incident. There is no audience, source boundary, or definition of success.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/bad/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.11
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/bad/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.51
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/bad/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.91
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/bad/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.3100000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "spec",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "DEFINE THE\nTASK",
+          "description": "Tell AI what success means.",
+          "storyboard": "Analyst arranges document, audience profile, and checklist into a clear work surface.",
+          "narrationCue": "Make the assignment precise: a SOC analyst needs observed events, uncertain details, and next checks.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": -4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/spec/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.22
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/spec/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.62
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/spec/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.02
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/spec/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.4200000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "rewrite",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "BOUND THE\nSOURCE",
+          "description": "Cite the log. Mark unknowns.",
+          "storyboard": "Camera moves from source log to prompt editor; highlighted timestamps attach to each claim.",
+          "narrationCue": "Use only the incident log. Cite timestamps, separate observed facts from assumptions, and never invent missing evidence.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": 4,
+              "zoom": 1.045,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -2,
+              "y": 4,
+              "zoom": 1.14,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/rewrite/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.33
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/rewrite/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.73
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/rewrite/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.1300000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/rewrite/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.5300000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "trace",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "EVIDENCE\nHAS A CHAIN",
+          "description": "Observation before conclusion.",
+          "storyboard": "Evidence slips become threads joining source lines to a supported statement.",
+          "narrationCue": "Now we have an evidence chain. A log line supports an observation. An observation supports a conclusion.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -25,
+              "y": -3,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/trace/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.44
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/trace/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.8400000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/trace/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.24
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/trace/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.6400000000000001
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "format",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "STRUCTURE\nTHE RESULT",
+          "description": "Facts. Unknowns. Checks.",
+          "storyboard": "Organized report sections emerge on screen. Each field snaps into a validated schema.",
+          "narrationCue": "Request structured fields for facts, unknowns, and checks. Your application can validate that schema before displaying anything.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 24,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 46,
+              "y": -10,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/format/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.55
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/format/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.9500000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/format/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.35
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/format/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.7500000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "FLUENCY\nISN\u2019T PROOF",
+          "description": "Unsupported claims must fail.",
+          "storyboard": "An unverified attacker label is confronted by absent evidence and stamped unsupported.",
+          "narrationCue": "If the answer names an attacker without supporting evidence, it fails. Fluent language is not evidence.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/evaluate/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.66
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/evaluate/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.06
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/evaluate/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.46
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/evaluate/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.8600000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "iterate",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "CHANGE ONE\nVARIABLE",
+          "description": "Keep the tests identical.",
+          "storyboard": "Split-screen workstation compares prompt A and prompt B using identical evidence and rubric.",
+          "narrationCue": "Keep the document and scoring rubric fixed. Change one instruction, then compare both answers against identical tests.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.045,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.14,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/iterate/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.77
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/iterate/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.17
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/iterate/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.57
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/iterate/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.9700000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "payoff",
+          "label": "AI MASTERCLASS / PROMPTS",
+          "headline": "SPECIFY. VERIFY.\nITERATE.",
+          "description": "Better outputs are testable.",
+          "storyboard": "Cinematic hero shot: analyst sees verified citations linked across report and source.",
+          "narrationCue": "The real upgrade is not a secret prompt phrase. It is clear instructions plus independent verification. What works for you?",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": -4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/prompt/payoff/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.88
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/prompt/payoff/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.28
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/prompt/payoff/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.6800000000000002
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/prompt/payoff/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 2.08
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CarBuyingAssets60",
+      "title": "HOW TO BUY A CAR",
+      "accent": "#FFD18C",
+      "fps": 60,
+      "width": 1080,
+      "height": 1920,
+      "overlapFrames": 30,
+      "shots": [
+        {
+          "id": "hook",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "$25,000\nISN\u2019T TOTAL",
+          "description": "Ask for the full number.",
+          "storyboard": "Buyer approaches detailed car in dealership; price tag appears, then a second larger total line emerges.",
+          "narrationCue": "That twenty-five-thousand-dollar car? The window sticker may not be what you actually pay. Ask for the full total.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/hook/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.0
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/hook/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.4
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/hook/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.8
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/hook/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.2000000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "otd",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "GET THE\nREAL QUOTE",
+          "description": "Out-the-door, in writing.",
+          "storyboard": "Dealer passes a paper quote to buyer; camera tracks to itemized total and signatures area.",
+          "narrationCue": "Get the out-the-door price in writing: vehicle, taxes, title, registration, dealer fees, and every added product.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/otd/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.11
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/otd/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.51
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/otd/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 0.91
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/otd/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.3100000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "fees",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "QUESTION\nTHE EXTRAS",
+          "description": "Which charges are optional?",
+          "storyboard": "Buyer points to add-on rows; optional items separate visually from taxes and title fees.",
+          "narrationCue": "Now examine the extras. Ask which are optional, remove anything you do not want, and request another quote.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 24,
+              "y": -4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -1,
+              "y": -10,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/fees/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.22
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/fees/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.62
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/fees/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.02
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/fees/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.4200000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "financing",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "PRICE AND\nFINANCING",
+          "description": "Negotiate them separately.",
+          "storyboard": "Two distinct panes: car total on left, loan APR and term on right; buyer compares.",
+          "narrationCue": "Separate the car deal from the loan. Compare APR, length, amount financed, total charges, and lender offers.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": 4,
+              "zoom": 1.045,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -2,
+              "y": 4,
+              "zoom": 1.14,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/financing/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.33
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/financing/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.73
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/financing/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.1300000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/financing/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.5300000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "payment",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "LOW MONTHLY\nCAN COST MORE",
+          "description": "Length changes total interest.",
+          "storyboard": "Same vehicle behind two loan schedules, with longer term making lifetime cost grow.",
+          "narrationCue": "Beware a low monthly payment achieved by stretching the term. Lower each month can mean more interest overall.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -25,
+              "y": -3,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/payment/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.44
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/payment/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.8400000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/payment/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.24
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/payment/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.6400000000000001
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "inspect",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "INSPECT\nTHE CAR",
+          "description": "Check history and condition.",
+          "storyboard": "Mechanic inspects a used car under soft shop lighting; buyer watches findings.",
+          "narrationCue": "With a used car, check history and arrange an independent inspection. A polished listing cannot reveal every problem.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": 4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/inspect/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.55
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/inspect/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 0.9500000000000001
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/inspect/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.35
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/inspect/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.7500000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "ownership",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "BUDGET FOR\nOWNERSHIP",
+          "description": "The payment is one component.",
+          "storyboard": "Car moves through everyday environment; insurance, maintenance and energy costs enter scene.",
+          "narrationCue": "Add insurance, fuel or charging, maintenance, and repairs. Affording the payment is not the whole ownership budget.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -24,
+              "y": -4,
+              "zoom": 1.015,
+              "roll": -0.25
+            },
+            "to": {
+              "x": -49,
+              "y": 4,
+              "zoom": 1.095,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/ownership/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.66
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/ownership/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.06
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/ownership/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.46
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/ownership/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.8600000000000003
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "contract",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "CHECK THE\nCONTRACT",
+          "description": "Compare every final term.",
+          "storyboard": "Buyer and dealer examine a final contract next to written quote; terms align visually.",
+          "narrationCue": "Before signing, compare the final paperwork to your written quote. Check every fee, add-on, and financing term.",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": 0,
+              "y": 4,
+              "zoom": 1.09,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 22,
+              "y": -3,
+              "zoom": 1.18,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/contract/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.77
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/contract/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.17
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/contract/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.57
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/contract/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 1.9700000000000002
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "payoff",
+          "label": "EVERYDAY INTELLIGENCE / CAR",
+          "headline": "SHOP THE\nTOTAL COST",
+          "description": "What fee would you question?",
+          "storyboard": "Buyer steps into the car lot at dusk with transparent itemized quote; cinematic closing.",
+          "narrationCue": "Shop the total, verify the car, and read the contract. Which surprise dealership charge deserves more attention?",
+          "durationFrames": 480,
+          "camera": {
+            "from": {
+              "x": -36,
+              "y": -4,
+              "zoom": 1.02,
+              "roll": -0.25
+            },
+            "to": {
+              "x": 38,
+              "y": -10,
+              "zoom": 1.12,
+              "roll": 0.4
+            }
+          },
+          "focus": {
+            "from": 0.65,
+            "to": 1.25
+          },
+          "layers": [
+            {
+              "id": "environment",
+              "src": "cinema-assets/car/payoff/environment.jpg",
+              "depth": 0.18,
+              "rect": {
+                "x": -140,
+                "y": -120,
+                "width": 1360,
+                "height": 2160
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 9,
+                "amountY": 6,
+                "rotation": 0.2,
+                "rate": 0.07,
+                "phase": 0.88
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "character",
+              "src": "cinema-assets/car/payoff/character.png",
+              "depth": 0.97,
+              "rect": {
+                "x": 94,
+                "y": 420,
+                "width": 920,
+                "height": 1240
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "float",
+                "amountX": 13,
+                "amountY": 12,
+                "rotation": 1.2,
+                "rate": 0.21,
+                "phase": 1.28
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "action",
+              "src": "cinema-assets/car/payoff/action.png",
+              "depth": 1.3,
+              "rect": {
+                "x": 250,
+                "y": 680,
+                "width": 640,
+                "height": 600
+              },
+              "pivot": {
+                "x": 0.18,
+                "y": 0.79
+              },
+              "motion": {
+                "mode": "hinge",
+                "amountX": 0,
+                "amountY": 0,
+                "rotation": 4.8,
+                "rate": 0.32,
+                "phase": 1.6800000000000002
+              },
+              "blend": "normal",
+              "opacity": 1,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            },
+            {
+              "id": "foreground",
+              "src": "cinema-assets/car/payoff/foreground.png",
+              "depth": 1.88,
+              "rect": {
+                "x": -120,
+                "y": 1300,
+                "width": 1310,
+                "height": 730
+              },
+              "pivot": {
+                "x": 0.52,
+                "y": 0.48
+              },
+              "motion": {
+                "mode": "drift",
+                "amountX": 22,
+                "amountY": 9,
+                "rotation": 0.6,
+                "rate": 0.11,
+                "phase": 2.08
+              },
+              "blend": "normal",
+              "opacity": 0.92,
+              "rights": {
+                "status": "pending",
+                "evidence": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

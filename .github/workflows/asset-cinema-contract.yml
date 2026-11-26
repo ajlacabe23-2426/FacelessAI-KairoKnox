@@ -1,0 +1,30 @@
+name: Asset Cinema Contract - no paid generation
+on:
+  pull_request:
+    paths:
+      - 'video-engine/asset-cinema/**'
+      - 'video-engine/src/asset-cinema/**'
+      - 'video-engine/scripts/check-assets.mjs'
+      - 'video-engine/tests/asset-*.test.mjs'
+      - 'video-engine/package.json'
+      - '.github/workflows/asset-cinema-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check 27-scene storyboard and reject unsafe paths
+        working-directory: video-engine
+        run: npm run assets:check
+      - name: Test camera timing and export safety gates (no credits)
+        working-directory: video-engine
+        run: npm run assets:test
