@@ -1,4 +1,4 @@
-name: Kairo Three Fluid Episodes - native 60fps private review
+name: Kairo Fluid Episodes - native 60fps private review
 on:
   push:
     paths:
@@ -36,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        film: [NvidiaEconomyFluid60, AgentProgrammingFluid60, PromptEngineeringFluid60]
+        film: [NvidiaEconomyFluid60, AgentProgrammingFluid60, PromptEngineeringFluid60, CarBuyingFluid60]
     steps:
       - uses: actions/checkout@v4
         with:
